@@ -66,7 +66,7 @@ import {
               </p>
   
               <div className={tokenPageStyles.pricingContainer}>
-                <SaleInfo nft={selectedNft} />
+                
               </div>
             </div>
           </div>

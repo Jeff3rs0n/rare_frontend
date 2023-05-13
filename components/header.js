@@ -85,7 +85,7 @@ export default function Header() {
                   as="button"
                   color="warning"
                   size="md"
-                  src="https://bafkreibb4spte4lc57f46332l2rtcxm7dprqlq2ymgdyyig6woaqnheqze.ipfs.nftstorage.link/"
+                  src="https://bafybeibe7emo7543ezfxqrtrkvmmsluvztko6stofp3t2co4m4m2e6bi2u.ipfs.nftstorage.link/user.png"
                 />
               </Dropdown.Trigger>
             </Navbar.Item>
