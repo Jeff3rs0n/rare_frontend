@@ -80,7 +80,7 @@ export default function Header() {
 
             <Navbar.Item>
               <Dropdown.Trigger>
-        <Avatar
+           <Avatar
                   bordered
                   as="button"
                   color="warning"
