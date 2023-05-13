@@ -66,7 +66,6 @@ import {
               </p>
   
               <div className={tokenPageStyles.pricingContainer}>
-                
               </div>
             </div>
           </div>

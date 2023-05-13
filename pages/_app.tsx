@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import { CoreBlockchain } from "@thirdweb-dev/chains";
+import { CoreBlockchain, CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
 import Header from "../components/header"
 
@@ -28,9 +28,9 @@ const darkTheme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={ CoreBlockchain }  authConfig={{
+    <ThirdwebProvider activeChain={CoreBlockchainTestnet}  authConfig={{
       authUrl: "/api/auth",
-      domain: "https://example.com",
+      domain: "https://rarebay.vercel.app",
     }}>
 
       <NextThemesProvider
