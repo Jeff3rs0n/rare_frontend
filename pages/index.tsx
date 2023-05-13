@@ -73,7 +73,7 @@ export default function Home() {
               />
             </Col>
             <Col>
-              <Text color="#d1d1d1" size={16} 
+              <Text size={16} 
               color="warning"
               weight={"bold"}
               css={{
