@@ -2,8 +2,9 @@
 
 // 1. Set up the network your smart contracts are deployed to.
 // First, import the chain from the package, then set the NETWORK variable to the chain.
-import { CoreBlockchain } from "@thirdweb-dev/chains";
-export const NETWORK = CoreBlockchain;
+import { CoreBlockchain, CoreBlockchainTestnet } from "@thirdweb-dev/chains";
+
+export const NETWORK = CoreBlockchainTestnet;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
