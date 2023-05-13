@@ -10,7 +10,7 @@ import {
     MARKETPLACE_ADDRESS,
     NFT_COLLECTION_ADDRESS,
   } from "../const/contractAddresses";
-  import Skeleton from "./Skeleton/Skeleton";
+  import Skeleton from "../pages/Skeleton/Skeleton";
   import styles from "./NFT.module.css";
   
   type Props = {
