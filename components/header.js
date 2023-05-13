@@ -109,12 +109,12 @@ export default function Header() {
         </div>
 
               </Dropdown.Item>
-              <Dropdown.Item key="settings" withDivider>
-                My Settings
+              <Dropdown.Item key="buy" withDivider><Link href="/buy"><Text color="warning" css={{ fontFamily: "monospace"}}>Buy NFT</Text></Link>
               </Dropdown.Item>
-              <Dropdown.Item key="team_settings"><Text color="warning" css={{ fontFamily: "monospace"}}>Create NFT</Text></Dropdown.Item>
-              <Dropdown.Item key="analytics" withDivider>
-                My Collections
+              <Dropdown.Item key="sell"><Link href="/sell"> <Text color="warning" css={{ fontFamily: "monospace"}}>Sell NFT</Text></Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="create"><Text color="warning" css={{ fontFamily: "monospace"}}>Create NFT</Text></Dropdown.Item>
+              <Dropdown.Item key="collections" withDivider><Link href={`/profile/${address}`}><Text color="warning" css={{ fontFamily: "monospace"}}>My Collections</Text></Link>
               </Dropdown.Item>
               <Dropdown.Item key="portfolio"><Link href={`/profile/${address}`}><Text color="warning" css={{ fontFamily: "monospace"}}>My Portfolio</Text></Link></Dropdown.Item>
               <Dropdown.Item key="configurations"><Link href="/create"><Text color="warning" css={{ fontFamily: "monospace"}}>Create Launchad</Text></Link></Dropdown.Item>
