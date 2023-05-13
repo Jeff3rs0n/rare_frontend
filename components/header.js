@@ -41,28 +41,31 @@ export default function Header() {
             },
           }}
         >
-
-          <Text b color="inherit" 
+ <Link href="/">
+ <Text b color="warning" 
           css={{
             fontFamily: "monospace"
           }}
           >
            RareBay 
           </Text>
+         
           <Image
           src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
           alt="logo"
           width={50}
           height={50}
         />
+ </Link>
+         
         </Navbar.Brand>
         <Navbar.Content
           activeColor="warning"
           hideIn="xs"
           variant="light"
         >
-          <Navbar.Link href="#">Marketplace</Navbar.Link>
-          <Navbar.Link isActive href="#">
+          <Navbar.Link href="/" isActive>Marketplace</Navbar.Link>
+          <Navbar.Link  href="#">
             Categories
           </Navbar.Link>
           <Navbar.Link href="#">Airdrops</Navbar.Link>
@@ -109,12 +112,12 @@ export default function Header() {
               <Dropdown.Item key="settings" withDivider>
                 My Settings
               </Dropdown.Item>
-              <Dropdown.Item key="team_settings">Create NFT</Dropdown.Item>
+              <Dropdown.Item key="team_settings"><Text color="warning" css={{ fontFamily: "monospace"}}>Create NFT</Text></Dropdown.Item>
               <Dropdown.Item key="analytics" withDivider>
                 My Collections
               </Dropdown.Item>
-              <Dropdown.Item key="portfolio"><Link href={`/profile/${address}`}>My Portfolio</Link></Dropdown.Item>
-              <Dropdown.Item key="configurations"><Link href="/create">Create Launchpad</Link></Dropdown.Item>
+              <Dropdown.Item key="portfolio"><Link href={`/profile/${address}`}><Text color="warning" css={{ fontFamily: "monospace"}}>My Portfolio</Text></Link></Dropdown.Item>
+              <Dropdown.Item key="configurations"><Link href="/create"><Text color="warning" css={{ fontFamily: "monospace"}}>Create Launchad</Text></Link></Dropdown.Item>
               <Dropdown.Item key="theme" >
               <Switch
         checked={isDark}
