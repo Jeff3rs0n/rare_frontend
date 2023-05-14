@@ -23,7 +23,9 @@ import {
   import Skeleton from "../../../pages/Skeleton/Skeleton";
   import toast, { Toaster } from "react-hot-toast";
   import toastStyle from "../../../util/toastConfig";
-  
+  import { Text, Spacer } from "@nextui-org/react"
+
+
   type Props = {
     nft: NFT;
     contractMetadata: any;

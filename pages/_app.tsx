@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
     }}>
 
       <NextThemesProvider
-    defaultTheme="dark"
+    defaultTheme="light"
     attribute="class"
     value={{
       light: lightTheme.className,

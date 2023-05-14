@@ -149,8 +149,9 @@
   }
   
   .label {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgba(239, 114, 11, 0.9);
+    font-weight: bold;
+    font-family: monospace;
+    color: rgb(122, 122, 122);
     margin: 0px;
     margin-bottom: 4px;
   }
@@ -199,7 +200,7 @@
     align-items: center;
     flex-grow: 1;
     gap: 4px;
-    border: 1px solid rgba(22, 6, 6, 0.528);
+    border: 1px solid rgba(86, 74, 74, 0.528);
     padding: 8px 12px;
     min-width: 128px;
     border-radius: 16px;
@@ -239,7 +240,7 @@
     position: relative;
     -webkit-box-flex: 1;
     flex-grow: 1;
-    background: transparent;
+
     border-radius: 16px;
     overflow: hidden;
     margin-top: 32px;
@@ -249,7 +250,7 @@
   .pricingInfo {
     padding: 16px;
     border-radius: 14px;
-    background-color: rgba(31, 28, 28, 0.341);
+    background-color: rgba(61, 52, 52, 0.419);
     width: 100%;
     margin: 0px;
     margin-bottom: 12px;
@@ -260,7 +261,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
-    color: rgba(239, 114, 11, 0.9);
+    color: rgba(255, 255, 255, 0.9);
     margin: 0px;
     border-radius: 8px;
   }
