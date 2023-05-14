@@ -1,4 +1,5 @@
 .container {
+  
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -7,6 +8,7 @@
   }
   
   .metadataContainer {
+    
     display: flex;
     flex-direction: column;
     -webkit-box-flex: 1;
@@ -17,6 +19,7 @@
   }
   
   .listingContainer {
+    
     flex-shrink: 1;
     position: sticky;
     width: 100%;
@@ -27,10 +30,13 @@
   }
   
   .image {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
     border-radius: 16px;
     width: 100% !important;
     height: auto !important;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(61, 47, 47, 0.541);
   }
   
   .input {
@@ -41,7 +47,7 @@
     background: transparent;
     border: none;
     font-size: 16px;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(54, 48, 48, 0.451);
     border-radius: 8px;
     margin-bottom: 16px;
     margin-left: 2px;
@@ -55,10 +61,14 @@
   }
   
   .imageContainer {
+    
     position: relative;
   }
   
   .crossButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -66,11 +76,13 @@
   }
   
   .crossButton:hover {
+    
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(52, 42, 42, 0.8) !important;
   }
   
   .collectionImage {
+    
     width: 32px !important;
     height: 32px !important;
     border-radius: 8px;
@@ -90,6 +102,7 @@
   }
   
   .title {
+    
     font-weight: 700;
     font-size: 32px;
     hyphens: auto;
@@ -123,7 +136,7 @@
     border-radius: 50%;
   
     opacity: 0.9;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(17, 16, 16, 0.92);
   }
   
   .nftOwnerInfo {
@@ -136,7 +149,8 @@
   }
   
   .label {
-    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(239, 114, 11, 0.9);
     margin: 0px;
     margin-bottom: 4px;
   }
@@ -144,10 +158,11 @@
   .nftOwnerAddress {
     font-weight: 600;
     margin: 0px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(239, 114, 11, 0.9);
   }
   
   .descriptionContainer {
+    
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -169,7 +184,7 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(26, 19, 19, 0.46);
     padding: 8px 12px;
     min-width: 128px;
     border-radius: 16px;
@@ -177,13 +192,14 @@
   }
   
   .eventsContainer {
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     gap: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(22, 6, 6, 0.528);
     padding: 8px 12px;
     min-width: 128px;
     border-radius: 16px;
@@ -191,15 +207,17 @@
   }
   
   .traitValue {
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     margin: 0px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgb(255, 134, 47);
   }
   
   .traitName {
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
     margin: 0px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(253, 98, 1, 0.93);
   }
   
   .eventContainer {
@@ -231,17 +249,18 @@
   .pricingInfo {
     padding: 16px;
     border-radius: 14px;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(31, 28, 28, 0.341);
     width: 100%;
     margin: 0px;
     margin-bottom: 12px;
   }
   
   .pricingValue {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(239, 114, 11, 0.9);
     margin: 0px;
     border-radius: 8px;
   }

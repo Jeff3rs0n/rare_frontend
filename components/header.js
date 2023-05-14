@@ -64,12 +64,36 @@ export default function Header() {
           hideIn="xs"
           variant="light"
         >
-          <Navbar.Link href="/" isActive>Marketplace</Navbar.Link>
+          <Navbar.Link href="/" isActive> <Text b color="warning" 
+          css={{
+            fontFamily: "monospace"
+          }}
+          >
+           Marketplace
+          </Text></Navbar.Link>
           <Navbar.Link  href="#">
-            Categories
+          <Text b color="warning" 
+          css={{
+            fontFamily: "monospace"
+          }}
+          >
+           Categories
+          </Text>
           </Navbar.Link>
-          <Navbar.Link href="#">Airdrops</Navbar.Link>
-          <Navbar.Link href="#">Launchpads</Navbar.Link>
+          <Navbar.Link href="#"> <Text b color="warning" 
+          css={{
+            fontFamily: "monospace"
+          }}
+          >
+           Airdrop 
+          </Text></Navbar.Link>
+          <Navbar.Link href="#"> <Text b color="warning" 
+          css={{
+            fontFamily: "monospace"
+          }}
+          >
+           Lanchpads 
+          </Text></Navbar.Link>
         </Navbar.Content>
         <Navbar.Content
           css={{

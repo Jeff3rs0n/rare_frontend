@@ -40,10 +40,7 @@ import {
     return (
       <>
         <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
-  
-        <p className={styles.nftTokenId}>Token ID #{nft.metadata.id}</p>
-        <p className={styles.nftName}>{nft.metadata.name}</p>
-  
+        <p className={styles.nftName}>{nft.metadata.name} #{nft.metadata.id}</p>
         <div className={styles.priceContainer}>
           {loadingContract || loadingDirect || loadingAuction ? (
             <Skeleton width="100%" height="100%" />

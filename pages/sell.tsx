@@ -11,6 +11,7 @@ import {
   import tokenPageStyles from "../styles/Token.module.css";
   import { NFT as NFTType } from "@thirdweb-dev/sdk";
   import SaleInfo from "../components/SaleInfo";
+  import { Text } from "@nextui-org/react";
   
   export default function Sell() {
     // Load all of the NFTs from the NFT Collection
@@ -22,10 +23,30 @@ import {
   
     return (
       <Container maxWidth="lg">
-        <h1>Sell NFTs</h1>
+         <Text
+        h2
+        size={60}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+        weight="bold"
+      >
+         Sell Your RARE NFT
+      </Text>
+      <hr></hr>
         {!selectedNft ? (
           <>
-            <p>Select which NFT you&rsquo;d like to sell below.</p>
+            <Text
+            weight={"bold"}
+size={16}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+>Browse NFT You would Like to Sell from the ones you own</Text>
             <NFTGrid
               data={data}
               isLoading={isLoading}
@@ -57,13 +78,19 @@ import {
             </div>
   
             <div className={tokenPageStyles.listingContainer}>
-              <p>You&rsquo;re about to list the following item for sale.</p>
-              <h1 className={tokenPageStyles.title}>
+              <Text css={{
+                fontFamily: "monospace"
+              }}>You&rsquo;re about to list the following item for sale.</Text>
+              <Text h1 css={{
+                fontFamily: "monospace"
+              }}  className={tokenPageStyles.title}>
                 {selectedNft.metadata.name}
-              </h1>
-              <p className={tokenPageStyles.collectionName}>
+              </Text>
+              <Text css={{
+                fontFamily: "monospace"
+              }} className={tokenPageStyles.collectionName}>
                 Token ID #{selectedNft.metadata.id}
-              </p>
+              </Text>
   
               <div className={tokenPageStyles.pricingContainer}>
       

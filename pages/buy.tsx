@@ -3,6 +3,8 @@ import React from "react";
 import Container from "../components/Container/Container";
 import NFTGrid from "./NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
+import { Text, Spacer } from "@nextui-org/react"
+
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -11,8 +13,28 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-      <h1>Buy NFTs</h1>
-      <p>Browse which NFTs are available from the collection.</p>
+            <Text
+        h2
+        size={60}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+        weight="bold"
+      >
+         RareBay Collection
+      </Text>
+<Text
+size={16}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+>Browse Rare NFT</Text>
+<hr></hr>
+<Spacer />
       <NFTGrid
         data={data}
         isLoading={isLoading}
