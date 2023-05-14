@@ -1,7 +1,7 @@
 import { Navbar, Link, Text, Avatar, Dropdown, Container, Image} from "@nextui-org/react";
 import { Layout } from "./Layout.js";
 import { useTheme as useNextTheme } from 'next-themes'
-import { Switch, useTheme } from '@nextui-org/react'
+import { Switch, useTheme, Spacer } from '@nextui-org/react'
 
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import styles from "./Navbar.module.css";
@@ -88,13 +88,7 @@ export default function Header() {
           >
            Airdrop 
           </Text></Navbar.Link>
-          <Navbar.Link href="#"> <Text b color="warning" 
-          css={{
-            fontFamily: "monospace"
-          }}
-          >
-           Lanchpads 
-          </Text></Navbar.Link>
+          <Spacer />
         </Navbar.Content>
         
         <Navbar.Content
@@ -106,7 +100,7 @@ export default function Header() {
           }}
         >  
 
-<ConnectWallet btnTitle="Sign In" />
+<ConnectWallet btnTitle="Sign In"  />
           <Dropdown placement="bottom-right">
 
             <Navbar.Item>
@@ -117,7 +111,7 @@ export default function Header() {
                   as="button"
                   color="warning"
                   size="md"
-                  src="https://bafybeibe7emo7543ezfxqrtrkvmmsluvztko6stofp3t2co4m4m2e6bi2u.ipfs.nftstorage.link/user.png"
+                  src="https://bafybeifwhnkyf2y2tzmcsv6rrysbcrkvpitozkjoefky2seaitaw7txyby.ipfs.nftstorage.link/user(1).png"
                 />
               </Dropdown.Trigger>
             </Navbar.Item>
