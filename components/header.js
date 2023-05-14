@@ -96,6 +96,7 @@ export default function Header() {
            Lanchpads 
           </Text></Navbar.Link>
         </Navbar.Content>
+        
         <Navbar.Content
           css={{
             "@xs": {
@@ -103,11 +104,14 @@ export default function Header() {
               jc: "flex-end",
             },
           }}
-        >
+        >  
+
+<ConnectWallet btnTitle="Sign In" />
           <Dropdown placement="bottom-right">
 
             <Navbar.Item>
               <Dropdown.Trigger>
+              
            <Avatar
                   bordered
                   as="button"
@@ -125,7 +129,7 @@ export default function Header() {
             >
               <Dropdown.Item key="profile" css={{ height: "$18" }}>
               <div className={styles.navRight}>
-            <ConnectWallet theme="dark" btnTitle="Connect Wallet" />
+              <Link href="/buy"><Text color="warning" css={{ fontFamily: "monospace"}}>Wallet</Text></Link>
           {address && (
             <Link className={styles.link} href={`/profile/${address}`}>
 
