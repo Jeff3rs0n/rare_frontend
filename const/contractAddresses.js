@@ -8,7 +8,7 @@ export const NETWORK = CoreBlockchainTestnet;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
-export const MARKETPLACE_ADDRESS = "0x41883748054F2984CB28B10f12ac6604BEA582e6";
+export const MARKETPLACE_ADDRESS = "0x131c6359f2E71D278e0004f3beFb0791F3EFE22e";
 
 // 3. The address of your NFT collection smart contract.
 export const NFT_COLLECTION_ADDRESS =

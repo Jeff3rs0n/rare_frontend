@@ -1,4 +1,4 @@
-import { useContract, useNFT } from "@thirdweb-dev/react";
+import { useContract, useNFT, useContractWrite} from "@thirdweb-dev/react";
 import { DirectListingV3, EnglishAuction } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import React from "react";
