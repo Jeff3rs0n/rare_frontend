@@ -32,7 +32,7 @@ export default function Header() {
       maxW: "100%",
       minWidth: "100%"
     }}>
- <Navbar isBordered variant="floating" >
+ <Navbar isBordered variant="static" >
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
@@ -44,7 +44,8 @@ export default function Header() {
  <Link href="/">
  <Text b color="warning" 
           css={{
-            fontFamily: "monospace"
+            fontFamily: "monospace",
+            textGradient: "45deg, $yellow600 -20%, $red600 100%",
           }}
           >
            RareBay 
