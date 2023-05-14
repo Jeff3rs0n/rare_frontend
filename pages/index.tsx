@@ -9,7 +9,8 @@ import {
    Card,
   Col,
   Row,
-  Button
+  Button,
+  Badge
 } from "@nextui-org/react"
 import Content  from '@/components/Content'
 import type { NextPage } from "next";
@@ -28,7 +29,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spacer />
-   <Container>
+   <Container css={{w: "65%"}}>
+   <Spacer />
    <Card css={{ w: "100%", h: "700px" }}>
   <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
   <Col>
@@ -64,26 +66,17 @@ export default function Home() {
         <Col>
           <Row>
             <Col span={3}>
-              <Card.Image
-                src="https://nextui.org/images/breathing-app-icon.jpeg"
-                css={{ bg: "black", br: "50%" }}
-                height={40}
-                width={40}
-                alt="Breathing app icon"
-              />
+           
             </Col>
             <Col>
-              <Text size={16} 
+              <Text size={18} 
               color="warning"
               weight={"bold"}
               css={{
                 fontFamily: "monospace"
               }}
               >
-               Minting Now
-              </Text>
-              <Text color="#d1d1d1" size={14}>
-                Volume: 0 CORE
+          <Badge color="success" variant="dot" enableShadow/> Minting Now
               </Text>
             </Col>
           </Row>
@@ -93,8 +86,9 @@ export default function Home() {
             <Button
               flat
               auto
-              rounded
-              css={{ color: "#94f9f0", bg: "#94f9f026" }}
+              css={{ color: "orange", bg: "#94f9f026",
+            borderStyle: "solid"
+            }}
             >
               <Text
                 css={{ color: "inherit" }}
@@ -180,7 +174,9 @@ the kind of art that is priceless.
                   href="/"
                   target="_blank"
                 >
-                  $RARE Airdrop
+                 <Text color="warning" css={{ fontFamily: "monospace",
+                fontWeight: "bold"
+                }}>$RARE AIRDROP</Text>
                 </Link>
               </div>
             </div>
