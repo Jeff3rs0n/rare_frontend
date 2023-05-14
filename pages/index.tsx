@@ -177,7 +177,7 @@ the kind of art that is priceless.
                 </Link>
                 <Link
                   className={styles.secondaryCta}
-                  href="https://github.com/thirdweb-example/marketplace-v3"
+                  href="/"
                   target="_blank"
                 >
                   $RARE Airdrop
