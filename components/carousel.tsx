@@ -62,14 +62,19 @@ export default function Caros() {
               <Col>
                 <Text
                   size={12}
-                  weight="bold"
+                  weight="extrabold"
                   transform="uppercase"
                   color="warning"
+                css={{
+                  fontFamily: "monospace"
+                }}
                 >
                   Collectibles
                 </Text>
-                <Text h3 color="white">
-                  Bore Apes Yatch Club
+                <Text h3 color="white" css={{
+ fontFamily: "monospace"
+                }}>
+                  Collection Name
                 </Text>
               </Col>
             </Card.Header>
@@ -106,7 +111,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                        Minting Now
+                       Coming soon
                       </Text>
                     </Col>
                   </Row>
@@ -151,14 +156,19 @@ export default function Caros() {
               <Col>
                 <Text
                   size={12}
-                  weight="bold"
+                  weight="extrabold"
                   transform="uppercase"
                   color="warning"
+                css={{
+                  fontFamily: "monospace"
+                }}
                 >
                   Collectibles
                 </Text>
-                <Text h3 color="white">
-                  Bore Apes Yatch Club
+                <Text h3 color="white" css={{
+                   fontFamily: "monospace"
+                }}>
+                  Collection Name
                 </Text>
               </Col>
             </Card.Header>
@@ -195,7 +205,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                        Minting Now
+                       Coming soon
                       </Text>
                     </Col>
                   </Row>
@@ -240,14 +250,19 @@ export default function Caros() {
               <Col>
                 <Text
                   size={12}
-                  weight="bold"
+                  weight="extrabold"
                   transform="uppercase"
                   color="warning"
+                css={{
+                  fontFamily: "monospace"
+                }}
                 >
                   Collectibles
                 </Text>
-                <Text h3 color="white">
-                  Bore Apes Yatch Club
+                <Text h3 color="white" css={{
+ fontFamily: "monospace"
+                }}>
+                  Collection Name
                 </Text>
               </Col>
             </Card.Header>
@@ -284,7 +299,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                        Minting Now
+                       Coming soon
                       </Text>
                     </Col>
                   </Row>
@@ -329,14 +344,19 @@ export default function Caros() {
               <Col>
                 <Text
                   size={12}
-                  weight="bold"
+                  weight="extrabold"
                   transform="uppercase"
                   color="warning"
+                css={{
+                  fontFamily: "monospace"
+                }}
                 >
                   Collectibles
                 </Text>
-                <Text h3 color="white">
-                  Bore Apes Yatch Club
+                <Text h3 color="inherit" css={{
+                  fontFamily: "monospace"
+                }}>
+                  Collection Name
                 </Text>
               </Col>
             </Card.Header>
@@ -373,7 +393,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                        Minting Now
+                       Coming soon
                       </Text>
                     </Col>
                   </Row>
