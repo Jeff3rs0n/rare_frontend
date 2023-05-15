@@ -59,8 +59,6 @@ maxWidth: "100%"
          <Container css={{w: "100%"}} >
    </Container>
       </Container>
- <hr></hr>
-
       <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.hero}>
