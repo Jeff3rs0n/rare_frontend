@@ -132,7 +132,7 @@ maxWidth: "100%"
         }}
         weight="bold"
       >
-         A Digital Museam.
+         A Digital Museum.
       </Text>
                 </span>
               <p className={styles.heroSubtitle}>
