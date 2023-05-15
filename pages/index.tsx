@@ -17,7 +17,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
-
+import Caros from "../components/carousel"
 
 
 
@@ -52,86 +52,18 @@ export default function Home() {
 maxWidth: "100%"
       }}
       >
-         <Container css={{w: "100%"}} >
+        
+         <Container css={{w: "90%"}} >
+         <Caros />
    <Spacer />
-   <Card css={{ w: "100%", h: "500px" }} >
-  <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}> 
-  <Col>
-        <Text size={12} weight="bold" transform="uppercase" color="warning">
-          Collectibles
-        </Text>
-        <Text h3 color="white">
-          Bore Apes Yatch Club
-        </Text>
-      </Col>
-  </Card.Header>
-  <Card.Body css={{ p: 0 }}>
-    <Card.Image
-               objectFit="cover"
-                src="https://ik.imagekit.io/bayc/assets/bayc-mutant-hero.jpg"
-                width={1500}
-                height={2000}
-                alt="Background gradient from red to blue"
-                className={styles.gradient}>
-    </Card.Image>
-  </Card.Body>
-  <Card.Footer
-      isBlurred
-      css={{
-        position: "absolute",
-        bgBlur: "#0f111466",
-        borderTop: "$borderWeights$light solid $gray800",
-        bottom: 0,
-        zIndex: 1,
-      }}
-    >
-      <Row>
-        <Col>
-          <Row>
-            <Col span={3}>
-           
-            </Col>
-            <Col>
-              <Text size={16} 
-              color="warning"
-              weight={"bold"}
-              css={{
-                fontFamily: "monospace"
-              }}
-              >
-          <Badge color="success" variant="dot" enableShadow/> Minting Now
-              </Text>
-            </Col>
-          </Row>
-        </Col>
-        <Col>
-          <Row justify="flex-end">
-            <Button
-              flat
-              auto
-              css={{ color: "orange", bg: "#94f9f026",
-            borderStyle: "solid"
-            }}
-            >
-              <Text
-                css={{ color: "inherit" }}
-                size={12}
-                weight="bold"
-                transform="uppercase"
-              >
-                VIEW COLLECTION
-              </Text>
-            </Button>
-          </Row>
-        </Col>
-      </Row>
-    </Card.Footer>
-</Card>
+   
    
    </Container>
    
       </Container>
+      <Spacer />
  <hr></hr>
+
       <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.hero}>
