@@ -96,7 +96,7 @@ export default function Caros() {
                     <Col span={3}></Col>
                     <Col>
                       <Text
-                        size={16}
+                        size={14}
                         color="warning"
                         weight={"bold"}
                         css={{
@@ -134,8 +134,10 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
         </div>
+       
+       
         <div className="keen-slider__slide number-slide2">
         <Card css={{ w: "100%", h: "600px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -216,9 +218,11 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
 
         </div>
+        
+       
         <div className="keen-slider__slide number-slide3">
         <Card css={{ w: "100%", h: "600px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -299,9 +303,11 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
 
         </div>
+       
+        
         <div className="keen-slider__slide number-slide4">
         <Card css={{ w: "100%", h: "600px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -382,9 +388,11 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
 
         </div>
+        
+       
         <div className="keen-slider__slide number-slide5">
         <Card css={{ w: "100%", h: "600px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -465,9 +473,11 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
 
         </div>
+       
+        
         <div className="keen-slider__slide number-slide6">
         <Card css={{ w: "100%", h: "600px" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -548,10 +558,14 @@ export default function Caros() {
               </Row>
             </Card.Footer>
           </Card>
-          <Spacer />
+          
 
         </div>
+         
+       
       </div>
+      
+     
     </>
   );
 }
