@@ -47,21 +47,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spacer />
+      <Spacer />
+      <Container css={{w: "100%"}}>
+        <Caros />
+        </Container>
       <Container 
       css={{
 maxWidth: "100%"
       }}
       >
-        
          <Container css={{w: "100%"}} >
-         <Caros />
-   <Spacer />
-   
-   
    </Container>
-   
       </Container>
-      <Spacer />
  <hr></hr>
 
       <div className={styles.container}>

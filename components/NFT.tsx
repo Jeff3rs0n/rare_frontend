@@ -8,7 +8,8 @@ import {
   import React from "react";
   import {
     MARKETPLACE_ADDRESS,
-    NFT_COLLECTION_ADDRESS,
+    NFT_COLLECTION_ADDRESS, 
+    NFT_COLLECTION_ADDRESS1
   } from "../const/contractAddresses";
   import Skeleton from "../pages/Skeleton/Skeleton";
   import styles from "./NFT.module.css";
@@ -27,6 +28,10 @@ import {
     const { data: directListing, isLoading: loadingDirect } =
       useValidDirectListings(marketplace, {
         tokenContract: NFT_COLLECTION_ADDRESS,
+        tokenId: nft.metadata.id,
+      });
+      useValidDirectListings(marketplace, {
+        tokenContract: NFT_COLLECTION_ADDRESS1,
         tokenId: nft.metadata.id,
       });
   

@@ -55,8 +55,8 @@ export default function Caros() {
     <>
       <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide number-slide1">
-          <Container>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -74,7 +74,7 @@ export default function Caros() {
                     h3
                     color="white"
                     css={{
-                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
 
                       fontFamily: "monospace",
                     }}
@@ -108,12 +108,13 @@ export default function Caros() {
                       <Col span={3}></Col>
                       <Col>
                         <Text
-                          size={14}
+                          size={13}
                           color="warning"
                           weight={"bold"}
                           css={{
-                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-              
+                            textGradient:
+                              "45deg, $yellow600 -20%, $red600 100%",
+
                             fontFamily: "monospace",
                           }}
                         >
@@ -121,12 +122,38 @@ export default function Caros() {
                           Active
                         </Text>
                       </Col>
+                      <Col>
+                        <Text
+                          size={10}
+                          css={{
+                            fontFamily: "monospace",
+                          }}
+                        >
+                          Volume: 0.0 CORE
+                        </Text>
+                                              <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Owners: 0
+                      </Text>
+                                            <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Items: 0
+                      </Text>
+                      </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row justify="flex-end">
                       <Button
-                        flat
+      Owners   
                         auto
                         css={{
                           color: "",
@@ -156,8 +183,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide2">
-          <Container>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -175,7 +202,7 @@ export default function Caros() {
                     h3
                     color="white"
                     css={{
-                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
 
                       fontFamily: "monospace",
                     }}
@@ -209,12 +236,13 @@ export default function Caros() {
                       <Col span={3}></Col>
                       <Col>
                         <Text
-                          size={16}
+                          size={13}
                           color="warning"
                           weight={"bold"}
                           css={{
-                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-              
+                            textGradient:
+                              "45deg, $yellow600 -20%, $red600 100%",
+
                             fontFamily: "monospace",
                           }}
                         >
@@ -222,12 +250,38 @@ export default function Caros() {
                           Active
                         </Text>
                       </Col>
+                      <Col>
+                        <Text
+                          size={10}
+                          css={{
+                            fontFamily: "monospace",
+                          }}
+                        >
+                          Volume: 0.0 CORE
+                        </Text>
+                                              <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Owners: 0
+                      </Text>
+                                            <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Items: 0
+                      </Text>
+                      </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row justify="flex-end">
                       <Button
-                        flat
+      Owners   
                         auto
                         css={{
                           color: "",
@@ -257,8 +311,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide3">
-          <Container>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -276,7 +330,7 @@ export default function Caros() {
                     h3
                     color="white"
                     css={{
-                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
 
                       fontFamily: "monospace",
                     }}
@@ -310,12 +364,13 @@ export default function Caros() {
                       <Col span={3}></Col>
                       <Col>
                         <Text
-                          size={16}
+                          size={13}
                           color="warning"
                           weight={"bold"}
                           css={{
-                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-              
+                            textGradient:
+                              "45deg, $yellow600 -20%, $red600 100%",
+
                             fontFamily: "monospace",
                           }}
                         >
@@ -323,12 +378,38 @@ export default function Caros() {
                           Active
                         </Text>
                       </Col>
+                      <Col>
+                        <Text
+                          size={10}
+                          css={{
+                            fontFamily: "monospace",
+                          }}
+                        >
+                          Volume: 0.0 CORE
+                        </Text>
+                                              <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Owners: 0
+                      </Text>
+                                            <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Items: 0
+                      </Text>
+                      </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row justify="flex-end">
                       <Button
-                        flat
+      Owners   
                         auto
                         css={{
                           color: "",
@@ -358,8 +439,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide4">
-          <Container>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -377,7 +458,7 @@ export default function Caros() {
                     h3
                     color="inherit"
                     css={{
-                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
                       fontFamily: "monospace",
                     }}
                   >
@@ -410,12 +491,13 @@ export default function Caros() {
                       <Col span={3}></Col>
                       <Col>
                         <Text
-                          size={16}
+                          size={13}
                           color="warning"
                           weight={"bold"}
                           css={{
-                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-              
+                            textGradient:
+                              "45deg, $yellow600 -20%, $red600 100%",
+
                             fontFamily: "monospace",
                           }}
                         >
@@ -423,12 +505,38 @@ export default function Caros() {
                           Active
                         </Text>
                       </Col>
+                      <Col>
+                        <Text
+                          size={10}
+                          css={{
+                            fontFamily: "monospace",
+                          }}
+                        >
+                          Volume: 0.0 CORE
+                        </Text>
+                                              <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Owners: 0
+                      </Text>
+                                            <Text
+                      size={10}
+                        css={{
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        Items: 0
+                      </Text>
+                      </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row justify="flex-end">
                       <Button
-                        flat
+      Owners   
                         auto
                         css={{
                           fontFamily: "monospace",
