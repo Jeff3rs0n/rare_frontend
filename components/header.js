@@ -122,7 +122,7 @@ export default function Header() {
                   bordered
                   as="button"
                   color="warning"
-                  size="md"
+                  size="sm"
                   src="https://bafybeifwhnkyf2y2tzmcsv6rrysbcrkvpitozkjoefky2seaitaw7txyby.ipfs.nftstorage.link/user(1).png"
                 />
               </Dropdown.Trigger>
