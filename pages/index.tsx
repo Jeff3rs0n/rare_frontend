@@ -47,6 +47,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spacer />
+      <Container>
+      <Text
+        h2
+        size={50}
+        css={{
+          fontFamily: "monospace",
+          textGradient: "45deg, $pink600 -20%, $blue600 100%",
+        }}
+        weight="bold"
+      >
+         RareBay Marketplace
+      </Text>
+      <Text
+        h2
+        size={17}
+        css={{
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+        }}
+        weight="bold"
+      >
+        Digital Museum for RARE Art
+      </Text>
+      <hr></hr>
+      
+      <Spacer />
+      </Container>
+
       <Spacer />
       <Container css={{w: "100%"}}>
         <Caros />

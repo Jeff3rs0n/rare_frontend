@@ -73,9 +73,10 @@ export default function Header() {
             {" "}
             <Text
               b
-              color="warning"
+             
               css={{
                 fontFamily: "monospace",
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%"
               }}
             >
               Marketplace
@@ -84,9 +85,10 @@ export default function Header() {
           <Navbar.Link href="#">
             <Text
               b
-              color="warning"
+             
               css={{
                 fontFamily: "monospace",
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%"
               }}
             >
               Categories
@@ -99,7 +101,7 @@ export default function Header() {
               color="warning"
               css={{
                 fontFamily: "monospace",
-              }}
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%"              }}
             >
               Airdrop
             </Text>

@@ -13,18 +13,6 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-            <Text
-        h2
-        size={60}
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-        }}
-        weight="bold"
-      >
-         RareBay Collection
-      </Text>
 <Text
 size={16}
         css={{
