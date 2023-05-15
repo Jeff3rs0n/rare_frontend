@@ -1,6 +1,7 @@
 
 
 .number-slide1 {
+  
   background: grey;
   display: flex;
   align-items: center;
@@ -19,6 +20,7 @@
 }
 
 .number-slide2 {
+  
   background: grey;
   display: flex;
   align-items: center;
@@ -37,6 +39,7 @@
 }
 
 .number-slide3 {
+  
   background: grey;
   display: flex;
   align-items: center;
@@ -60,6 +63,7 @@
 }
 
 .number-slide4 {
+  
   background: grey;
   display: flex;
   align-items: center;
@@ -78,6 +82,7 @@
 }
 
 .number-slide5 {
+  
   background: grey;
   display: flex;
   align-items: center;
@@ -96,6 +101,7 @@
 }
 
 .number-slide6 {
+  
   background: grey;
   display: flex;
   align-items: center;
