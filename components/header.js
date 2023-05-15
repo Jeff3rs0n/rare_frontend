@@ -19,6 +19,7 @@ import {Plus} from '@web3uikit/icons'
 import {Grid} from '@web3uikit/icons'
 import {ReferenceApi} from '@web3uikit/icons'
 import {Rocket} from '@web3uikit/icons'
+import {ChevronRight2X} from '@web3uikit/icons'
 
 
 
@@ -196,14 +197,14 @@ export default function Header() {
                   </Text>
                 </Link>
               </Dropdown.Item>
-              <Dropdown.Item key="theme">
+              <Dropdown.Item key="theme" withDivider>
                 <Switch
                   checked={isDark}
                   onChange={(e) =>
                     setTheme(e.target.checked ? "dark" : "light")
                   }
                 />
-               
+                
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

@@ -13,13 +13,10 @@ import {
   Button,
   Badge,
 } from "@nextui-org/react";
-import {Dapps} from '@web3uikit/icons'
-import {Cat} from '@web3uikit/icons'
-import {UserTeam} from '@web3uikit/icons'
-import {Eye} from '@web3uikit/icons'
-
-
-
+import { Dapps } from "@web3uikit/icons";
+import { Cat } from "@web3uikit/icons";
+import { UserTeam } from "@web3uikit/icons";
+import { Eye } from "@web3uikit/icons";
 
 export default function Caros() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
@@ -125,71 +122,75 @@ export default function Caros() {
                             fontFamily: "monospace",
                           }}
                         >
-                          <Badge color="success" variant="dot"/>{" "}
-                          Active
+                          <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
-                                                <Text
+                        >
+                          {" "}
+                          <Dapps fontSize="15px" /> Volume: 0.0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Cat fontSize='15px'/> Items: #0</Text>
-                          <Text
+                        >
+                          {" "}
+                          <Cat fontSize="15px" /> Items: #0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
+                        >
+                          <UserTeam fontSize="15px" /> Owners: #0
+                        </Text>
                       </Col>
-                    
                     </Row>
                   </Col>
                   <Col>
                     <Row justify="flex-end">
                       <Button
+                      color="warning"
                         flat
                         auto
                         css={{
-                          color: "",
                           bg: "#94f9f026",
                           borderStyle: "solid",
                           borderRadius: "8px",
                           borderWidth: "1p",
                         }}
                       >
+                        <Eye fontSize="18px" />
+                        <Spacer />
                         <Text
                           css={{
                             color: "inherit",
                             textGradient:
                               "45deg, $yellow600 -20%, $red600 100%",
                           }}
-                          size={12}
+                          size={13}
                           weight="bold"
-                          transform="uppercase"
                         >
-                          VIEW COLLECTION
-                        </Text><Eye fontSize='15px'/>
+                          View
+                        </Text>
                       </Button>
                     </Row>
                   </Col>
@@ -263,44 +264,47 @@ export default function Caros() {
                             fontFamily: "monospace",
                           }}
                         >
-                          <Badge color="success" variant="dot"  />{" "}
-                          Active
+                          <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
-                                                <Text
+                        >
+                          {" "}
+                          <Dapps fontSize="15px" /> Volume: 0.0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Cat fontSize='15px'/> Items: #0</Text>
-                          <Text
+                        >
+                          {" "}
+                          <Cat fontSize="15px" /> Items: #0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
+                        >
+                          <UserTeam fontSize="15px" /> Owners: #0
+                        </Text>
                       </Col>
-                    
                     </Row>
                   </Col>
                   <Col>
@@ -308,6 +312,7 @@ export default function Caros() {
                       <Button
                         flat
                         auto
+                        color="warning"
                         css={{
                           color: "",
                           bg: "#94f9f026",
@@ -316,18 +321,20 @@ export default function Caros() {
                           borderWidth: "1p",
                         }}
                       >
+                        {" "}
+                        <Eye fontSize="18px" />
+                        <Spacer />
                         <Text
                           css={{
                             color: "inherit",
                             textGradient:
                               "45deg, $yellow600 -20%, $red600 100%",
                           }}
-                          size={12}
+                          size={13}
                           weight="bold"
-                          transform="uppercase"
                         >
-                          VIEW COLLECTION
-                        </Text><Eye fontSize='15px'/>
+                          View
+                        </Text>
                       </Button>
                     </Row>
                   </Col>
@@ -401,46 +408,49 @@ export default function Caros() {
                             fontFamily: "monospace",
                           }}
                         >
-                          <Badge color="success" variant="dot"  />{" "}
-                          Active
+                          <Badge color="success" variant="dot" /> Active
                         </Text>
-                     
+
                         <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
-                                                <Text
+                        >
+                          {" "}
+                          <Dapps fontSize="15px" /> Volume: 0.0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Cat fontSize='15px'/> Items: #0</Text>
-                        
-                          <Text
+                        >
+                          {" "}
+                          <Cat fontSize="15px" /> Items: #0
+                        </Text>
+
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
+                        >
+                          <UserTeam fontSize="15px" /> Owners: #0
+                        </Text>
                       </Col>
-                    
                     </Row>
                   </Col>
                   <Col>
@@ -448,6 +458,7 @@ export default function Caros() {
                       <Button
                         flat
                         auto
+                        color="warning"
                         css={{
                           color: "",
                           bg: "#94f9f026",
@@ -456,18 +467,20 @@ export default function Caros() {
                           borderWidth: "1p",
                         }}
                       >
+                        {" "}
+                        <Eye fontSize="18px" />
+                        <Spacer />
                         <Text
                           css={{
                             color: "inherit",
                             textGradient:
                               "45deg, $yellow600 -20%, $red600 100%",
                           }}
-                          size={12}
+                          size={13}
                           weight="bold"
-                          transform="uppercase"
                         >
-                          VIEW COLLECTION
-                        </Text><Eye fontSize='15px'/>
+                          View
+                        </Text>
                       </Button>
                     </Row>
                   </Col>
@@ -540,44 +553,47 @@ export default function Caros() {
                             fontFamily: "monospace",
                           }}
                         >
-                          <Badge color="success" variant="dot"  />{" "}
-                          Active
+                          <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
-                                                <Text
+                        >
+                          {" "}
+                          <Dapps fontSize="15px" /> Volume: 0.0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        > <Cat fontSize='15px'/> Items: #0</Text>
-                          <Text
+                        >
+                          {" "}
+                          <Cat fontSize="15px" /> Items: #0
+                        </Text>
+                        <Text
                           size={15}
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient:
-                              "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue600 -20%, $red600 100%",
 
                             fontFamily: "monospace",
                           }}
-                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
+                        >
+                          <UserTeam fontSize="15px" /> Owners: #0
+                        </Text>
                       </Col>
-                    
                     </Row>
                   </Col>
                   <Col>
@@ -585,6 +601,7 @@ export default function Caros() {
                       <Button
                         flat
                         auto
+                        color="warning"
                         css={{
                           fontFamily: "monospace",
                           bg: "#94f9f026",
@@ -593,18 +610,20 @@ export default function Caros() {
                           borderWidth: "1p",
                         }}
                       >
+                        {" "}
+                        <Eye fontSize="18px" />
+                        <Spacer />
                         <Text
                           css={{
                             color: "inherit",
                             textGradient:
                               "45deg, $yellow600 -20%, $red600 100%",
                           }}
-                          size={12}
+                          size={13}
                           weight="bold"
-                          transform="uppercase"
                         >
-                          VIEW COLLECTION
-                        </Text><Eye fontSize='15px'/>
+                          View
+                        </Text>
                       </Button>
                     </Row>
                   </Col>
