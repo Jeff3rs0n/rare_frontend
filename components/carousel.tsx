@@ -111,7 +111,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                       Coming soon
+                       Active
                       </Text>
                     </Col>
                   </Row>
@@ -205,7 +205,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                       Coming soon
+                       Active
                       </Text>
                     </Col>
                   </Row>
@@ -299,7 +299,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                       Coming soon
+                       Active
                       </Text>
                     </Col>
                   </Row>
@@ -393,7 +393,7 @@ export default function Caros() {
                         }}
                       >
                         <Badge color="success" variant="dot" enableShadow />{" "}
-                       Coming soon
+                       Active
                       </Text>
                     </Col>
                   </Row>
