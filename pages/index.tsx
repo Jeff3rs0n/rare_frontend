@@ -105,7 +105,7 @@ maxWidth: "100%"
                  
  <Text
         h1
-        size={60}
+        size={50}
         css={{
           textGradient: "45deg, $blue600 -20%, $pink600 50%",
         }}
@@ -115,13 +115,13 @@ maxWidth: "100%"
       </Text>
       <Text
         h1
-        size={72}
+        size={50}
         css={{
-          textGradient: "45deg, $purple600 -20%, $pink600 100%",
+          textGradient: "45deg, $yellow600 -20%, $blue600 100%",
         }}
         weight="bold"
       >
-       Home of RARE NFT.
+       Home of the Rarest NFTs
       </Text>
       <Text
         h1
