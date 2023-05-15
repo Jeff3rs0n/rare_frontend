@@ -112,6 +112,8 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
+                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              
                             fontFamily: "monospace",
                           }}
                         >
@@ -211,6 +213,8 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
+                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              
                             fontFamily: "monospace",
                           }}
                         >
@@ -310,6 +314,8 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
+                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              
                             fontFamily: "monospace",
                           }}
                         >
@@ -408,6 +414,8 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
+                          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              
                             fontFamily: "monospace",
                           }}
                         >
