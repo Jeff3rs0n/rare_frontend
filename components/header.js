@@ -13,6 +13,15 @@ import { Switch, useTheme, Spacer } from "@nextui-org/react";
 
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import styles from "./Navbar.module.css";
+import {NftCat} from '@web3uikit/icons'
+import {HandCoin} from '@web3uikit/icons'
+import {Plus} from '@web3uikit/icons'
+import {Grid} from '@web3uikit/icons'
+import {ReferenceApi} from '@web3uikit/icons'
+import {Rocket} from '@web3uikit/icons'
+
+
+
 
 export default function Header() {
   const { setTheme } = useNextTheme();
@@ -149,7 +158,7 @@ export default function Header() {
               <Dropdown.Item key="buy" withDivider>
                 <Link href="/buy">
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                    Buy NFT
+                  <NftCat fontSize='15px'/>   Buy NFT
                   </Text>
                 </Link>
               </Dropdown.Item>
@@ -157,33 +166,33 @@ export default function Header() {
                 <Link href="/sell">
                   {" "}
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                    Sell NFT
+                  <HandCoin fontSize='15px'/> Sell NFT
                   </Text>
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="create">
                 <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  Create NFT
+                <Plus fontSize='15px'/> Create NFT
                 </Text>
               </Dropdown.Item>
               <Dropdown.Item key="collections" withDivider>
                 <Link href={`/profile/${address}`}>
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                    My Collections
+                  <Grid fontSize='15px'/> My Collections
                   </Text>
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="portfolio">
                 <Link href={`/profile/${address}`}>
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                    My Portfolio
+                  <ReferenceApi fontSize='15px'/> My Portfolio
                   </Text>
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="configurations">
                 <Link href="/create">
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                    Create Launchad
+                  <Rocket fontSize='15px'/> Create Launchad
                   </Text>
                 </Link>
               </Dropdown.Item>
@@ -194,6 +203,7 @@ export default function Header() {
                     setTheme(e.target.checked ? "dark" : "light")
                   }
                 />
+               
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

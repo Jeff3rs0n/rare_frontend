@@ -13,6 +13,13 @@ import {
   Button,
   Badge,
 } from "@nextui-org/react";
+import {Dapps} from '@web3uikit/icons'
+import {Cat} from '@web3uikit/icons'
+import {UserTeam} from '@web3uikit/icons'
+import {Eye} from '@web3uikit/icons'
+
+
+
 
 export default function Caros() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
@@ -131,7 +138,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Volume: 0.0</Text>
+                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
                                                 <Text
                           size={15}
                           color="warning"
@@ -142,7 +149,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Items: #0</Text>
+                        > <Cat fontSize='15px'/> Items: #0</Text>
                           <Text
                           size={15}
                           color="warning"
@@ -153,7 +160,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Owners: #0</Text>
+                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
                       </Col>
                     
                     </Row>
@@ -182,7 +189,7 @@ export default function Caros() {
                           transform="uppercase"
                         >
                           VIEW COLLECTION
-                        </Text>
+                        </Text><Eye fontSize='15px'/>
                       </Button>
                     </Row>
                   </Col>
@@ -269,7 +276,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Volume: 0.0</Text>
+                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
                                                 <Text
                           size={15}
                           color="warning"
@@ -280,7 +287,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Items: #0</Text>
+                        > <Cat fontSize='15px'/> Items: #0</Text>
                           <Text
                           size={15}
                           color="warning"
@@ -291,7 +298,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Owners: #0</Text>
+                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
                       </Col>
                     
                     </Row>
@@ -320,7 +327,7 @@ export default function Caros() {
                           transform="uppercase"
                         >
                           VIEW COLLECTION
-                        </Text>
+                        </Text><Eye fontSize='15px'/>
                       </Button>
                     </Row>
                   </Col>
@@ -408,7 +415,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Volume: 0.0</Text>
+                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
                                                 <Text
                           size={15}
                           color="warning"
@@ -419,7 +426,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Items: #0</Text>
+                        > <Cat fontSize='15px'/> Items: #0</Text>
                         
                           <Text
                           size={15}
@@ -431,7 +438,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Owners: #0</Text>
+                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
                       </Col>
                     
                     </Row>
@@ -460,7 +467,7 @@ export default function Caros() {
                           transform="uppercase"
                         >
                           VIEW COLLECTION
-                        </Text>
+                        </Text><Eye fontSize='15px'/>
                       </Button>
                     </Row>
                   </Col>
@@ -546,7 +553,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Volume: 0.0</Text>
+                        > <Dapps fontSize='15px'/> Volume: 0.0</Text>
                                                 <Text
                           size={15}
                           color="warning"
@@ -557,7 +564,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Items: #0</Text>
+                        > <Cat fontSize='15px'/> Items: #0</Text>
                           <Text
                           size={15}
                           color="warning"
@@ -568,7 +575,7 @@ export default function Caros() {
 
                             fontFamily: "monospace",
                           }}
-                        >Owners: #0</Text>
+                        ><UserTeam fontSize='15px'/> Owners: #0</Text>
                       </Col>
                     
                     </Row>
@@ -597,7 +604,7 @@ export default function Caros() {
                           transform="uppercase"
                         >
                           VIEW COLLECTION
-                        </Text>
+                        </Text><Eye fontSize='15px'/>
                       </Button>
                     </Row>
                   </Col>

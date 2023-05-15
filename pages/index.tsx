@@ -24,6 +24,7 @@ import Caros from "../components/carousel"
 
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -102,7 +103,7 @@ maxWidth: "100%"
             <div className={styles.heroBody}>
             <Spacer />
 <span className={styles.heroTitleGradient}>
-                 
+<hr></hr>              
  <Text
         h1
         size={50}
@@ -121,7 +122,7 @@ maxWidth: "100%"
         }}
         weight="bold"
       >
-       Home of the Rarest NFTs
+       Home of the Rarest NFTs.
       </Text>
       <Text
         h1
@@ -166,7 +167,7 @@ the kind of art that is priceless.
         </div>
       </div>
     </div>
-    
+   
     </>
   )
 }
