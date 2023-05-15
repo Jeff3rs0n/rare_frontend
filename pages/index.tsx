@@ -53,7 +53,7 @@ maxWidth: "100%"
       }}
       >
         
-         <Container css={{w: "90%"}} >
+         <Container css={{w: "100%"}} >
          <Caros />
    <Spacer />
    
