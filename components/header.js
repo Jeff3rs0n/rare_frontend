@@ -109,7 +109,7 @@ export default function Header() {
           <Spacer />
         </Navbar.Content>
 
-        <Navbar.Content
+         <Navbar.Content
           css={{
             "@xs": {
               w: "12%",
