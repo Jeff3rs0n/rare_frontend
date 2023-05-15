@@ -30,6 +30,8 @@ size={16}
           "Looks like there are no NFTs in this collection. Did you import your contract on the thirdweb dashboard? https://thirdweb.com/dashboard"
         }
       />
+       
     </Container>
+   
   );
 }
