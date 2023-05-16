@@ -30,16 +30,11 @@ export default function Header() {
 
   const address = useAddress();
   const collapseItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    "Marketplace",
+    "Launchpad",
+    "$RARE Airdrop",
+    "Categories",
+    "Learn",
   ];
 
   return (
