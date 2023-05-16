@@ -17,7 +17,7 @@ import {
   type Props = {
     nft: NFT;
   };
-import { Spacer } from "@nextui-org/react";
+import { Card, Col, Row, Text } from "@nextui-org/react";
 import truncateEthAddress from 'truncate-eth-address'
 
 
@@ -49,8 +49,30 @@ import truncateEthAddress from 'truncate-eth-address'
 
     return (
       <>
-        <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
-        <p className={styles.nftName}>{nft.metadata.name} #{nft.metadata.id} {truncateEthAddress(owner)}
+        <Card>
+    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+      <Col>
+        <Text size={9} weight="bold" transform="uppercase" color="#ffffffAA">
+         NFT Rarity: #0
+        </Text>
+        <Text size={14} color="inherit" weight={"extrabold"} css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $blue50 100%",
+        }}>
+        {nft.metadata.name} #{nft.metadata.id}
+        </Text>
+      </Col>
+    </Card.Header>
+    <Card.Image
+      src={nft.metadata.image}
+      objectFit="cover"
+      width="100%"
+      alt="Card image background"
+    />
+  </Card>
+
+        <p className={styles.nftName}>{truncateEthAddress(owner)}
        
         </p>
         <div className={styles.priceContainer}>
