@@ -13,21 +13,33 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-<Text
-size={16}
+               <Text
+        h4
+        size={40}
         css={{
           padding: "2%",
           fontFamily: "monospace",
           textGradient: "45deg, $yellow600 -20%, $red600 100%",
         }}
->Browse Rare NFT</Text>
+        weight="bold"
+      >
+         Active Listings on RareBay ♦️
+      </Text>
+<Text
+size={16}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow700 -50%, $red800 100%",
+        }}
+>NFTs on RareBay can only be bought when owner accepts highest bid 🌟</Text>
 <hr></hr>
 <Spacer />
       <NFTGrid
         data={data}
         isLoading={isLoading}
         emptyText={
-          "Looks like there are no NFTs in this collection. Did you import your contract on the thirdweb dashboard? https://thirdweb.com/dashboard"
+          "Oops! No NFTs Here"
         }
       />
        

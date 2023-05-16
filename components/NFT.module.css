@@ -16,12 +16,12 @@
   }
   
   .nftName {
-    color: rgba(255, 103, 2, 0.834);
+    color: rgb(255, 245, 157);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     max-width: 100%;
-    font-family: inherit;
+    font-family: monospace;
     vertical-align: inherit;
     font-size: 15px;
     line-height: 22px;
@@ -67,7 +67,7 @@
     font-size: 13px;
     line-height: 20px;
     font-weight: bold;
-    color: rgb(245, 245, 245);
+    color: rgb(248, 234, 203);
   }
   
   .nftPriceValue {

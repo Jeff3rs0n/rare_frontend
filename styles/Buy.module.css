@@ -7,6 +7,7 @@
   }
   
   .nftContainer {
+    background-color: rgba(51, 53, 23, 0.623);
     border-style: solid;
     border-width: 0.1px;
     border-color: rgba(60, 60, 60, 0.444);
@@ -28,7 +29,7 @@
   .nftContainer:hover {
     cursor: pointer;
     transform: translate3d(0px, -4px, 0px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(112, 103, 103, 0.1);
   }
   
   .title {

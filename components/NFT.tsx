@@ -17,7 +17,8 @@ import {
   type Props = {
     nft: NFT;
   };
-  
+import { Spacer } from "@nextui-org/react";
+
   export default function NFTComponent({ nft }: Props) {
     const { contract: marketplace, isLoading: loadingContract } = useContract(
       MARKETPLACE_ADDRESS,
@@ -52,7 +53,8 @@ import {
           ) : directListing && directListing[0] ? (
             <div className={styles.nftPriceContainer}>
               <div>
-                <p className={styles.nftPriceLabel}>Price</p>
+                <p className={styles.nftPriceLabel}>Price💲</p>
+                <hr></hr>
                 <p className={styles.nftPriceValue}>
                   {`${directListing[0]?.currencyValuePerToken.displayValue}
             ${directListing[0]?.currencyValuePerToken.symbol}`}
@@ -72,8 +74,9 @@ import {
           ) : (
             <div className={styles.nftPriceContainer}>
               <div>
-                <p className={styles.nftPriceLabel}>Price</p>
-                <p className={styles.nftPriceValue}>Not for sale</p>
+                <p className={styles.nftPriceLabel}>Price💲</p>
+                <hr></hr>
+                <p className={styles.nftPriceValue}>Priceless💎</p>
               </div>
             </div>
           )}
