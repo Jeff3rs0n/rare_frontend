@@ -331,6 +331,8 @@
   line-height: 140%;
   text-align: center;
   transform: translateY(5px);
+  color: wheat;
+  font-family: monospace;
 }
 
 .heroCtaContainer {

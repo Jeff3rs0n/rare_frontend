@@ -43,13 +43,8 @@ export default function Header() {
   ];
 
   return (
-    <Container
-      css={{
-        maxW: "100%",
-        minWidth: "100%",
-      }}
-    >
-      <Navbar isBordered variant="static">
+
+      <Navbar isBordered variant="floating">
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
@@ -198,13 +193,6 @@ export default function Header() {
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="theme" withDivider>
-                <Switch
-                  checked={isDark}
-                  onChange={(e) =>
-                    setTheme(e.target.checked ? "dark" : "light")
-                  }
-                />
-                
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -232,6 +220,5 @@ export default function Header() {
           ))}
         </Navbar.Collapse>
       </Navbar>
-    </Container>
   );
 }

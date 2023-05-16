@@ -35,6 +35,7 @@ export default function Home() {
 
   return (
     <>
+
       <Head>
         <title>RareBay: Multichain NFT Marketplace</title>
         <meta name="description" content="NFT Marketplace for Rare NFT" />
@@ -42,7 +43,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spacer />
-      <Container>
+      <Container  fluid>
         <Text
           h2
           size={50}

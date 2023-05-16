@@ -3,21 +3,11 @@ import { CoreBlockchain, CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
 import Header from "../components/header"
 
-import { createTheme, NextUIProvider } from "@nextui-org/react"
+import { createTheme, NextUIProvider, Container } from "@nextui-org/react"
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 import NextNProgress from "nextjs-progressbar";
 
-
-
-const lightTheme = createTheme({
-  type: 'light',
-  theme: {
-    colors: { 
-      gradient: 'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
-    }, // optional
-  }
-})
 
 const darkTheme = createTheme({
   type: 'dark',
@@ -30,6 +20,7 @@ const darkTheme = createTheme({
 
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <ThirdwebProvider activeChain={CoreBlockchainTestnet}  authConfig={{
       authUrl: "/api/auth",
@@ -40,12 +31,17 @@ export default function App({ Component, pageProps }: AppProps) {
     defaultTheme="dark"
     attribute="class"
     value={{
-      light: lightTheme.className,
       dark: darkTheme.className
     }}
   >
 
     <NextUIProvider>
+      <div style={{
+          backgroundImage: `url("https://bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa.ipfs.nftstorage.link/ipfs/bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa/411997-fractal-fractal-flame-mathematics-energy-field-space.jpg")`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          width: "100%"
+        }}>
     <Header />
     <NextNProgress
         color="var(--color-tertiary)"
@@ -54,9 +50,10 @@ export default function App({ Component, pageProps }: AppProps) {
         height={3}
         showOnShallow={true}
       />
+       <Component {...pageProps} />
+       </div>
    
-    <Component {...pageProps} />
-  
+
     </NextUIProvider>
     </NextThemesProvider>
     </ThirdwebProvider>
