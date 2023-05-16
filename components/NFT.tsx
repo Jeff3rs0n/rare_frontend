@@ -73,7 +73,7 @@ import truncateEthAddress from 'truncate-eth-address'
     />
   </Card>
 
-        <p className={styles.nftName}>{truncateEthAddress(owner)}
+        <p className={styles.nftName}>👤 Owner: {truncateEthAddress(owner)}
        
         </p>
         <div className={styles.priceContainer}>
