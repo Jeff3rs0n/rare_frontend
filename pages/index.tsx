@@ -77,7 +77,7 @@ export default function Home() {
               b
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $green400 -10%, $pink400 100%",
+                textGradient: "45deg, $pink700 -20%, $purple400 100%"
               }}
             >
               Art
@@ -108,7 +108,7 @@ export default function Home() {
              
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $yellow400 -10%, $blue100 100%"
+                textGradient: "45deg, $pink700 -20%, $purple400 100%"
               }}
             >
               Memberships

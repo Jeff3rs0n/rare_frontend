@@ -14,6 +14,7 @@ const lightTheme = createTheme({
   type: 'light',
   theme: {
     colors: { 
+      gradient: 'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
     }, // optional
   }
 })
@@ -21,7 +22,9 @@ const lightTheme = createTheme({
 const darkTheme = createTheme({
   type: 'dark',
   theme: {
-    colors: {}, // optional
+    colors: {
+      gradient: 'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
+    }, // optional
   }
 })
 
