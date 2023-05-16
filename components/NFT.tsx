@@ -46,6 +46,7 @@ import truncateEthAddress from 'truncate-eth-address'
       });
 
       const owner = nft.owner as string
+      const srcs = nft.metadata.image as string
 
     return (
       <>
@@ -65,7 +66,7 @@ import truncateEthAddress from 'truncate-eth-address'
       </Col>
     </Card.Header>
     <Card.Image
-      src={nft.metadata.image}
+      src={srcs}
       objectFit="cover"
       width="100%"
       alt="Card image background"
