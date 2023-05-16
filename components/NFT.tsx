@@ -18,13 +18,15 @@ import {
     nft: NFT;
   };
 import { Spacer } from "@nextui-org/react";
+import truncateEthAddress from 'truncate-eth-address'
+
+
 
   export default function NFTComponent({ nft }: Props) {
     const { contract: marketplace, isLoading: loadingContract } = useContract(
       MARKETPLACE_ADDRESS,
       "marketplace-v3"
     );
-  
     // 1. Load if the NFT is for direct listing
     const { data: directListing, isLoading: loadingDirect } =
       useValidDirectListings(marketplace, {
@@ -42,11 +44,15 @@ import { Spacer } from "@nextui-org/react";
         tokenContract: NFT_COLLECTION_ADDRESS,
         tokenId: nft.metadata.id,
       });
-  
+
+      const owner = nft.owner as string
+
     return (
       <>
         <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
-        <p className={styles.nftName}>{nft.metadata.name} #{nft.metadata.id}</p>
+        <p className={styles.nftName}>{nft.metadata.name} #{nft.metadata.id} {truncateEthAddress(owner)}
+       
+        </p>
         <div className={styles.priceContainer}>
           {loadingContract || loadingDirect || loadingAuction ? (
             <Skeleton width="100%" height="100%" />
