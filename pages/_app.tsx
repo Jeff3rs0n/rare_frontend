@@ -43,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
   >
 
     <NextUIProvider>
+    <Header />
     <NextNProgress
         color="var(--color-tertiary)"
         startPosition={0.3}
@@ -50,7 +51,7 @@ export default function App({ Component, pageProps }: AppProps) {
         height={3}
         showOnShallow={true}
       />
-    <Header />
+   
     <Component {...pageProps} />
   
     </NextUIProvider>

@@ -1,43 +1,37 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import { 
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import {
   Spacer,
   Image,
   Container,
   Text,
-   Card,
+  Card,
   Col,
   Row,
   Button,
-  Badge
-} from "@nextui-org/react"
-import Content  from '@/components/Content'
+  Badge,
+} from "@nextui-org/react";
+import Content from "@/components/Content";
 import type { NextPage } from "next";
 import Link from "next/link";
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
-import Caros from "../components/carousel"
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
+import Caros from "../components/carousel";
 
-
-
-
-
-
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       slideChanged() {
-        console.log('slide changed')
+        console.log("slide changed");
       },
     },
     [
       // add plugins here
     ]
-  )
+  );
 
   return (
     <>
@@ -49,125 +43,169 @@ export default function Home() {
       </Head>
       <Spacer />
       <Container>
-      <Text
-        h2
-        size={50}
-        css={{
-          fontFamily: "monospace",
-          textGradient: "45deg, $pink600 -20%, $blue600 100%",
-        }}
-        weight="bold"
-      >
-         RareBay Marketplace
-      </Text>
-      <Text
-        h2
-        size={17}
-        css={{
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $blue600 100%",
-        }}
-        weight="bold"
-      >
-        Digital Museum for RARE Art
-      </Text>
-      <hr></hr>
-      
-      <Spacer />
-      </Container>
+        <Text
+          h2
+          size={50}
+          css={{
+            fontFamily: "monospace",
+            textGradient: "45deg, $pink600 -20%, $blue600 100%",
+          }}
+          weight="bold"
+        >
+          RareBay Marketplace
+        </Text>
+        <Text
+          h2
+          size={17}
+          css={{
+            fontFamily: "monospace",
+            textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+          }}
+          weight="bold"
+        >
+          Digital Museum for RARE Art
+        </Text>
+        <hr></hr>
 
+        <Spacer />
+      </Container>
+      <div className={styles.heroBody}>
+        <Button.Group color="gradient" ghost>
+          <Button>
+            {" "}
+            <Text
+              b
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $green400 -10%, $pink400 100%",
+              }}
+            >
+              Art
+            </Text>
+          </Button>
+          <Button>            <Text
+              b
+             
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $pink700 -20%, $purple400 100%"
+              }}
+            >
+              PFPS
+            </Text></Button>
+          <Button>            <Text
+              b
+             
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $red700 -20%, $blue400 100%"
+              }}
+            >
+              Gaming
+            </Text></Button>
+            <Button>            <Text
+              b
+             
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $yellow400 -10%, $blue100 100%"
+              }}
+            >
+              Memberships
+            </Text></Button>
+        </Button.Group>
+      </div>
       <Spacer />
-      <Container css={{w: "100%"}}>
+      <Container css={{ w: "100%" }}>
         <Caros />
-        </Container>
-      <Container 
-      css={{
-maxWidth: "100%"
-      }}
+      </Container>
+      <Container
+        css={{
+          maxWidth: "100%",
+        }}
       >
-         <Container css={{w: "100%"}} >
-   </Container>
+        <Container css={{ w: "100%" }}></Container>
       </Container>
       <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.hero}>
-          <div className={styles.heroBackground}>
-
-            <div className={styles.heroBackgroundInner}>
-              <Spacer />
+        <div className={styles.content}>
+          <div className={styles.hero}>
+            <div className={styles.heroBackground}>
+              <div className={styles.heroBackgroundInner}>
+                <Spacer />
+              </div>
             </div>
-          </div>
-          <Spacer />
-      
-          <div className={styles.heroBodyContainer}>
-            <div className={styles.heroBody}>
             <Spacer />
-<span className={styles.heroTitleGradient}>
-<hr></hr>              
- <Text
-        h1
-        size={50}
-        css={{
-          textGradient: "45deg, $blue600 -20%, $pink600 50%",
-        }}
-        weight="bold"
-      >
-        Welcome to RareBay.
-      </Text>
-      <Text
-        h1
-        size={50}
-        css={{
-          textGradient: "45deg, $yellow600 -20%, $blue600 100%",
-        }}
-        weight="bold"
-      >
-       Home of the Rarest NFTs.
-      </Text>
-      <Text
-        h1
-        size={60}
-        css={{
-          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-        }}
-        weight="bold"
-      >
-         A Digital Museum.
-      </Text>
-                </span>
-              <p className={styles.heroSubtitle}>
-                <Link
-                  className={styles.link}
-                  href="https://thirdweb.com"
-                  target="_blank"
-                >
-                  rarebay.io
-                </Link>{" "}
-Find
-Rare NFT Not just your average Bored ape #001 with 10k Owners, but something Rare
-the kind of art that is priceless.
-              </p>
 
-              <div className={styles.heroCtaContainer}>
-                <Link className={styles.heroCta} href="/buy">
-                  Get Started
-                </Link>
-                <Link
-                  className={styles.secondaryCta}
-                  href="/"
-                  target="_blank"
-                >
-                 <Text color="warning" css={{ fontFamily: "monospace",
-                fontWeight: "bold"
-                }}>$RARE AIRDROP</Text>
-                </Link>
+            <div className={styles.heroBodyContainer}>
+              <div className={styles.heroBody}>
+                <Spacer />
+                <span className={styles.heroTitleGradient}>
+                  <hr></hr>
+                  <Text
+                    h1
+                    size={50}
+                    css={{
+                      textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                    }}
+                    weight="bold"
+                  >
+                    Welcome to RareBay.
+                  </Text>
+                  <Text
+                    h1
+                    size={50}
+                    css={{
+                      textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+                    }}
+                    weight="bold"
+                  >
+                    Home of the Rarest NFTs.
+                  </Text>
+                  <Text
+                    h1
+                    size={60}
+                    css={{
+                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                    }}
+                    weight="bold"
+                  >
+                    A Digital Museum.
+                  </Text>
+                </span>
+                <p className={styles.heroSubtitle}>
+                  <Link
+                    className={styles.link}
+                    href="https://thirdweb.com"
+                    target="_blank"
+                  >
+                    rarebay.io
+                  </Link>{" "}
+                  Find Rare NFT Not just your average Bored ape #001 with 10k
+                  Owners, but something Rare the kind of art that is priceless.
+                </p>
+
+                <div className={styles.heroCtaContainer}>
+                  <Link className={styles.heroCta} href="/buy">
+                    Get Started
+                  </Link>
+                  <Link
+                    className={styles.secondaryCta}
+                    href="/"
+                    target="_blank"
+                  >
+                    <Text
+                      color="warning"
+                      css={{ fontFamily: "monospace", fontWeight: "bold" }}
+                    >
+                      $RARE AIRDROP
+                    </Text>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-   
     </>
-  )
+  );
 }
