@@ -78,7 +78,7 @@ export default function Home() {
               b
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $pink700 -20%, $purple400 100%"
+                textGradient: "45deg, $pink500 -20%, $yellow800 100%"
               }}
             >
               Art
@@ -89,7 +89,7 @@ export default function Home() {
              
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $pink700 -20%, $purple400 100%"
+                textGradient: "45deg, $pink500 -20%, $yellow800 100%"
               }}
             >
               PFPS
@@ -99,7 +99,7 @@ export default function Home() {
              
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $red700 -20%, $blue400 100%"
+                textGradient: "45deg, $pink500 -20%, $yellow800 100%"
               }}
             >
               Gaming
@@ -109,7 +109,7 @@ export default function Home() {
              
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $pink700 -20%, $purple400 100%"
+                textGradient: "45deg, $pink500 -20%, $yellow800 100%"
               }}
             >
               Memberships
@@ -182,7 +182,7 @@ export default function Home() {
                     rarebay.io
                   </Link>{" "}
                   Find Rare NFT Not just your average Bored ape #001 with 10k
-                  Owners, but something Rare the kind of art that is priceless.
+                  Owners, but something Rare, the kind of art that is priceless.
                 </p>
 
                 <div className={styles.heroCtaContainer}>
