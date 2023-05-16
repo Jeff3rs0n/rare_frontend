@@ -196,7 +196,7 @@ import {
                 </div>
               </div>
             </div>
-  
+            
             <div className={styles.listingContainer}>
               {contractMetadata && (
                 <div className={styles.contractMetadataContainer}>
