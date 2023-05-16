@@ -22,6 +22,7 @@ import {
     const [selectedNft, setSelectedNft] = useState<NFTType>();
   
     return (
+      
       <Container maxWidth="lg">
          <Text
         h2

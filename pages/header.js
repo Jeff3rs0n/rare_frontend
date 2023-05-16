@@ -1,13 +1,11 @@
 import {
   Navbar,
-  Link,
   Text,
   Avatar,
   Dropdown,
   Container,
   Image,
 } from "@nextui-org/react";
-import { Layout } from "./Layout.js";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme, Spacer } from "@nextui-org/react";
 
@@ -20,7 +18,7 @@ import {Grid} from '@web3uikit/icons'
 import {ReferenceApi} from '@web3uikit/icons'
 import {Rocket} from '@web3uikit/icons'
 import {ChevronRight2X} from '@web3uikit/icons'
-
+import Link from "next/link";
 
 
 
@@ -59,17 +57,16 @@ export default function Header() {
             >
               RareBay
             </Text>
-
+</Link>
             <Image
               src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
               alt="logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
-          </Link>
         </Navbar.Brand>
         <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
-          <Navbar.Link href="/" isActive>
+          <Link href="/" isActive>
             {" "}
             <Text
               b
@@ -81,8 +78,8 @@ export default function Header() {
             >
               Marketplace
             </Text>
-          </Navbar.Link>
-          <Navbar.Link href="#">
+          </Link>
+          <Link href="#">
             <Text
               b
              
@@ -93,8 +90,8 @@ export default function Header() {
             >
               Categories
             </Text>
-          </Navbar.Link>
-          <Navbar.Link href="#">
+          </Link>
+          <Link href="#">
             {" "}
             <Text
               b
@@ -105,7 +102,7 @@ export default function Header() {
             >
               Airdrop
             </Text>
-          </Navbar.Link>
+          </Link>
           <Spacer />
         </Navbar.Content>
 
@@ -162,9 +159,11 @@ export default function Header() {
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="create">
+                <Link href="/">
                 <Text color="warning" css={{ fontFamily: "monospace" }}>
                 <Plus fontSize='15px'/> Create NFT
                 </Text>
+                </Link>
               </Dropdown.Item>
               <Dropdown.Item key="collections" withDivider>
                 <Link href={`/profile/${address}`}>
@@ -198,6 +197,7 @@ export default function Header() {
               key={item}
               activeColor="warning"
               css={{
+                fontFamily: "monospace",
                 color: index === collapseItems.length - 1 ? "$error" : "",
               }}
               isActive={index === 2}

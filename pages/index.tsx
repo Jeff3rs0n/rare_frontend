@@ -12,7 +12,7 @@ import {
   Button,
   Badge,
 } from "@nextui-org/react";
-import Content from "@/components/Content";
+import Content from "@/pages/Content";
 import type { NextPage } from "next";
 import Link from "next/link";
 import "keen-slider/keen-slider.min.css";

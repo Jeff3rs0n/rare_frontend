@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { CoreBlockchain, CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
-import Header from "../components/header"
+import Header from "./header"
 
 import { createTheme, NextUIProvider, Container } from "@nextui-org/react"
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
@@ -36,13 +36,16 @@ export default function App({ Component, pageProps }: AppProps) {
   >
 
     <NextUIProvider>
+   
       <div style={{
           backgroundImage: `url("https://bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa.ipfs.nftstorage.link/ipfs/bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa/411997-fractal-fractal-flame-mathematics-energy-field-space.jpg")`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           width: "100%"
         }}>
+  
     <Header />
+    
     <NextNProgress
         color="var(--color-tertiary)"
         startPosition={0.3}
@@ -52,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
        <Component {...pageProps} />
        </div>
-   
+    
 
     </NextUIProvider>
     </NextThemesProvider>
