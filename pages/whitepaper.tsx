@@ -77,10 +77,10 @@ export default function ProfilePage() {
                 non-fungible-tokens. NFT Markeplaces have been here for a while
                 but this one is a Rare one "no pun intended". RareBay Marketplace
                 implements a new kind of buying and selling of NFTs using a
-                rarity algorithim that makes NFTs truely decentralized and Rare.
+                rarity algorithm that makes NFTs truely decentralized and Rare.
                 Rarity in RareBay is generted by an ERC20 Token and A staking
                 techique that will be discussed in the subsequent pages. RareBay
-                combines the power of ERC71 and ERC20 Contracts to make
+                combines the power of ERC71 and ERC20 contracts to make
                 NFTs as priceles as the Monalisa.
               </Text>
             </div>
@@ -255,16 +255,23 @@ export default function ProfilePage() {
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
                 Rarity in RareBay works by combining an ERC721 Staking contract
                 and an ERC20 Token. Rare Creators 'no pun intended' will need to
-                have a minimum of 1000 items as ERC20 Tokens. This 1000 ERC20
-                Tokens are staked in an algorithim that works based on time and
-                Price and Rarity increaces with How many ERC20 Token are
+                have a minimum of 1000 items as ERC20 Tokens. 1000 beacause we want to reduce the the number of true creators
+                Duplicacy of this 1000 items is no allowed, each item unique in its own way. And since duplicay can not be measured, a Voting DAO will exist for validating this to ensure items listted are not similar at a large extent, These 1000 ERC20
+                Tokens are staked in an algorithm that works based on time and
+                price. Rarity increaces with How many ERC20 Token are
                 rewarded during staking. Such that:
                 <Spacer />
                 <Text
                   weight="bold"
                   css={{ color: "$accents8", fontFamily: "monospace" }}
                 >
-                  1000 ERC20_NFT = 1 $RARE reward earned annualy.
+                  1000 ERC20_NFT = 1 $RARE reward earned annualy = Rarity
+                </Text>
+                <Text
+                  weight="bold"
+                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                >
+              Rarity = []
                 </Text>
                 <Spacer />
                 Annual reward of $RARE token is done every milisecond but
@@ -306,7 +313,7 @@ export default function ProfilePage() {
                   Staked RARE NFT can not be traded. But John wants to to sell
                   some of his work for a month in an Auction. Unstaking will
                   stop Rarity increament, and he can not unstake any Value less
-                  than 1000 items. The algorithim will still work if his staking
+                  than 1000 items. The algorithm will still work if his staking
                   wallet balance is less than 1000 items but he still can not
                   add any items that will not amount the total to 1K items. Lets
                   say John waited 1year to earn 1 $RARE reward, the Rarity of
@@ -453,7 +460,7 @@ export default function ProfilePage() {
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
                 This Paper concludes by stating that this propasal for Rarity
                 may still be considerd vague, with how NFTs can be modified. To carb
-                scams, contracts deployed on RareBay will require validation from a
+                scams, Smart contracts deployed on RareBay will require validation from a
                 voting DAO, unrealistic collections can not be minted, and
                 duplicate items will also not be accepted. There will currently
                 not exist an item with more Rarity than the algorithm supports.
