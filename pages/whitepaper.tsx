@@ -416,7 +416,7 @@ export default function ProfilePage() {
               <ChevronLeft2X fontSize="20px" />
               <Text
                 css={{ fontFamily: "monospace" }}
-                onClick={() => setTab("introduction")}
+                onClick={() => setTab("Contract")}
               >
                 Contracts
               </Text>
