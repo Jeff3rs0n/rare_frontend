@@ -146,7 +146,7 @@ export default function ProfilePage() {
                 as a blockchain containing bits of data that are immutable. This
                 invention was reinvented into Ethereum which provided the same peer
                 to peer mechanism but with slight upgarde of allowing this bits
-                of data in a blockchain to be immutable in ways termed as
+                of data in a blockchain to be mutable in ways termed as
                 smart-contracts but with less decentralization, this opended
                 doors to other great creation like the CORE DAO Network, A
                 truely decentralized way of interacting with smart-contracts.
