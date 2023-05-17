@@ -316,7 +316,7 @@ export default function ProfilePage() {
                   proportionaly too. The Value is an integer calculated from the
                   number of Rewards earned and ranges from 0 to infinity. The
                   supply of $RARE Token is also unlimited. John now has 1 $RARE
-                  Token, what to do with this token is upto John to decide but
+                  Token, what to do with this token is upto John to decide but he
                   has the option to trade at discounted prices using $RARE Token
                   on RareBay NFT Markeplace.
                 </Text>
