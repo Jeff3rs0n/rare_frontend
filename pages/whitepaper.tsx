@@ -227,7 +227,7 @@ export default function ProfilePage() {
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
                 Smart Contracts are computational executions done according to agreed terms. Ethereum was the first blockchain that implemented
                 the use of Smart Contracts, Smart Contracts have changed the
-                way users inertact with blockchians upgrading from just transfer
+                way users interact with blockchians upgrading from just transfer
                 of bits to chunck of immutable data. Ethereum pioneered the first
                 practical example of smart contracts. RareBay is built on CORE Blockchain. A new Blockchain network that utilises
                 the Satoshi Plus Consesus combining the Proof of Work(PoW) and
