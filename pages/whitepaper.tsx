@@ -80,7 +80,7 @@ export default function ProfilePage() {
                 rarity algorithm that makes NFTs truely decentralized and Rare.
                 Rarity in RareBay is generted by an ERC20 Token and A staking
                 techique that will be discussed in the subsequent pages. RareBay
-                combines the power of ERC71 and ERC20 contracts to make
+                combines the power of ERC721 and ERC20 contracts to make
                 NFTs as priceles as the Monalisa.
               </Text>
             </div>
@@ -230,7 +230,7 @@ export default function ProfilePage() {
                 practical example of Contracts. RareBay is built on CORE Blockchain. A new Blockchain network that utilises
                 the Satoshi Plus Consesus combining the Proof of Work(PoW) and
                 Delegated Proof of Stake (DPoS) which promises to bring more
-                decentralization compared to its predecessors. RareBay uses ERC721 and ERC720 combined to
+                decentralization compared to its predecessors. RareBay uses ERC721 and ERC20 combined to
                 create a way of making NFT as Rare as they can get.
               </Text>
               <Spacer />
