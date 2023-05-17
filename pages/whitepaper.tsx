@@ -221,7 +221,7 @@ export default function ProfilePage() {
             <Grid xs={6}></Grid>
 
             <Text h3 css={{ fontFamily: "monospace" }}>
-              Smart Contracts
+              Contracts
             </Text>
             <div>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
