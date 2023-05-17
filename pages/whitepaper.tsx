@@ -290,13 +290,13 @@ export default function ProfilePage() {
                 Scenario
                 <hr></hr>
                 <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
-                  This scenarios tires to relay the logical flow of events in a
+                  This scenarios tries to relay the logical flow of events in a
                   practical manner. John Doe a creator, wants to list their Rare
                   NFT("no pun intended") on RareBay NFT Marketplace. John tries
                   to list 1 NFT on RareBay Markeplace, they are prompted with an
                   error, "Please Stake atleast 1000+ items", John adds more
                   items and creates a launchpad successfully on the marketplace.
-                  This Launcpad is not directly listed it is checked for duplicay and 
+                  This Launcpad is not directly listed it is checked for duplicacy and 
                   unacceptable content in a decntralized DAO Voting. Once verified, John's
                   Listing is published on the markeplace for other users to buy.
                   The Rarity of John's collection will default to Zero. He
