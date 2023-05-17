@@ -32,7 +32,7 @@ size={16}
           fontFamily: "monospace",
           textGradient: "45deg, $yellow700 -50%, $red800 100%",
         }}
->NFTs on RareBay can only be bought when owner accepts highest bid 🌟</Text>
+>NFTs on RareBay have Rarity, an algorithim based on time and price🌟</Text>
 <hr></hr>
 <Spacer />
       <NFTGrid
