@@ -239,7 +239,7 @@ export default function ProfilePage() {
 
               <Text h4 css={{ color: "$accents8", fontFamily: "monospace" }}>
                 Rarity
-              </Text>
+                </Text>
               <hr></hr>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
               Rarity is directly proportional to price and is a method of determing how less likely you can find
