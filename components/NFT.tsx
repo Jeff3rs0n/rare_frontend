@@ -53,13 +53,15 @@ import truncateEthAddress from 'truncate-eth-address'
         <Card>
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
-        <Text size={9} weight="bold" transform="uppercase" color="#ffffffAA">
+        <Text size={8} weight="bold" transform="uppercase" css={{
+         textGradient: "45deg, $yellow300 -20%, $blue50 90%",
+        }}>
          NFT Rarity: #0
         </Text>
-        <Text size={14} color="inherit" weight={"extrabold"} css={{
+        <Text size={14}  weight={"extrabold"} css={{
           padding: "2%",
           fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $blue50 100%",
+          textGradient: "45deg, $yellow300 -20%, $blue50 100%",
         }}>
         {nft.metadata.name} #{nft.metadata.id}
         </Text>
@@ -93,11 +95,19 @@ import truncateEthAddress from 'truncate-eth-address'
           ) : auctionListing && auctionListing[0] ? (
             <div className={styles.nftPriceContainer}>
               <div>
-                <p className={styles.nftPriceLabel}>Minimum Bid</p>
-                <p className={styles.nftPriceValue}>
+                <Text className={styles.nftPriceLabel}
+                 css={{
+                  textGradient: "45deg, $yellow900 -20%, $blue500 90%",
+                }}
+                >Minimum Bid 🕷️</Text>
+                <Text className={styles.nftPriceValue} 
+                css={{
+                  textGradient: "45deg, $yellow800 -20%, $blue500 90%"
+                }}
+                >
                   {`${auctionListing[0]?.minimumBidCurrencyValue.displayValue}
             ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}
-                </p>
+                </Text>
               </div>
             </div>
           ) : (
@@ -105,7 +115,11 @@ import truncateEthAddress from 'truncate-eth-address'
               <div>
                 <p className={styles.nftPriceLabel}>Price💲</p>
                 <hr></hr>
-                <p className={styles.nftPriceValue}>Priceless💎</p>
+                <Text className={styles.nftPriceValue}
+                css={{
+                  textGradient: "45deg, $yellow900 -20%, $blue500 90%",
+                }}
+                >Priceless💎</Text>
               </div>
             </div>
           )}

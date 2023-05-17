@@ -7,7 +7,7 @@ import { createTheme, NextUIProvider, Container } from "@nextui-org/react"
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 import NextNProgress from "nextjs-progressbar";
-
+import { Analytics } from '@vercel/analytics/react';
 
 const darkTheme = createTheme({
   type: 'dark',
@@ -54,6 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
         showOnShallow={true}
       />
        <Component {...pageProps} />
+       <Analytics />
        </div>
     
 

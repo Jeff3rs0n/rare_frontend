@@ -79,6 +79,19 @@ export default function Header() {
               Marketplace
             </Text>
           </Link>
+          <Link href="/whitepaper" isActive>
+            {" "}
+            <Text
+              b
+             
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%"
+              }}
+            >
+              Whitepaper
+            </Text>
+          </Link>
           <Link href="#">
             <Text
               b

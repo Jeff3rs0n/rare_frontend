@@ -24,9 +24,8 @@
 
 .tabs {
   width: 100%;
-  display: flex;
+  display: block;
   flex-direction: row;
-  justify-content: flex-start;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   margin-top: 16px;
   margin-bottom: 16px;
