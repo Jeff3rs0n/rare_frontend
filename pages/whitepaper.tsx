@@ -76,7 +76,7 @@ export default function ProfilePage() {
                 and who to transfer it to. RareBay is a markeplace for
                 non-fungible-tokens. NFT Markeplaces have been here for a while
                 but this one is a Rare one "no pun intended". RareBay Marketplace
-                implements a new kind of buyning and selling of NFTs using a
+                implements a new kind of buying and selling of NFTs using a
                 rarity algorithim that makes NFTs truely decentralized and Rare.
                 Rarity in RareBay is generted by an ERC20 Token and A staking
                 techique that will be discussed in the subsequent pages. RareBay
@@ -143,7 +143,7 @@ export default function ProfilePage() {
                 to ensure that even milleniums to come these precious objects
                 would still be intact. In 2009 Satoshi Nakamoto Invented a
                 decentralized Way of transfering digital cash in what he termed
-                as a blockchain containing bits of data that are immutable. These
+                as a blockchain containing bits of data that are immutable. This
                 invention was reinvented into Ethereum which provided the same peer
                 to peer mechanism but with slight upgarde of allowing this bits
                 of data in a blockchain to be immutable in ways termed as
