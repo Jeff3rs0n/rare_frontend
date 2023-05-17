@@ -76,7 +76,7 @@ export default function ProfilePage() {
                 and who to transfer it to. RareBay is a markeplace for
                 non-fungible-tokens. NFT Markeplaces have been here for a while
                 but this one is a Rare one "no pun intended". RareBay Marketplace
-                implemets a new kind of buyning and selling of NFTs using a
+                implements a new kind of buyning and selling of NFTs using a
                 rarity algorithim that makes NFTs truely decentralized and Rare.
                 Rarity in RareBay is generted by an ERC20 Token and A staking
                 techique that will be discussed in the subsequent pages. RareBay
