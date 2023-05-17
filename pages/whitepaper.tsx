@@ -69,7 +69,7 @@ export default function ProfilePage() {
             </Text>
             <div>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
-                Non-fungible Tokens are uniquie identifiers that are recorded on a
+                Non-fungible Tokens are unique identifiers that are recorded on a
                 Blockchain and has long been used to certify ownership and
                 authenticity of digital assets. NFTs are not mutable, and this
                 immutability allows only the owner to decide what to do with it
