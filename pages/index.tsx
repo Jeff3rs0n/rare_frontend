@@ -198,7 +198,7 @@ export default function Home() {
                       color="warning"
                       css={{ fontFamily: "monospace", fontWeight: "bold" }}
                     >
-                      $RARE AIRDROP
+                      $RARE TOKEN
                     </Text>
                   </Link>
                 </div>

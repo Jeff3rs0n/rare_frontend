@@ -10,7 +10,7 @@ import { ChevronRight2X } from "@web3uikit/icons";
 export default function ProfilePage() {
   const router = useRouter();
   const [tab, setTab] = useState<
-    "nfts" | "introduction" | "Smart Contracts" | "Token" | "conclusion"
+    "nfts" | "introduction" | "Contracts" | "Token" | "conclusion"
   >("nfts");
 
   return (
@@ -80,7 +80,7 @@ export default function ProfilePage() {
                 rarity algorithim that makes NFTs truely decentralized and Rare.
                 Rarity in RareBay is generted by an ERC20 Token and A staking
                 techique that will be discussed in the subsequent pages. RareBay
-                combines the power of ERC71 and ERC20 smart contracts to make
+                combines the power of ERC71 and ERC20 Contracts to make
                 NFTs as priceles as the Monalisa.
               </Text>
             </div>
@@ -172,7 +172,7 @@ export default function ProfilePage() {
               <Text
                 b
                 css={{ fontFamily: "monospace" }}
-                onClick={() => setTab("Smart Contracts")}
+                onClick={() => setTab("Contracts")}
               >
                 Contracts
               </Text>
@@ -186,7 +186,7 @@ export default function ProfilePage() {
 
       <div
         className={`${
-          tab === "Smart Contracts"
+          tab === "Contracts"
             ? styles.activeTabContent
             : styles.tabContent
         }`}
@@ -223,11 +223,11 @@ export default function ProfilePage() {
             </Text>
             <div>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
-                Smart Contracts are computational executions done according to agreed terms. Ethereum was the first blockchain that implemented
-                the use of Smart Contracts, Smart Contracts have changed the
+                Contracts are computational executions done according to agreed terms. Ethereum was the first blockchain that implemented
+                the use of Contracts, Contracts have changed the
                 way users interact with blockchians upgrading from just transfer
                 of bits to chunck of immutable data. Ethereum pioneered the first
-                practical example of smart contracts. RareBay is built on CORE Blockchain. A new Blockchain network that utilises
+                practical example of Contracts. RareBay is built on CORE Blockchain. A new Blockchain network that utilises
                 the Satoshi Plus Consesus combining the Proof of Work(PoW) and
                 Delegated Proof of Stake (DPoS) which promises to bring more
                 decentralization compared to its predecessors. RareBay uses ERC721 and ERC720 combined to
