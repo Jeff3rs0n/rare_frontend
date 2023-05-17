@@ -166,8 +166,6 @@ export default function ProfilePage() {
               >
                 Abstract
               </Text>
-
-              <Spacer />
             </Button>
             <Spacer />
             <Button light>
@@ -176,7 +174,7 @@ export default function ProfilePage() {
                 css={{ fontFamily: "monospace" }}
                 onClick={() => setTab("Smart Contracts")}
               >
-                Smart Contracts
+                Contracts
               </Text>
               <ChevronRight2X fontSize="20px" />
               <Spacer />
