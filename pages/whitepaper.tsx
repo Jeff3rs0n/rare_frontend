@@ -406,7 +406,7 @@ export default function ProfilePage() {
                   onClick={() => setTab("conclusion")}
                 >
                   Conclusion
-                </Text>
+                 </Text>
                 <ChevronRight2X fontSize="20px" />
                 <Spacer />
               </Button>
