@@ -274,7 +274,7 @@ export default function ProfilePage() {
                 Token that is rewarded has no supply beacause there is no Limit
                 to how RARE an NFT can become. All NFT Before being listed on
                 RareBay have zero Rarity. Once a creator stakes 1000 ERC20
-                Tokens, the are rewarded with Rarity. Unstaking stops the Rarity
+                Tokens, they are rewarded with Rarity. Unstaking stops the Rarity
                 increament and makes the Item have a constant rarity which can
                 be increased again by staking. The $RARE Token used here has no
                 default admin and the supply is unlimited, staking and unstaking
