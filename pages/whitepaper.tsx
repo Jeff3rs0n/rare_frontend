@@ -256,7 +256,7 @@ export default function ProfilePage() {
                 Rarity in RareBay works by combining an ERC721 Staking contract
                 and an ERC20 Token. Rare Creators 'no pun intended' will need to
                 have a minimum of 1000 items as ERC20 Tokens. 1000 beacause we want to reduce the the number of Rare creators.
-                Duplicacy of these 1000 items is no allowed, each item unique in its own way. And since duplicay can not be measured, a Voting DAO will exist for validating this to ensure items listted are not similar at a large extent, These 1000 ERC20
+                Duplicacy of these 1000 items is not allowed, each item unique in its own way. And since duplicay can not be measured, a Voting DAO will exist for validating this to ensure items listed are not similar at a large extent, These 1000 ERC20
                 Tokens are staked in an algorithm that works based on time and
                 price. Rarity increaces with How many ERC20 Token are
                 rewarded during staking. Such that:
