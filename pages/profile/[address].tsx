@@ -56,13 +56,13 @@ export default function ProfilePage() {
         <div
           className={styles.coverImage}
           style={{
-            background: `linear-gradient(90deg, ${randomColor1}, ${randomColor2})`,
+            background: `linear-gradient(3deg, ${randomColor1}, ${randomColor2},  ${randomColor3}, ${randomColor4}, ${randomColor1}, ${randomColor1})`,
           }}
         />
         <div
           className={styles.profilePicture}
           style={{
-            background: `linear-gradient(90deg, ${randomColor3}, ${randomColor4})`,
+            background: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
           }}
         />
         <h1 className={styles.profileName}>
@@ -120,7 +120,7 @@ export default function ProfilePage() {
         {loadingDirects ? (
           <p>Loading...</p>
         ) : directListings && directListings.length === 0 ? (
-          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+          <p>Nothing Listed ⁉️</p>
         ) : (
           directListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />
@@ -136,7 +136,7 @@ export default function ProfilePage() {
         {loadingAuctions ? (
           <p>Loading...</p>
         ) : auctionListings && auctionListings.length === 0 ? (
-          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+          <p>❌ NO NFTs HERE ❌</p>
         ) : (
           auctionListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />

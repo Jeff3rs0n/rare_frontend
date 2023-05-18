@@ -1,4 +1,5 @@
 .profileHeader {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .coverImage {
@@ -24,7 +25,7 @@
 
 .tabs {
   width: 100%;
-  display: block;
+  display: flex;
   flex-direction: row;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   margin-top: 16px;
@@ -32,6 +33,9 @@
 }
 
 .tab {
+  flex-direction:row-reverse;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
   padding: 16px;
   font-size: 16px;
   font-weight: 600;
@@ -46,18 +50,25 @@
 
 .activeTab {
   color: rgba(255, 255, 255, 1);
-  border-bottom: 2px solid #0294fe;
-  color: #0294fe;
+  border-bottom: 2px solid #fe7302;
+  color: #fe9102c9;
 }
 
 .tabContent {
-  display: none;
+  width: 100%;
+  display: flex;
   height: 0px;
   opacity: 0;
   transition: all 0.1s linear;
+  flex-direction:column;
 }
 
 .activeTabContent {
+  display: flex;
+  flex-direction:inherit;
+  flex-wrap: wrap;
+  gap: 1%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   opacity: 1;
