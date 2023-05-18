@@ -5,7 +5,7 @@ import {
   useValidEnglishAuctions,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper";
 import NFTGrid from "../NFTGrid";
@@ -26,8 +26,14 @@ import {
   Row,
   Button,
   Badge,
+  Input
 } from "@nextui-org/react";
 import Link from "next/link";
+import { Modal, Checkbox } from "@nextui-org/react";
+import { Upload } from "@web3uikit/core"
+import { useStorageUpload } from "@thirdweb-dev/react";
+
+
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -37,6 +43,14 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 ];
 
 export default function ProfilePage() {
+   const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
+  
   const router = useRouter();
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "Sell">("nfts");
 
@@ -75,6 +89,8 @@ export default function ProfilePage() {
       <hr></hr>
       <Spacer />
       <div className={styles.profileHeader}>
+ 
+      <Spacer />
         <div
           className={styles.coverImage}
           style={{
@@ -87,15 +103,66 @@ export default function ProfilePage() {
             background: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
           }}
         />
-        <h1 className={styles.profileName}>
+                <Button auto light onPress={handler}
+                >
+      ✏️Edit
+      </Button>
+      <Modal
+        closeButton
+        aria-labelledby="modal-title"
+        open={visible}
+        onClose={closeHandler}
+        css={{
+          backgroundColor: "transparent",
+          borderStyle: "solid",
+          borderWidth: "1px"
+        }}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={18} 
+          css={{
+            alignContent: "centre",
+            textAlign: "centre",
+            display: "flex",
+            fontFamily: "$mono"
+          }}
+          >
+            Set Avatar
+          </Text>
+          <hr></hr>
+        </Modal.Header>
+        <Modal.Body>
+          
+        <div>
+      <input type="file" />
+      <button>Upload</button>
+    </div>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button auto flat color="error" onPress={closeHandler}>
+            Close
+          </Button>
+          <Button auto onPress={closeHandler}>
+            Save
+          </Button>
+        </Modal.Footer>
+      </Modal>
+        <Text className={styles.profileName}
+        css={{
+          fontFamily: "$mono",
+          fontSize: "40px"
+        }}
+        >
           {router.query.address ? (
             router.query.address.toString().substring(0, 4) +
             "..." +
             router.query.address.toString().substring(38, 42)
           ) : (
             <Skeleton width="320" />
+
           )}
-        </h1>
+        </Text>
       </div>
 
       <div className={styles.tabs}>
