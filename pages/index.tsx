@@ -69,6 +69,15 @@ export default function Home() {
         <hr></hr>
 
         <Spacer />
+        <Button.Group color="warning" light>
+        <Button><Link href="/"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Home 🏠</Text></Link></Button>
+        <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Listings ✨ »</Text></Link></Button>
+      </Button.Group>
+      <hr></hr>
       </Container>
       <div className={styles.heroBody}>
         <Button.Group color="gradient" ghost>

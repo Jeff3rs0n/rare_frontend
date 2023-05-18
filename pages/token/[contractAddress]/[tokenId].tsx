@@ -22,7 +22,7 @@ import {
   import Skeleton from "../../../pages/Skeleton/Skeleton";
   import toast, { Toaster } from "react-hot-toast";
   import toastStyle from "../../../util/toastConfig";
-  import { Text, Spacer, Card, Col, Row, Container, Input } from "@nextui-org/react"
+  import { Text, Spacer, Card, Col, Row, Container, Input, Button } from "@nextui-org/react"
 
 
   type Props = {
@@ -118,12 +118,19 @@ import {
   
     return (
       <>
+
         <Toaster position="bottom-center" reverseOrder={false} />
         <Container css={{
           width: "1000px",
           height: "auto"
         }}>
           <div className={styles.container}>
+          <Button.Group color="warning" light>
+        <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> ⬅ Listings ✨</Text></Link></Button>
+      </Button.Group>
+      <hr></hr>
             <div className={styles.metadataContainer}>
             <Card isHoverable    css={{
                   width: "500px",

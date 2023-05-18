@@ -67,7 +67,6 @@ export default function Header() {
         >
           <Link href="/">
             <Text
-            hidden="xs"
               b
               color="warning"
               css={{

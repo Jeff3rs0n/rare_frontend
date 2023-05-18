@@ -3,8 +3,8 @@ import React from "react";
 import Container from "../components/Container/Container";
 import NFTGrid from "./NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
-import { Text, Spacer } from "@nextui-org/react"
-
+import { Text, Spacer, Button } from "@nextui-org/react"
+import Link from "next/link";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -15,7 +15,7 @@ export default function Buy() {
     <Container maxWidth="lg">
                <Text
         h4
-        size={40}
+        size={30}
         css={{
           padding: "2%",
           fontFamily: "monospace",
@@ -25,14 +25,14 @@ export default function Buy() {
       >
          Active Listings on RareBay ♦️
       </Text>
-<Text
-size={16}
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow700 -50%, $red800 100%",
-        }}
->NFTs on RareBay have Rarity, an algorithm based on time and price🌟</Text>
+      <Button.Group color="warning" light>
+        <Button><Link href="/"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> ⬅ Home 🏠</Text></Link></Button>
+        <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Listings ✨</Text></Link></Button>
+      </Button.Group>
 <hr></hr>
 <Spacer />
       <NFTGrid

@@ -17,6 +17,17 @@ import {
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
 import Sell from "../sell"
+import {
+  Spacer,
+  Image,
+  Text,
+  Card,
+  Col,
+  Row,
+  Button,
+  Badge,
+} from "@nextui-org/react";
+import Link from "next/link";
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -53,6 +64,16 @@ export default function ProfilePage() {
 
   return (
     <Container maxWidth="lg">
+                <Button.Group color="warning" light>
+        <Button><Link href="/"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> « Home 🏠</Text></Link></Button>
+                <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Listings ✨ »</Text></Link></Button>
+      </Button.Group>
+      <hr></hr>
+      <Spacer />
       <div className={styles.profileHeader}>
         <div
           className={styles.coverImage}
@@ -158,6 +179,9 @@ export default function ProfilePage() {
       >
 <Sell />
       </div>
+      <Spacer />
+      <Spacer />
     </Container>
+
   );
 }
