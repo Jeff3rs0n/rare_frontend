@@ -17,7 +17,8 @@ import {
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
-import { Text, Input, Spacer } from "@nextui-org/react";
+import { Text, Input, Spacer, Button } from "@nextui-org/react";
+import Link from "next/link";
 
 type Props = {
   nft: NFTType;
@@ -76,7 +77,6 @@ export default function SaleInfo({ nft }: Props) {
         endDate: new Date(),
         floorPrice: "0",
         buyoutPrice: "0",
-        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E",
       },
     });
 
@@ -97,7 +97,7 @@ export default function SaleInfo({ nft }: Props) {
 
       if (txResult) {
         toast.success("Marketplace approval granted", {
-          icon: "👍",
+          icon: "☑️",
           style: toastStyle,
           position: "bottom-center",
         });
@@ -151,6 +151,8 @@ export default function SaleInfo({ nft }: Props) {
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
       <div className={styles.saleInfoContainer} style={{ marginTop: -10 }}>
+
+      <hr></hr>
         <div className={profileStyles.tabs}>
           <h3
             className={`${profileStyles.tab} 
@@ -177,9 +179,11 @@ export default function SaleInfo({ nft }: Props) {
           }`}
           style={{ flexDirection: "column" }}
         >
-          <h4 className={styles.formSectionTitle}>When </h4>
+          <h4 className={styles.formSectionTitle}>When Do you want to List This NFT </h4>
 
           {/* Input field for auction start date */}
+          <Spacer />  
+          <Spacer />
           <legend className={styles.legend}> Listing Starts on </legend>
           <Input
           
@@ -191,9 +195,11 @@ export default function SaleInfo({ nft }: Props) {
             {...registerDirect("startDate")}
             aria-label="Auction Start Date"
           />
-
+  <Spacer />
+  <Spacer />
           {/* Input field for auction end date */}
-          <legend className={styles.legend}> Listing Ends on </legend>
+          <legend className={styles.legend}> Listing Ends on (Has to be future)</legend>
+        
           <Input
           bordered
             color="warning"
@@ -254,9 +260,10 @@ export default function SaleInfo({ nft }: Props) {
           style={{ flexDirection: "column" }}
         >
           <h4 className={styles.formSectionTitle}>When </h4>
-
+<Spacer />
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Auction Starts on </legend>
+
           <Input
             color="warning"
             shadow
@@ -265,7 +272,7 @@ export default function SaleInfo({ nft }: Props) {
             {...registerAuction("startDate")}
             aria-label="Auction Start Date"
           />
-
+<Spacer />
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Auction Ends on </legend>
           <Input
@@ -279,7 +286,7 @@ export default function SaleInfo({ nft }: Props) {
           <h4 className={styles.formSectionTitle}>Price </h4>
 
           {/* Input field for minimum bid price */}
-          <legend className={styles.legend}> Allow bids starting from </legend>
+          <legend className={styles.legend}> Allow bids starting from: </legend>
           <Input
             shadow
             bordered
@@ -288,9 +295,9 @@ export default function SaleInfo({ nft }: Props) {
             type="number"
             {...registerAuction("floorPrice")}
           />
-
+<Spacer />
           {/* Input field for buyout price */}
-          <legend className={styles.legend}> Buyout price </legend>
+          <legend className={styles.legend}> Sell Item if Bid is:</legend>
           <Input
             bordered
             color="warning"

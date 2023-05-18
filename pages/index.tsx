@@ -79,6 +79,7 @@ export default function Home() {
       </Button.Group>
       <hr></hr>
       </Container>
+      <Spacer />
       <div className={styles.heroBody}>
         <Button.Group color="gradient" ghost>
           <Button>

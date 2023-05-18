@@ -35,3 +35,10 @@
     flex-direction: column;
     opacity: 1;
   }
+.saleInfoContainer{
+  width: 100%;
+}
+.container{
+  backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.182);
+}

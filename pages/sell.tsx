@@ -11,8 +11,9 @@ import {
   import tokenPageStyles from "../styles/Token.module.css";
   import { NFT as NFTType } from "@thirdweb-dev/sdk";
   import SaleInfo from "../components/SaleInfo";
-  import { Text } from "@nextui-org/react";
+  import { Text, Button, Spacer } from "@nextui-org/react";
   import ProfilePage from "../pages/profile/[address]"
+  import Link from "next/link";
 
 
   export default function Sell() {
@@ -26,6 +27,16 @@ import {
     return (
       
       <Container maxWidth="lg">
+              <Button.Group color="warning" light>
+        <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> ⬅ Listings ✨</Text></Link></Button>
+                <Button><Link href="/"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Home 🏠</Text></Link></Button>
+      </Button.Group>
+      <hr></hr>
+      <Spacer />
         {!selectedNft ? (
           <>
    <NFTGrid
@@ -79,6 +90,8 @@ import {
             </div>
           </div>
         )}
+        <Spacer />
+        <Spacer />
       </Container>
 
     );
