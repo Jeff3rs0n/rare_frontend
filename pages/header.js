@@ -84,8 +84,8 @@ export default function Header() {
               height={40}
             />
         </Navbar.Brand>
-        <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
-          <Link href="/" isActive>
+        <Navbar.Content activeColor="warning" hideIn="xs" variant="light"  >
+          <Link href="/" isActive key={"Market"}>
             {" "}
             <Text
               b
@@ -98,7 +98,7 @@ export default function Header() {
               Marketplace
             </Text>
           </Link>
-          <Link href="/whitepaper" isActive>
+          <Link href="/whitepaper" isActive key={whitepaper}>
             {" "}
             <Text
               b
@@ -127,6 +127,7 @@ export default function Header() {
           <Spacer />
 
         </Navbar.Content>
+
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
