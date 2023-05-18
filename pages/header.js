@@ -113,8 +113,8 @@ export default function Header() {
                 fontFamily: "monospace",
                 textGradient: "45deg, $yellow600 -20%, $blue600 100%"              }}
             >
-              Airdrop
-            </Text>
+              $RARE 
+             </Text>
           </Link>
           <Spacer />
         </Navbar.Content>
