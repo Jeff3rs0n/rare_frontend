@@ -147,7 +147,7 @@ export default function Header() {
             >
               <Dropdown.Item key="profile" css={{ height: "$18" }}>
                 <div className={styles.navRight}>
-                <ConnectWallet btnTitle="Sign In"  />
+                <ConnectWallet btnTitle="Connect Wallet"  />
                   {address && (
                     <Link
                       className={styles.link}

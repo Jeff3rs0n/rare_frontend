@@ -7,7 +7,7 @@ import { Text, Spacer, Card, Grid, Button } from "@nextui-org/react";
 import { ChevronLeft2X } from "@web3uikit/icons";
 import { ChevronRight2X } from "@web3uikit/icons";
 
-export default function ProfilePage() {
+export default function Whitepaper() {
   const router = useRouter();
   const [tab, setTab] = useState<
     "nfts" | "introduction" | "Contracts" | "Token" | "conclusion"
