@@ -191,14 +191,14 @@ export default function Home() {
                   </Link>
                   <Link
                     className={styles.secondaryCta}
-                    href="/"
+                    href="/whitepaper"
                     target="_blank"
                   >
                     <Text
                       color="warning"
                       css={{ fontFamily: "monospace", fontWeight: "bold" }}
                     >
-                      $RARE TOKEN
+                     Whitepaper
                     </Text>
                   </Link>
                 </div>
