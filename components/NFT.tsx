@@ -71,7 +71,7 @@ import truncateEthAddress from 'truncate-eth-address'
       src={srcs}
       objectFit="cover"
       width="100%"
-      alt="Card image background"
+      alt="nft"
     />
   </Card>
 

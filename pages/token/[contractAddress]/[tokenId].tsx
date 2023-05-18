@@ -8,7 +8,6 @@ import {
     Web3Button,
   } from "@thirdweb-dev/react";
   import React, { useState } from "react";
-  import Container from "../../../components/Container/Container";
   import { GetStaticProps, GetStaticPaths } from "next";
   import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
   import {
@@ -23,7 +22,7 @@ import {
   import Skeleton from "../../../pages/Skeleton/Skeleton";
   import toast, { Toaster } from "react-hot-toast";
   import toastStyle from "../../../util/toastConfig";
-  import { Text, Spacer } from "@nextui-org/react"
+  import { Text, Spacer, Card, Col, Row, Container, Input } from "@nextui-org/react"
 
 
   type Props = {
@@ -34,6 +33,7 @@ import {
   const [randomColor1, randomColor2] = [randomColor(), randomColor()];
   
   export default function TokenPage({ nft, contractMetadata }: Props) {
+    const nftg = nft.metadata.image as string
     const [bidValue, setBidValue] = useState<string>();
   
     // Connect to marketplace smart contract
@@ -119,19 +119,42 @@ import {
     return (
       <>
         <Toaster position="bottom-center" reverseOrder={false} />
-        <Container maxWidth="lg">
+        <Container css={{
+          width: "1000px",
+          height: "auto"
+        }}>
           <div className={styles.container}>
             <div className={styles.metadataContainer}>
-              <ThirdwebNftMedia
-                metadata={nft.metadata}
-                className={styles.image}
+            <Card isHoverable    css={{
+                  width: "500px",
+                  height: "500px"
+                }} >
+    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+    </Card.Header>
+    <Card.Image
+                src={nftg}
+                objectFit="cover"
+                width="100%"
+                height={"100%"}
+                alt="nft"
               />
-  
+  </Card>
+  <Spacer />
+
               <div className={styles.descriptionContainer}>
                 <h3 className={styles.descriptionTitle}>Description</h3>
-                <p className={styles.description}>{nft.metadata.description}</p>
+                <Text 
+                css={{
+                  fontFamily: "monospace",
+                  padding: "2%",
+                  borderStyle: "solid",
+                  borderWidth: "1px",
+                  borderRadius: "8px",
+                  borderColor: "grey"
+                }}
+                className={styles.description}>{nft.metadata.description}</Text>
   
-                <h3 className={styles.descriptionTitle}>Traits</h3>
+                <Text className={styles.descriptionTitle}>Traits</Text>
   
                 <div className={styles.traitsContainer}>
                   {Object.entries(nft?.metadata?.attributes || {}).map(
@@ -204,12 +227,18 @@ import {
                     src={contractMetadata.image}
                     className={styles.collectionImage}
                   />
-                  <p className={styles.collectionName}>{contractMetadata.name}</p>
+                  <Text
+                                  css={{
+                                    fontFamily: "monospace",
+                                  }}
+                  className={styles.collectionName}>{contractMetadata.name}</Text>
                 </div>
               )}
-              <h1 className={styles.title}>{nft.metadata.name}</h1>
-              <p className={styles.collectionName}>Token ID #{nft.metadata.id}</p>
-  
+              <Text 
+                              css={{
+                                fontFamily: "monospace",
+                              }}
+              className={styles.title}>{nft.metadata.name}</Text>
               <Link
                 href={`/profile/${nft.owner}`}
                 className={styles.nftOwnerContainer}
@@ -218,7 +247,7 @@ import {
                 <div
                   className={styles.nftOwnerImage}
                   style={{
-                    background: `linear-gradient(90deg, ${randomColor1}, ${randomColor2})`,
+                    background: `linear-gradient(60deg, ${randomColor1}, ${randomColor2}, ${randomColor2}, ${randomColor1})`,
                   }}
                 />
                 <div className={styles.nftOwnerInfo}>
@@ -312,16 +341,22 @@ import {
                     <p className={styles.listingTime}>or</p>
                   </div>
   
-                  <input
+                  <Input
+                        bordered
+                        color="warning"
+                        placeholder="Bid Price"
                     className={styles.input}
                     defaultValue={
                       auctionListing?.[0]?.minimumBidCurrencyValue
                         ?.displayValue || 0
                     }
                     type="number"
-                    step={0.000001}
+                    step={0.0001}
                     onChange={(e) => {
                       setBidValue(e.target.value);
+                    }}
+                    css={{
+                      width: "100%"
                     }}
                   />
   
@@ -352,6 +387,8 @@ import {
             </div>
           </div>
         </Container>
+        <Spacer />
+        <Spacer />
       </>
     );
   }
