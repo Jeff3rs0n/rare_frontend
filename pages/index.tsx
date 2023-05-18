@@ -72,7 +72,7 @@ export default function Home() {
         <Button.Group color="warning" light>
         <Button><Link href="/"><Text css={{
           fontFamily: "$mono"
-        }} color="white"> Home 🏠</Text></Link></Button>
+        }} color="white">« Home 🏠</Text></Link></Button>
         <Button><Link href="/buy"><Text css={{
           fontFamily: "$mono"
         }} color="white"> Listings ✨ »</Text></Link></Button>

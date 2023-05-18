@@ -366,7 +366,7 @@ import {
                       width: "100%"
                     }}
                   />
-  
+  <Spacer />
                   <Web3Button
                     contractAddress={MARKETPLACE_ADDRESS}
                     action={async () => await createBidOrOffer()}
