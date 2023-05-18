@@ -48,6 +48,7 @@ size={16}
           textGradient: "45deg, $yellow600 -20%, $red600 100%",
         }}
 >Browse NFT You would Like to Sell from the ones you own</Text>
+<hr></hr>
             <NFTGrid
               data={data}
               isLoading={isLoading}
