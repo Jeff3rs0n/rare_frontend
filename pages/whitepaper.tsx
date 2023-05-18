@@ -65,7 +65,7 @@ export default function ProfilePage() {
             <Grid xs={6}></Grid>
 
             <Text h3 css={{ fontFamily: "monospace" }}>
-              Abstract
+              Abstractcon
             </Text>
             <div>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
@@ -416,7 +416,7 @@ export default function ProfilePage() {
               <ChevronLeft2X fontSize="20px" />
               <Text
                 css={{ fontFamily: "monospace" }}
-                onClick={() => setTab("Contract")}
+                onClick={() => setTab("Contracts")}
               >
                 Contracts
               </Text>
