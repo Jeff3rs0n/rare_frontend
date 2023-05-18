@@ -94,11 +94,12 @@ size={16}
               </Text>
   
               <div className={tokenPageStyles.pricingContainer}>
-      
+              <SaleInfo nft={selectedNft} />
               </div>
             </div>
           </div>
         )}
       </Container>
+
     );
   }
