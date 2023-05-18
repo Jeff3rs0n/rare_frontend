@@ -65,7 +65,7 @@ export default function ProfilePage() {
             <Grid xs={6}></Grid>
 
             <Text h3 css={{ fontFamily: "monospace" }}>
-              Abstractcon
+              Abstract
             </Text>
             <div>
               <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
