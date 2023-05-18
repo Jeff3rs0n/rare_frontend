@@ -17,6 +17,8 @@ import {
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
+import { Text, Input } from "@nextui-org/react"
+
 
 type Props = {
   nft: NFTType;
@@ -29,6 +31,7 @@ type AuctionFormData = {
   endDate: Date;
   floorPrice: string;
   buyoutPrice: string;
+  currency: string;
 };
 
 type DirectFormData = {
@@ -37,6 +40,7 @@ type DirectFormData = {
   price: string;
   startDate: Date;
   endDate: Date;
+  currency: string;
 };
 
 export default function SaleInfo({ nft }: Props) {
@@ -73,6 +77,7 @@ export default function SaleInfo({ nft }: Props) {
         endDate: new Date(),
         floorPrice: "0",
         buyoutPrice: "0",
+        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E"
       },
     });
 
@@ -112,6 +117,7 @@ export default function SaleInfo({ nft }: Props) {
         startDate: new Date(),
         endDate: new Date(),
         price: "0",
+        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E"
       },
     });
 
@@ -176,8 +182,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Listing Starts on </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="datetime-local"
             {...registerDirect("startDate")}
             aria-label="Auction Start Date"
@@ -185,8 +191,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Listing Ends on </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="datetime-local"
             {...registerDirect("endDate")}
             aria-label="Auction End Date"
@@ -195,8 +201,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for buyout price */}
           <legend className={styles.legend}> Price per token</legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="number"
             step={0.000001}
             {...registerDirect("price")}
@@ -242,8 +248,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Auction Starts on </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="datetime-local"
             {...registerAuction("startDate")}
             aria-label="Auction Start Date"
@@ -251,8 +257,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Auction Ends on </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="datetime-local"
             {...registerAuction("endDate")}
             aria-label="Auction End Date"
@@ -261,8 +267,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for minimum bid price */}
           <legend className={styles.legend}> Allow bids starting from </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             step={0.000001}
             type="number"
             {...registerAuction("floorPrice")}
@@ -270,8 +276,8 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for buyout price */}
           <legend className={styles.legend}> Buyout price </legend>
-          <input
-            className={styles.input}
+          <Input
+            className={styles.Input}
             type="number"
             step={0.000001}
             {...registerAuction("buyoutPrice")}
