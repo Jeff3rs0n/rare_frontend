@@ -170,7 +170,6 @@ export default function ProfilePage() {
                 Abstract
               </Text>
             </Button>
-            <Spacer />
             <Button light>
               <Text
                 b
@@ -180,7 +179,6 @@ export default function ProfilePage() {
                 Contracts
               </Text>
               <ChevronRight2X fontSize="20px" />
-              <Spacer />
             </Button>
           </Card.Footer>
         </Card>
