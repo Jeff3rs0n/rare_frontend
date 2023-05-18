@@ -189,18 +189,10 @@ export default function Home() {
                   <Link className={styles.heroCta} href="/buy">
                     Get Started
                   </Link>
-                  <Link
-                    className={styles.secondaryCta}
-                    href="/whitepaper"
-                    target="_blank"
-                  >
-                    <Text
-                      color="warning"
-                      css={{ fontFamily: "monospace", fontWeight: "bold" }}
-                    >
-                     Whitepaper
-                    </Text>
+                  <Link className={styles.heroCta} href="/whitepaper">
+                    Whitepaper
                   </Link>
+
                 </div>
               </div>
             </div>
