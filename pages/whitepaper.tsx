@@ -148,7 +148,7 @@ export default function ProfilePage() {
                 decentralized Way of transfering digital cash in what he termed
                 as a blockchain containing bits of data that are immutable. This
                 invention was reinvented into Ethereum which provided the same
-                peer to peer mechanism but with slight upgarde of allowing this
+                peer to peer mechanism but with slight upgarde of allowing these
                 bits of data in a blockchain to be mutable in ways termed as
                 smart-contracts but with less decentralization, this opended
                 doors to other great creation like the CORE DAO Network, A
