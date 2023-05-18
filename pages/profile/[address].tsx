@@ -134,11 +134,15 @@ export default function ProfilePage() {
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
+              <Spacer />
+      <Spacer />
         <NFTGrid
           data={ownedNfts}
           isLoading={loadingOwnedNfts}
           emptyText="❌ NO NFTs HERE ❌"
         />
+              <Spacer />
+      <Spacer />
       </div>
 
       <div

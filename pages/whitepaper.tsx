@@ -6,6 +6,7 @@ import styles from "../styles/Profile.module.css";
 import { Text, Spacer, Card, Grid, Button } from "@nextui-org/react";
 import { ChevronLeft2X } from "@web3uikit/icons";
 import { ChevronRight2X } from "@web3uikit/icons";
+import Link from "next/link"
 
 export default function Whitepaper() {
   const router = useRouter();
@@ -28,8 +29,18 @@ export default function Whitepaper() {
         Whitepaper📜
       </Text>
 
-      <div className={styles.tabs}></div>
-
+      <div className={styles.tabs}>
+      <Button.Group color="warning" light>
+        <Button><Link href="/"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> « Home 🏠</Text></Link></Button>
+        <Button><Link href="/buy"><Text css={{
+          fontFamily: "$mono"
+        }} color="white"> Listings ✨ »</Text></Link></Button>
+      </Button.Group>
+      </div>
+<Spacer />
+<Spacer />
       <div
         className={`${
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
