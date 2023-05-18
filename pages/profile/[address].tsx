@@ -16,6 +16,7 @@ import {
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
+import Sell from "../sell"
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -26,7 +27,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 
 export default function ProfilePage() {
   const router = useRouter();
-  const [tab, setTab] = useState<"nfts" | "listings" | "auctions">("nfts");
+  const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "Sell">("nfts");
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
 
@@ -98,6 +99,13 @@ export default function ProfilePage() {
         >
           Auctions
         </h3>
+        <h3
+          className={`${styles.tab}
+        ${tab === "Sell" ? styles.activeTab : ""}`}
+          onClick={() => setTab("Sell")}
+        >
+          Sell
+        </h3>
       </div>
 
       <div
@@ -142,6 +150,13 @@ export default function ProfilePage() {
             <ListingWrapper listing={listing} key={listing.id} />
           ))
         )}
+      </div>
+      <div
+        className={`${
+          tab === "Sell" ? styles.activeTabContent : styles.tabContent
+        }`}
+      >
+<Sell />
       </div>
     </Container>
   );

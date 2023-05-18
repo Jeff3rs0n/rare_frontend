@@ -17,8 +17,7 @@ import {
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
-import { Text, Input } from "@nextui-org/react"
-
+import { Text, Input, Spacer } from "@nextui-org/react";
 
 type Props = {
   nft: NFTType;
@@ -77,7 +76,7 @@ export default function SaleInfo({ nft }: Props) {
         endDate: new Date(),
         floorPrice: "0",
         buyoutPrice: "0",
-        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E"
+        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E",
       },
     });
 
@@ -117,7 +116,7 @@ export default function SaleInfo({ nft }: Props) {
         startDate: new Date(),
         endDate: new Date(),
         price: "0",
-        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E"
+        currency: "0xF2b1FE576C13C961474C21FDCEDb67C02ac0462E",
       },
     });
 
@@ -183,6 +182,10 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Listing Starts on </legend>
           <Input
+          
+          bordered
+            color="warning"
+            shadow
             className={styles.Input}
             type="datetime-local"
             {...registerDirect("startDate")}
@@ -192,6 +195,9 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Listing Ends on </legend>
           <Input
+          bordered
+            color="warning"
+            shadow
             className={styles.Input}
             type="datetime-local"
             {...registerDirect("endDate")}
@@ -202,19 +208,22 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for buyout price */}
           <legend className={styles.legend}> Price per token</legend>
           <Input
+          bordered
+            color="warning"
+            shadow
             className={styles.Input}
             type="number"
-            step={0.000001}
+            step={0.0001}
             {...registerDirect("price")}
           />
-
+          <Spacer />
           <Web3Button
             contractAddress={MARKETPLACE_ADDRESS}
             action={async () => {
               await handleSubmitDirect(handleSubmissionDirect)();
             }}
             onError={(error) => {
-              toast(`Listed Failed! Reason: ${error.cause}`, {
+              toast(`Listed Failed! Date values: ${error.cause}`, {
                 icon: "❌",
                 style: toastStyle,
                 position: "bottom-center",
@@ -222,7 +231,7 @@ export default function SaleInfo({ nft }: Props) {
             }}
             onSuccess={(txResult) => {
               toast("Listed Successfully!", {
-                icon: "🥳",
+                icon: "🍾",
                 style: toastStyle,
                 position: "bottom-center",
               });
@@ -249,7 +258,9 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Auction Starts on </legend>
           <Input
-            className={styles.Input}
+            color="warning"
+            shadow
+            bordered
             type="datetime-local"
             {...registerAuction("startDate")}
             aria-label="Auction Start Date"
@@ -258,7 +269,9 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Auction Ends on </legend>
           <Input
-            className={styles.Input}
+            color="warning"
+            shadow
+            bordered
             type="datetime-local"
             {...registerAuction("endDate")}
             aria-label="Auction End Date"
@@ -268,8 +281,10 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for minimum bid price */}
           <legend className={styles.legend}> Allow bids starting from </legend>
           <Input
-            className={styles.Input}
-            step={0.000001}
+            shadow
+            bordered
+            color="warning"
+            step={0.0001}
             type="number"
             {...registerAuction("floorPrice")}
           />
@@ -277,12 +292,13 @@ export default function SaleInfo({ nft }: Props) {
           {/* Input field for buyout price */}
           <legend className={styles.legend}> Buyout price </legend>
           <Input
-            className={styles.Input}
+            bordered
+            color="warning"
             type="number"
             step={0.000001}
             {...registerAuction("buyoutPrice")}
           />
-
+          <Spacer />
           <Web3Button
             contractAddress={MARKETPLACE_ADDRESS}
             action={async () => {

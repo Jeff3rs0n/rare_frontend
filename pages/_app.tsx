@@ -8,6 +8,8 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
+import {SSRProvider} from 'react-aria';
+
 
 const darkTheme = createTheme({
   type: "dark",
@@ -21,6 +23,7 @@ const darkTheme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    <SSRProvider>
     <ThirdwebProvider
       activeChain={CoreBlockchainTestnet}
       authConfig={{
@@ -59,5 +62,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </NextUIProvider>
       </NextThemesProvider>
     </ThirdwebProvider>
+    </SSRProvider>
   );
 }

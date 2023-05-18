@@ -67,6 +67,7 @@ export default function Header() {
         >
           <Link href="/">
             <Text
+            hidden="xs"
               b
               color="warning"
               css={{
@@ -160,13 +161,12 @@ export default function Header() {
       <ConnectWallet />
   <Dropdown placement="bottom-right">
             <Navbar.Item>
-           
+
               <Dropdown.Trigger>
                 <Avatar
                   bordered
-                  as="Button"
                   color="warning"
-                  size="sm"
+                  size="md"
                   src="https://bafybeifwhnkyf2y2tzmcsv6rrysbcrkvpitozkjoefky2seaitaw7txyby.ipfs.nftstorage.link/user(1).png"
                 />
               </Dropdown.Trigger>

@@ -12,7 +12,9 @@ import {
   import { NFT as NFTType } from "@thirdweb-dev/sdk";
   import SaleInfo from "../components/SaleInfo";
   import { Text } from "@nextui-org/react";
-  
+  import ProfilePage from "../pages/profile/[address]"
+
+
   export default function Sell() {
     // Load all of the NFTs from the NFT Collection
     const { contract } = useContract(NFT_COLLECTION_ADDRESS);
@@ -24,32 +26,9 @@ import {
     return (
       
       <Container maxWidth="lg">
-         <Text
-        h2
-        size={60}
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-        }}
-        weight="bold"
-      >
-         Sell Your RARE NFT
-      </Text>
-      <hr></hr>
         {!selectedNft ? (
           <>
-            <Text
-            weight={"bold"}
-size={16}
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-        }}
->Browse NFT You would Like to Sell from the ones you own</Text>
-<hr></hr>
-            <NFTGrid
+   <NFTGrid
               data={data}
               isLoading={isLoading}
               overrideOnclickBehavior={(nft) => {

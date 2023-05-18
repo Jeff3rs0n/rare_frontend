@@ -86,10 +86,14 @@ import truncateEthAddress from 'truncate-eth-address'
               <div>
                 <p className={styles.nftPriceLabel}>Price💲</p>
                 <hr></hr>
-                <p className={styles.nftPriceValue}>
+                <Text className={styles.nftPriceValue}
+                                 css={{
+                                  textGradient: "45deg, $yellow900 -20%, $purple600 60%",
+                                }}
+                >
                   {`${directListing[0]?.currencyValuePerToken.displayValue}
-            ${directListing[0]?.currencyValuePerToken.symbol}`}
-                </p>
+            ${directListing[0]?.currencyValuePerToken.symbol}`}🔸
+                </Text>
               </div>
             </div>
           ) : auctionListing && auctionListing[0] ? (
