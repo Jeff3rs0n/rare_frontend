@@ -121,7 +121,7 @@ import {
 
         <Toaster position="bottom-center" reverseOrder={false} />
         <Container css={{
-          width: "1000px",
+          width: "100%",
           height: "auto"
         }}>
           <div className={styles.container}>
@@ -133,8 +133,8 @@ import {
       <hr></hr>
             <div className={styles.metadataContainer}>
             <Card isHoverable    css={{
-                  width: "500px",
-                  height: "500px"
+                  width: "80%",
+                  height: "60%"
                 }} >
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
     </Card.Header>
