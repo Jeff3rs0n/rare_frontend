@@ -176,7 +176,7 @@ export default function Home() {
                 <p className={styles.heroSubtitle}>
                   <Link
                     className={styles.link}
-                    href="https://thirdweb.com"
+                    href="/"
                     target="_blank"
                   >
                     rarebay.io
