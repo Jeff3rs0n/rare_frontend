@@ -22,7 +22,9 @@ import { Hero, Typography } from "@web3uikit/core";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Counter } from "@/components/counter";
+import Header from "./header";
 
+import { motion, AnimatePresence } from "framer-motion"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,8 +54,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <Spacer />
       <Container  fluid>
+      <motion.div     animate={{
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+    }}>
+
         <Text
           h2
           size={50}
@@ -65,7 +74,8 @@ export default function Home() {
         >
           RareBay Marketplace
         </Text>
-        <Text
+
+    <Text
           h2
           size={17}
           css={{
@@ -76,6 +86,8 @@ export default function Home() {
         >
           Digital Museum for RARE Art
         </Text>
+    </motion.div>
+    
         <hr></hr>
 
         <Spacer />
@@ -156,6 +168,13 @@ export default function Home() {
                 <Spacer />
                 <span className={styles.heroTitleGradient}>
                   <hr></hr>
+                  <motion.div
+    animate={{
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 180, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+    }}
+  >
                   <Text
                     h1
                     size={50}
@@ -166,6 +185,7 @@ export default function Home() {
                   >
                     Welcome to RareBay.
                   </Text>
+                 
                   <Text
                     h1
                     size={50}
@@ -176,7 +196,11 @@ export default function Home() {
                   >
                     Home of the Rarest NFTs.
                   </Text>
-                  <Text
+                  </motion.div>
+                  <motion.div     initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}>
+                    <Text
                     h1
                     size={60}
                     css={{
@@ -186,6 +210,7 @@ export default function Home() {
                   >
                     A Digital Museum.
                   </Text>
+                  </motion.div>
                 </span>
                 <p className={styles.heroSubtitle}>
                   <Link
@@ -210,9 +235,17 @@ export default function Home() {
               </div>
             
           </div>
-  
+    <AnimatePresence>
+    { (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      />
+    )}
 
-        <Container>
+
+        <Container >
           <hr></hr>
                 <Spacer />
           <Card 
@@ -254,6 +287,7 @@ export default function Home() {
   </Card>
 
           </Container>
+          </AnimatePresence>
           <Spacer />
           <Spacer />
           <Spacer />

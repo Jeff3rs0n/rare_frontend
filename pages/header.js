@@ -29,8 +29,10 @@ import Link from "next/link";
 import { useState } from "react";
 import truncateEthAddress from 'truncate-eth-address'
 import Skeleton from "./Skeleton/Skeleton";
-import { Suspense } from 'react';
+import { Loading } from "@web3uikit/core";
+
 import { startTransition } from 'react';
+import { Suspense, lazy } from 'react';
 
 export default function Header() {
   const navc = useState("navc")
@@ -59,7 +61,8 @@ export default function Header() {
   ];
 
   return (
-   
+    <Suspense fallback={<Loading />}>
+         
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
@@ -168,7 +171,7 @@ export default function Header() {
 
               <Dropdown.Trigger>
                 <Avatar
-                
+                Skeleton
                   bordered
                   color="warning"
                   size="md"
@@ -241,5 +244,6 @@ export default function Header() {
           </Dropdown>
         </Navbar.Content>
       </Navbar>
+      </Suspense>
   );
 }

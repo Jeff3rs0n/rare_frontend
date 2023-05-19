@@ -23,6 +23,7 @@
     "@vercel/analytics": "^1.0.1",
     "@web3uikit/core": "^1.0.4",
     "ethers": "^5.7.2",
+    "framer-motion": "^10.12.12",
     "keen-slider": "^6.8.5",
     "next": "13.4.2",
     "next-themes": "^0.2.1",

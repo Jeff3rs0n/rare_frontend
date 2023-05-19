@@ -11,6 +11,9 @@ import { Analytics } from "@vercel/analytics/react";
 import {SSRProvider} from 'react-aria';
 import Skeleton from "./Skeleton/Skeleton";
 import Footer from "../components/footer"
+import { startTransition } from 'react';
+import { useState, Suspense, lazy } from 'react';
+import { Loading } from "@web3uikit/core";
 
 
 const darkTheme = createTheme({
@@ -50,7 +53,6 @@ export default function App({ Component, pageProps }: AppProps) {
               width: "100%",
             }}
           >
-            <Header />
 
             <NextNProgress
               color="var(--color-tertiary)"
@@ -59,8 +61,12 @@ export default function App({ Component, pageProps }: AppProps) {
               height={3}
               showOnShallow={true}
             />
-            
-            <Component {...pageProps} />
+              <Suspense fallback={<Loading />}>
+              <Header />
+              <Component {...pageProps} />
+      </Suspense>
+   
+
             <Footer />
             <Analytics />
           </div>
