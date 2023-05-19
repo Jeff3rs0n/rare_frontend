@@ -9,6 +9,8 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
 import {SSRProvider} from 'react-aria';
+import Skeleton from "./Skeleton/Skeleton";
+import Footer from "../components/footer"
 
 
 const darkTheme = createTheme({
@@ -20,6 +22,8 @@ const darkTheme = createTheme({
     }, // optional
   },
 });
+
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -55,7 +59,9 @@ export default function App({ Component, pageProps }: AppProps) {
               height={3}
               showOnShallow={true}
             />
+            
             <Component {...pageProps} />
+            <Footer />
             <Analytics />
           </div>
         </NextUIProvider>

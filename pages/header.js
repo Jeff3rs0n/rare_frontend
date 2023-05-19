@@ -28,8 +28,12 @@ import {ChevronRight2X} from '@web3uikit/icons'
 import Link from "next/link";
 import { useState } from "react";
 import truncateEthAddress from 'truncate-eth-address'
+import Skeleton from "./Skeleton/Skeleton";
+import { Suspense } from 'react';
+import { startTransition } from 'react';
 
 export default function Header() {
+  const navc = useState("navc")
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
 
@@ -55,8 +59,8 @@ export default function Header() {
   ];
 
   return (
-
-      <Navbar isBordered variant={"floating"} height={80}>
+   
+      <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
@@ -98,7 +102,7 @@ export default function Header() {
               Marketplace
             </Text>
           </Link>
-          <Link href="/whitepaper" isActive key={whitepaper}>
+          <Link href="/whitepaper" isActive key={"whitepaper"}>
             {" "}
             <Text
               b
@@ -164,6 +168,7 @@ export default function Header() {
 
               <Dropdown.Trigger>
                 <Avatar
+                
                   bordered
                   color="warning"
                   size="md"

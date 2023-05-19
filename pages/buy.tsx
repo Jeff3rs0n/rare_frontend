@@ -5,6 +5,7 @@ import NFTGrid from "./NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import { Text, Spacer, Button } from "@nextui-org/react"
 import Link from "next/link";
+import Buy1 from "./buy2";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -23,7 +24,7 @@ export default function Buy() {
         }}
         weight="bold"
       >
-         Active Listings on RareBay ♦️
+    Listings on RareBay ♦️
       </Text>
       <Button.Group color="warning" light>
         <Button><Link href="/"><Text css={{
@@ -42,7 +43,7 @@ export default function Buy() {
           "Oops! No NFTs Here"
         }
       />
-       
+       <Buy1 />
     </Container>
    
   );

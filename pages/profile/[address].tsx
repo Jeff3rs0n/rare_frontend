@@ -9,10 +9,12 @@ import React, { useState, ChangeEvent } from "react";
 import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper";
 import NFTGrid from "../NFTGrid";
+import NFTGrid2 from "../NFTGrid2";
 import Skeleton from "../Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
+  NFT_COLLECTION_ADDRESS1,
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
@@ -55,6 +57,7 @@ export default function ProfilePage() {
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "Sell">("nfts");
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract: nftCollection2 } = useContract(NFT_COLLECTION_ADDRESS1);
 
   const { contract: marketplace } = useContract(
     MARKETPLACE_ADDRESS,
@@ -63,6 +66,10 @@ export default function ProfilePage() {
 
   const { data: ownedNfts, isLoading: loadingOwnedNfts } = useOwnedNFTs(
     nftCollection,
+    router.query.address as string
+  );
+  const { data: ownedNfts1, isLoading: loadingOwnedNfts1 } = useOwnedNFTs(
+    nftCollection2,
     router.query.address as string
   );
 
@@ -208,6 +215,7 @@ export default function ProfilePage() {
           isLoading={loadingOwnedNfts}
           emptyText="❌ NO NFTs HERE ❌"
         />
+        <hr></hr>
               <Spacer />
       <Spacer />
       </div>

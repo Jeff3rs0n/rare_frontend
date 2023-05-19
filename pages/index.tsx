@@ -18,10 +18,20 @@ import Link from "next/link";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
 import Caros from "../components/carousel";
+import { Hero, Typography } from "@web3uikit/core";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Counter } from "@/components/counter";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const notify = () =>
+  toast.info('Inscrição confirmada com sucesso!', {
+    closeButton: false,
+    theme: 'colored',
+  });
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       slideChanged() {
@@ -139,15 +149,9 @@ export default function Home() {
       </Container>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.hero}>
-            <div className={styles.heroBackground}>
-              <div className={styles.heroBackgroundInner}>
-                <Spacer />
-              </div>
-            </div>
-            <Spacer />
+      
 
-            <div className={styles.heroBodyContainer}>
+            
               <div className={styles.heroBody}>
                 <Spacer />
                 <span className={styles.heroTitleGradient}>
@@ -194,7 +198,6 @@ export default function Home() {
                   Find Rare NFT Not just your average Bored ape #001 with 10k
                   Owners, but something Rare, the kind of art that is priceless.
                 </p>
-
                 <div className={styles.heroCtaContainer}>
                   <Link className={styles.heroCta} href="/buy">
                     Get Started
@@ -202,13 +205,60 @@ export default function Home() {
                   <Link className={styles.heroCta} href="/whitepaper">
                     Whitepaper
                   </Link>
-
-                </div>
+           </div>
+             
               </div>
-            </div>
+            
           </div>
-        </div>
+  
+
+        <Container>
+          <hr></hr>
+                <Spacer />
+          <Card 
+          css={{
+            backgroundColor: "transparent",
+            backdropFilter: "blur(16px)",
+          }}
+          >
+            <Card.Header>
+            <Col>
+            <Text h2 weight="bold" color="#ffffffAA" css={{
+          fontFamily: "monospace"
+        }}>
+          RareBay Launch Countdown
+          <Text color="warning" size={14} css={{
+          fontFamily: "monospace",
+          paddingRight: "8%",
+          paddingLeft: "8%"
+        }}>RareBay is in testnet mode and expected to launch when timer ends</Text>
+            <Spacer />
+            <Spacer />
+          <Image
+         
+              src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
+              alt="logo"
+              width={100}
+              height={100}
+            />  
+            <Spacer />
+              <Counter />
+        </Text>
+      </Col>
+      
+            </Card.Header>   
+            
+<Card.Body>
+  
+</Card.Body>
+  </Card>
+
+          </Container>
+          <Spacer />
+          <Spacer />
+          <Spacer />
       </div>
+      
     </>
   );
 }
