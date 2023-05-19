@@ -46,7 +46,13 @@ export default function Whitepaper() {
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Card css={{ p: "$6", mw: "100%" }}>
+        <Card css={{ p: "$6", mw: "100%",
+       
+ 
+          backgroundColor: "transparent",
+          backdropFilter: "blur(16px)",
+      
+      }} >
           <Card.Header>
             <img
               alt="logo"
