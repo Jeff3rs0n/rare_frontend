@@ -42,7 +42,7 @@ export const Counter = () => {
                 backdropFilter: "blur(16px)",
             }}>
                    <Spacer />
-               Days  : Hours :  Minutes :  Secounds 
+               Days  : Hours :  Minutes :  Seconds 
                  <Spacer />
             </Text>
           </span>
