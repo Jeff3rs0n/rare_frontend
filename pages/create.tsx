@@ -18,7 +18,7 @@ const Create: NextPage = () => {
       css={{
         display: "flex",
         flexDirection: "column",
-        width: "80%",
+        width: "90%",
       }}
     >
       <Spacer></Spacer>
