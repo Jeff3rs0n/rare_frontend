@@ -138,7 +138,7 @@ export default function Header() {
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
-              key={item.home}
+              key={item.  Market}
               activeColor="warning"
               css={{
                 fontFamily: "monospace",
