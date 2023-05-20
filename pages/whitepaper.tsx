@@ -51,7 +51,7 @@ export default function Whitepaper() {
  
           backgroundColor: "transparent",
           backdropFilter: "blur(16px)",
-      
+         borderStyle: "solid",
       }} >
           <Card.Header>
             <img
@@ -69,7 +69,7 @@ export default function Whitepaper() {
               </Grid>
               <Grid xs={12}>
                 <Text
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                   size={12}
                 >
                   A decentralized modern age Museum
@@ -85,7 +85,7 @@ export default function Whitepaper() {
               Abstract
             </Text>
             <div>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                 Non-fungible Tokens are unique identifiers that are recorded on
                 a Blockchain and has long been used to certify ownership and
                 authenticity of digital assets. NFTs are not mutable, and this
@@ -124,7 +124,12 @@ export default function Whitepaper() {
           tab === "introduction" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Card css={{ p: "$6", mw: "100%" }}>
+        <Card css={{ p: "$6", mw: "100%",
+      
+      backgroundColor: "transparent",
+      backdropFilter: "blur(16px)",
+     borderStyle: "solid",
+      }}>
           <Card.Header>
             <img
               alt="logo"
@@ -140,7 +145,7 @@ export default function Whitepaper() {
               </Grid>
               <Grid xs={12}>
                 <Text
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                   size={12}
                 >
                   A decentralized modern age Museum
@@ -156,7 +161,7 @@ export default function Whitepaper() {
               Introduction
             </Text>
             <div>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                 This paper proposes a new age of Digital Museum, Storage of
                 precious objects has long been human Hobby evidenced with how
                 Egyptian Arifacts was stored in the most delicate and secure way
@@ -207,7 +212,12 @@ export default function Whitepaper() {
           tab === "Contracts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Card css={{ p: "$6", mw: "100%" }}>
+        <Card css={{ p: "$6", mw: "100%",
+      
+      backgroundColor: "transparent",
+      backdropFilter: "blur(16px)",
+     borderStyle: "solid",
+      }}>
           <Card.Header>
             <img
               alt="nextui logo"
@@ -223,7 +233,7 @@ export default function Whitepaper() {
               </Grid>
               <Grid xs={12}>
                 <Text
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                   size={12}
                 >
                   A decentralized modern age Museum
@@ -239,7 +249,7 @@ export default function Whitepaper() {
              Smart Contracts
             </Text>
             <div>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                Smart Contracts are computational executions done according to agreed
                 terms. Ethereum was the first blockchain that implemented the
                 use of Contracts, Contracts have changed the way users interact
@@ -254,11 +264,11 @@ export default function Whitepaper() {
               </Text>
               <Spacer />
 
-              <Text h4 css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text h4 css={{ color: "white", fontFamily: "monospace" }}>
                 Rarity
               </Text>
               <hr></hr>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                 Rarity is directly proportional to price and is a method of
                 determing how less likely you can find something. This technique
                 is used by other marketplaces shallowlly based as how many
@@ -268,11 +278,11 @@ export default function Whitepaper() {
                 determing the Rarity of an NFT.
               </Text>
               <Spacer />
-              <Text h4 css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text h4 css={{ color: "white", fontFamily: "monospace" }}>
                 Working Mechanism
               </Text>
               <hr></hr>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                 Rarity in RareBay works by combining an ERC721 Staking contract
                 and an ERC20 Token. Rare Creators 'no pun intended' will need to
                 have a minimum of 1000 items as ERC20 Tokens. 1000 beacause we
@@ -287,13 +297,13 @@ export default function Whitepaper() {
                 <Spacer />
                 <Text
                   weight="bold"
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                 >
                   1000 ERC20_NFT = 1 $RARE reward earned annualy = Rarity
                 </Text>
                 <Text
                   weight="bold"
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                 >
                   Rarity = []
                 </Text>
@@ -314,10 +324,10 @@ export default function Whitepaper() {
                 sell ERC20 NFT on RareBay at discounted prices.
               </Text>
               <Spacer />
-              <Text h4 css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text h4 css={{ color: "white", fontFamily: "monospace" }}>
                 Scenario
                 <hr></hr>
-                <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+                <Text css={{ color: "white", fontFamily: "monospace" }}>
                   This scenario tries to relay the logical flow of events in a
                   practical manner. John Doe a creator, wants to list their Rare
                   NFT("no pun intended") on RareBay NFT Marketplace. John tries
@@ -384,7 +394,10 @@ export default function Whitepaper() {
           tab === "Token" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Card css={{ p: "$6", mw: "100%" }}>
+        <Card css={{ p: "$6", mw: "100%", 
+          backgroundColor: "transparent",
+          backdropFilter: "blur(16px)",
+         borderStyle: "solid", }}>
           <Card.Header>
             <img
               alt="nextui logo"
@@ -400,7 +413,7 @@ export default function Whitepaper() {
               </Grid>
               <Grid xs={12}>
                 <Text
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                   size={12}
                 >
                   A decentralized modern age museum
@@ -412,11 +425,11 @@ export default function Whitepaper() {
           <Card.Body css={{ py: "$2" }}>
             <Grid xs={6}></Grid>
 
-            <Text h3 css={{ color: "$accents8", fontFamily: "monospace" }}>
+            <Text h3 css={{ color: "white", fontFamily: "monospace" }}>
               $RARE Token
             </Text>
             <div>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace" }}>
                 $RARE is the ERC20 Token rewarded for staking NFT to increase
                 Rarity. The Token has an unlimited supply and a Zero initial
                 Supply. RARE Token is only earned through this method of staking
@@ -456,7 +469,12 @@ export default function Whitepaper() {
           tab === "conclusion" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Card css={{ p: "$6", mw: "100%" }}>
+        <Card css={{ p: "$6", mw: "100%",
+      
+      backgroundColor: "transparent",
+      backdropFilter: "blur(16px)",
+     borderStyle: "solid",
+      }}>
           <Card.Header>
             <img
               alt="nextui logo"
@@ -472,7 +490,7 @@ export default function Whitepaper() {
               </Grid>
               <Grid xs={12}>
                 <Text
-                  css={{ color: "$accents8", fontFamily: "monospace" }}
+                  css={{ color: "white", fontFamily: "monospace" }}
                   size={12}
                 >
                   A decentralized modern age Museum
@@ -488,7 +506,9 @@ export default function Whitepaper() {
               Conclusion
             </Text>
             <div>
-              <Text css={{ color: "$accents8", fontFamily: "monospace" }}>
+              <Text css={{ color: "white", fontFamily: "monospace",
+            
+            }}>
                 This Paper concludes by stating that this propasal for Rarity
                 may still be considerd vague, with how NFTs can be modified. To
                 carb scams, Smart contracts deployed on RareBay will require

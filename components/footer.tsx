@@ -5,6 +5,10 @@ export default function Footer() {
         <Container>
 <hr></hr>
 <Spacer />
+<Spacer />
+<Spacer />
+<Spacer />
+<Spacer />
 <Text css={{
     fontFamily: "$mono"
 }}>

@@ -252,6 +252,8 @@ export default function Home() {
           css={{
             backgroundColor: "transparent",
             backdropFilter: "blur(16px)",
+            borderColor: "grey",
+            borderStyle: "solid"
           }}
           >
             <Card.Header>

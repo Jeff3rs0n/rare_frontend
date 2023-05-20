@@ -118,7 +118,7 @@ export default function Header() {
               Whitepaper
             </Text>
           </Link>
-          <Link href="#">
+          <Link href="/create">
             {" "}
             <Text
               b
@@ -138,7 +138,7 @@ export default function Header() {
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
-              key={item}
+              key={item.home}
               activeColor="warning"
               css={{
                 fontFamily: "monospace",
@@ -153,7 +153,7 @@ export default function Header() {
                 }}
                 href="#"
               >
-                {item}
+                {item.Market}
               </Link>
             </Navbar.CollapseItem>
           ))}

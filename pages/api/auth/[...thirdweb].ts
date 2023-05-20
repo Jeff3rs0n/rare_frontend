@@ -9,6 +9,9 @@ const users: Record<string, any> = {};
 
 export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
   domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN || "",
+  wallet: new PrivateKeyWallet(process.env.THIRDWEB_AUTH_PRIVATE_KEY || ""),
+  // NOTE: All these callbacks are optional! You can delete this section and
+  // the Auth flow will still work.
   callbacks: {
     onLogin: async (address) => {
       // Here we can run side-effects like creating and updating user data
