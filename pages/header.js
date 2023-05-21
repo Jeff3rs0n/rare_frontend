@@ -208,7 +208,7 @@ export default function Header() {
              
                 <Link href="/">
                 <Text color="warning" css={{ fontFamily: "monospace" }}>
-                <Plus fontSize='15px'/> Create NFT
+                <Plus fontSize='15px'/> Drop Request
                 </Text>
                 </Link>
                
@@ -235,7 +235,7 @@ export default function Header() {
           
                 <Link href="/create">
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <Rocket fontSize='15px'/> Create Launchad
+                  <Rocket fontSize='15px'/> Mint Drops
                   </Text>
                 </Link>
              

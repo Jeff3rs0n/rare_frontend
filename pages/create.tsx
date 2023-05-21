@@ -55,9 +55,11 @@ const Create: NextPage = () => {
      <hr></hr>
       </Text>
       <Card
+      
         css={{
           backgroundColor: "transparent",
           backdropFilter: "blur(32px)",
+          borderC
         }}
       >
         <Card.Header></Card.Header>
@@ -172,7 +174,7 @@ const Create: NextPage = () => {
                 }}
               >
                 <Spacer />
-                Head to Minting Page to mint NFT from RareBay NFT Collection.
+               Minting NFT from RareBay NFT Drop will earn you $RARE
                 <br></br>
                 NOTE: You can only stake RARE NFT from RareBay.
               </Text>
@@ -228,7 +230,7 @@ const Create: NextPage = () => {
                 }}
               >
                 <Spacer />
-             Staking will earn you $RARE Token. $RARE increases NFT Rarity
+           $RARE increases NFT Rarity.
                 <br></br>
                 NOTE: $RARE is rare.
               </Text>

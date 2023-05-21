@@ -235,11 +235,7 @@ h3 className={styles.h1}>Unstaked NFTs
         >
       {ownedNfts?.map((nft) => (
         <div className={styles.nftBox} key={nft.metadata.id.toString()}>
-                  <Container
-        css={{
-          display: "flex",
-        }}
-      >
+
                       <Card>
                 <Card.Image
                   src={nft.metadata.image as string}
@@ -258,7 +254,6 @@ h3 className={styles.h1}>Unstaked NFTs
           >
             Stake
           </Web3Button>
-      </Container>
 
         </div>
       ))}

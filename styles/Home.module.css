@@ -621,3 +621,10 @@
   transform: translate3d(0px, -4px, 0px);
   box-shadow: 0px 4px 8px rgba(112, 103, 103, 0.1);
 }
+.nftBox{
+  display: flex;
+  flex-direction:inherit;
+  flex-wrap: wrap;
+  gap: 1%;
+  width: 100%;
+}
