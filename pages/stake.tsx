@@ -188,12 +188,18 @@ h3 className={styles.h1}>Your $RARE Balance
     </div>
 <Spacer />
 <Container>
-<Web3Button
-      action={(contract) => contract.call("claimRewards")}
-      contractAddress={stakingContractAddress}
+
+    <Web3Button
+      contractAddress="0x64BfC97133fe371a0992Dd5A6c20DA4Db5bCb82C"
+      action={(contract) => {
+        contract.call("claimRewards")
+      }}
     >
-      Claim Rewards
+      claimRewards
     </Web3Button>
+
+
+
 </Container>
  
 <Spacer />
@@ -233,18 +239,18 @@ h3 className={styles.h1}>NFTs Staked
 h3 className={styles.h1}>Unstaked NFTs
 <hr></hr>
 </Text>
-<Container
-        css={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          fontFamily: "$mono",
-          width: "10%"
-        }}
-      >
+<div
+        className={styles.nftGridContainer}
+        >
       {ownedNfts?.map((nft) => (
         <div className={styles.nftBox} key={nft.metadata.id.toString()}>
-              <Card>
+                  <Container
+        css={{
+          display: "flex",
+          width: "20%"
+        }}
+      >
+                      <Card>
                 <Card.Image
                   src={nft.metadata.image as string}
                   objectFit="cover"
@@ -262,9 +268,11 @@ h3 className={styles.h1}>Unstaked NFTs
           >
             Stake
           </Web3Button>
+      </Container>
+
         </div>
       ))}
-    </Container>
+    </div>
   </>
 )}
         </Card.Body>

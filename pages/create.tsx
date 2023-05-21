@@ -150,8 +150,7 @@ const Create: NextPage = () => {
   contractAddress={nftDropContractAddress}
   action={(contract) => contract.erc721.claim(1)}
   onSuccess={() => {
-    alert("NFT Claimed!");
-    router.push("/stake");
+    alert("Yaay!! NFT Claimed!");
   }}
   onError={(error) => {
     alert(error);

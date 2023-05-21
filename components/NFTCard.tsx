@@ -37,8 +37,7 @@ const NFTCard: FC<NFTCardProps> = ({ tokenId }) => {
       <Container
         css={{
           display: "flex",
-          flexDirection: "row",
-          width: "10%"
+          width: "20%"
         }}
       >
         {nft && (
