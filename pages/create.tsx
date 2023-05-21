@@ -2,16 +2,28 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import {
-  Text,
   Spacer,
-  Button,
   Image,
   Container,
   Card,
 } from "@nextui-org/react";
+import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
+import React from "react";
+import { Web3Button } from "@thirdweb-dev/react";
+import { nftDropContractAddress } from "../const/contractAddresses";
+
+
+
 
 const Create: NextPage = () => {
   const router = useRouter();
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
 
   return (
     <Container
@@ -33,13 +45,13 @@ const Create: NextPage = () => {
         }}
         weight="bold"
       >
-        RareBay ♦️ Staking
+      Earn $RARE from RareBay ♦️ Staking
      <Text
       css={{
         fontFamily: "monospace",
         textGradient: "90deg, white -10%, $yellow600 100%",
       }}
-     >Earn $RARE from staking.</Text>
+     ></Text>
      <hr></hr>
       </Text>
       <Card
@@ -78,7 +90,7 @@ const Create: NextPage = () => {
               shadow
                 color="warning"
                 ghost
-                onClick={() => router.push(`/mint`)}
+                onPress={handler}
                 css={{
                   padding: "3%",
                   fontFamily: "monospace",
@@ -101,6 +113,58 @@ const Create: NextPage = () => {
                   Mint NFT ✨
                 </Text>
               </Button>
+              <Modal
+        closeButton
+        aria-labelledby="modal-title"
+        open={visible}
+        onClose={closeHandler}
+      >
+        <Modal.Header>
+          <Text color="warning" id="modal-title" size={18}
+          css={{
+            fontFamily: "$mono"
+          }}
+          >
+            Mint an NFT from
+          </Text>
+          <br></br>
+        </Modal.Header>
+        <Text
+           css={{
+            fontFamily: "$mono"
+          }}
+        >RARE NFT Drop</Text>
+        <Modal.Body>
+<Container>
+<hr className={`${styles.smallDivider} ${styles.detailPageHr}`} />
+<Spacer />
+<Container
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              width: "70%",
+            }}
+>
+<Web3Button
+  theme="dark"
+  contractAddress={nftDropContractAddress}
+  action={(contract) => contract.erc721.claim(1)}
+  onSuccess={() => {
+    alert("NFT Claimed!");
+    router.push("/stake");
+  }}
+  onError={(error) => {
+    alert(error);
+  }}
+>
+  Claim NFT ✨
+</Web3Button>
+</Container>
+</Container>
+        </Modal.Body>
+        <Modal.Footer>
+        </Modal.Footer>
+      </Modal>
               <Text
                 size={16}
                 css={{
@@ -134,7 +198,7 @@ const Create: NextPage = () => {
               shadow
                 color="warning"
                 ghost
-                onClick={() => router.push(`/mint`)}
+                onClick={() => router.push(`/stake`)}
                 css={{
                   padding: "2%",
                   fontFamily: "monospace",

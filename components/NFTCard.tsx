@@ -1,44 +1,78 @@
 import {
-    ThirdwebNftMedia,
-    useContract,
-    useNFT,
-    Web3Button,
-  } from "@thirdweb-dev/react";
-  import type { FC } from "react";
-  import {
-    nftDropContractAddress,
-    stakingContractAddress,
-  } from "../const/contractAddresses";
-  import styles from "../styles/Home.module.css";
-  
-  interface NFTCardProps {
-    tokenId: number;
-  }
-  
-  const NFTCard: FC<NFTCardProps> = ({ tokenId }) => {
-    const { contract } = useContract(nftDropContractAddress, "nft-drop");
-    const { data: nft } = useNFT(contract, tokenId);
-  
-    return (
-      <>
+  ThirdwebNftMedia,
+  useContract,
+  useNFT,
+  Web3Button,
+  useAddress
+} from "@thirdweb-dev/react";
+import type { FC } from "react";
+import {
+  nftDropContractAddress,
+  stakingContractAddress,
+} from "../const/contractAddresses";
+import { NFT } from "@thirdweb-dev/sdk";
+import React from "react";
+import Skeleton from "../pages/Skeleton/Skeleton";
+import styles from "../styles/Buy.module.css";
+import { Card, Container, Button, Text, Spacer } from "@nextui-org/react";
+import {
+  tokenContractAddress,
+} from "../const/contractAddresses";
+
+
+type Props = {
+  nft: NFT;
+};
+import truncateEthAddress from "truncate-eth-address";
+
+interface NFTCardProps {
+  tokenId: number;
+}
+const NFTCard: FC<NFTCardProps> = ({ tokenId }) => {
+  const { contract } = useContract(nftDropContractAddress, "nft-drop");
+  const { data: nft } = useNFT(contract, tokenId);
+  const address = useAddress()
+  return (
+    <>
+      <Container
+        css={{
+          display: "flex",
+          flexDirection: "row",
+          width: "10%"
+        }}
+      >
         {nft && (
-          <div className={styles.nftBox}>
+          <div 
+          className={styles.nftBoxGrid}
+          >
             {nft.metadata && (
-              <ThirdwebNftMedia
-                metadata={nft.metadata}
-                className={styles.nftMedia}
-              />
+              <Card>
+                <Card.Image
+                  src={nft.metadata.image as string}
+                  objectFit="cover"
+                />
+                <Card.Footer isBlurred
+                css={{
+                  fontFamily: "$mono"
+                }}
+                >{nft.metadata.name} ◇ </Card.Footer>
+              </Card>
             )}
-            <h3>{nft.metadata.name}</h3>
+            <Spacer />
             <Web3Button
-              action={(contract) => contract?.call("withdraw", [[nft.metadata.id]])}
+              action={(contract) =>
+                contract?.call("withdraw", [nft.metadata.id])
+              }
               contractAddress={stakingContractAddress}
             >
-              Withdraw
+              Unstake
             </Web3Button>
+
+            <Spacer />
           </div>
         )}
-      </>
-    );
-  };
-  export default NFTCard;
+      </Container>
+    </>
+  );
+};
+export default NFTCard;
