@@ -7,6 +7,7 @@ import {
   useOwnedNFTs,
   useTokenBalance,
   Web3Button,
+  useContractWrite
 } from "@thirdweb-dev/react";
 import { BigNumber, ethers } from "ethers";
 import type { NextPage } from "next";
@@ -25,6 +26,7 @@ import {
   Card,
   Text
 } from "@nextui-org/react";
+import Claim from "../components/claim"
 
 
 const Stake: NextPage = () => {
@@ -189,19 +191,8 @@ h3 className={styles.h1}>Your $RARE Balance
 <Spacer />
 <Container>
 
-    <Web3Button
-      contractAddress="0x64BfC97133fe371a0992Dd5A6c20DA4Db5bCb82C"
-      action={(contract) => {
-        contract.call("claimRewards")
-      }}
-    >
-      claimRewards
-    </Web3Button>
-
-
-
 </Container>
- 
+<Claim />
 <Spacer />
     <Text
         css={{
@@ -229,7 +220,7 @@ h3 className={styles.h1}>NFTs Staked
         ))}
         </div>
    
-     
+ 
     <Text
         css={{
           padding: "2%",
