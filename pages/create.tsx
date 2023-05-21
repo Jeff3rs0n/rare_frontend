@@ -59,7 +59,7 @@ const Create: NextPage = () => {
         css={{
           backgroundColor: "transparent",
           backdropFilter: "blur(32px)",
-          borderC
+          borderColor: "grey"
         }}
       >
         <Card.Header></Card.Header>
