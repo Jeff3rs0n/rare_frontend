@@ -238,7 +238,6 @@ h3 className={styles.h1}>Unstaked NFTs
                   <Container
         css={{
           display: "flex",
-          width: "20%"
         }}
       >
                       <Card>
