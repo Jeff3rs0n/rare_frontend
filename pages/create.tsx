@@ -1,14 +1,46 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
-import { Spacer, Image, Container, Card } from "@nextui-org/react";
-import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
-import React from "react";
-import { Web3Button } from "@thirdweb-dev/react";
-import { nftDropContractAddress } from "../const/contractAddresses";
+import { Image } from "@nextui-org/react";
+import { Modal, Input, Row, Checkbox } from "@nextui-org/react";
 import Link from "next/link";
+import type { FC } from "react";
+import {
+  nftDropContractAddress,
+  stakingContractAddress,
+} from "../const/contractAddresses";
+import { NFT } from "@thirdweb-dev/sdk";
+import React from "react";
+import Skeleton from "../pages/Skeleton/Skeleton";
+import styles from "../styles/Home.module.css";
+import {
+  Card,
+  Container,
+  Button,
+  Text,
+  Spacer,
+  Grid,
+  Col,
+} from "@nextui-org/react";
+import { tokenContractAddress } from "../const/contractAddresses";
+import {
+  ThirdwebNftMedia,
+  useContract,
+  useNFT,
+  Web3Button,
+  useAddress,
+} from "@thirdweb-dev/react";
 
-const Create: NextPage = () => {
+type Props = {
+  nft: NFT;
+};
+interface NFTCardProps {
+  tokenId: number;
+}
+
+const Create: FC<NFTCardProps> = ({ tokenId }) => {
+  const { contract } = useContract(nftDropContractAddress, "nft-drop");
+  const { data: nft } = useNFT(contract, tokenId);
+  const address = useAddress();
   const router = useRouter();
   const [visible, setVisible] = React.useState(false);
   const handler = () => setVisible(true);
@@ -23,29 +55,10 @@ const Create: NextPage = () => {
       css={{
         display: "flex",
         flexDirection: "column",
-        width: "100%",
+        width: "80%",
       }}
     >
-      <Spacer></Spacer>
-      {/* Top Section */}
-
-      <Text
-        h2
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "90deg, white -10%, $yellow600 100%",
-        }}
-        weight="bold"
-      >
-        Get started by Minting from PKCH NFT collection
-        <Text
-          css={{
-            fontFamily: "monospace",
-            textGradient: "90deg, white -10%, $yellow600 100%",
-          }}
-        ></Text>
-      </Text>
+      <Spacer />
       <Button.Group color="warning" light>
         <Button>
           <Link href="/">
@@ -56,7 +69,7 @@ const Create: NextPage = () => {
               color="white"
             >
               {" "}
-              « Home 🏠
+              « Home 🏠 /
             </Text>
           </Link>
         </Button>
@@ -69,7 +82,7 @@ const Create: NextPage = () => {
               color="white"
             >
               {" "}
-              Listings ✨
+              Listings ✨ /
             </Text>
           </Link>
         </Button>
@@ -87,6 +100,53 @@ const Create: NextPage = () => {
           </Link>
         </Button>
       </Button.Group>
+      <Container
+        css={{
+          width: "80%",
+          height: "30%",
+        }}
+      >
+        <Card>
+          <Card.Image
+            objectFit="cover"
+            width={"100%"}
+            height={300}
+            src={nft?.metadata?.image as string}
+          />
+          <Card.Footer isBlurred>
+            <Col>
+              <Text
+                h5
+                css={{
+                  fontFamily: "$mono",
+                }}
+              >
+                ♻️ Supply 0
+              </Text>
+
+              <Text
+                h5
+                css={{
+                  fontFamily: "$mono",
+                }}
+              >
+                👤 Owners 0
+              </Text>
+            </Col>
+          </Card.Footer>
+        </Card>
+      </Container>
+      <Text
+        h4
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "90deg, white -10%, $yellow600 100%",
+        }}
+        weight="bold"
+      >
+        ❄️ Minting from {nft?.metadata?.name} NFT collection
+      </Text>
       <hr></hr>
       <Spacer />
       <Card
@@ -110,7 +170,7 @@ const Create: NextPage = () => {
               src="https://bafybeiaye5lcoeduup3c3edgbi25ayorebzjzqsaqsen2cxl3oc45ecwqm.ipfs.nftstorage.link/drop.png"
               alt="drop"
               width={100}
-              height={100}
+              height={60}
             />
 
             <Spacer />
@@ -340,3 +400,4 @@ const Create: NextPage = () => {
 };
 
 export default Create;
+
