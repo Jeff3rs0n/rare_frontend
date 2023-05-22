@@ -96,63 +96,55 @@ const Create: NextPage = ({ tokenId }) => {
             </Text>
           </Link>
         </Button>
-      </Button.Group>
-      <hr></hr>>
+      </Button.Group>>
       <Container
-      css={{
-        width: "50%"
-        
-      }}
-      >
-       <Card>
-        <Card.Image
-          objectFit="cover"
-          width="100%"
-          height={200}
-          src={nft?.metadata?.image as string}
-        />
-        <Card.Footer isBlurred>
-          <Row>
-            <Text
-              h5
-              css={{
-                fontFamily: "$mono",
-              }}
-            >
-              Total Supply 0.0
-            </Text>
-          </Row>
-          <Row>
-            <Text
-              h5
-              css={{
-                fontFamily: "$mono",
-              }}
-            >
-              Claimed Supply 0.0
-            </Text>
-          </Row>
-        </Card.Footer>
-      </Card>
-      </Container>
-      <Text
-        h4
         css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "90deg, white -10%, $yellow600 100%",
+          width: "60%",
         }}
-        weight="bold"
       >
-        ❄️ Minting from {nft?.metadata?.name} NFT collection
+        <Card>
+          <Card.Image
+            objectFit="cover"
+            width="100%"
+            height="60%"
+            src={nft?.metadata?.image as string}
+          />
+          <Card.Footer isBlurred>
+            <Col>
+              <Text
+                h5
+                css={{
+                  fontFamily: "$mono",
+                }}
+              >
+                Total Supply 0.0
+                <hr></hr>
+              </Text>
+
+              <Text
+                h5
+                css={{
+                  fontFamily: "$mono",
+                }}
+              >
+                Claimed Supply 0.0
+                <hr></hr>
+              </Text>
+            </Col>
+          </Card.Footer>
+        </Card>
         <Text
+          h4
           css={{
+            padding: "2%",
             fontFamily: "monospace",
             textGradient: "90deg, white -10%, $yellow600 100%",
           }}
-        ></Text>
-      </Text>
-
+          weight="bold"
+        >
+          ❄️ Minting from {nft?.metadata?.name} NFT collection
+        </Text>
+      </Container>
       <hr></hr>
       <Spacer />
       <Card
@@ -176,7 +168,7 @@ const Create: NextPage = ({ tokenId }) => {
               src="https://bafybeiaye5lcoeduup3c3edgbi25ayorebzjzqsaqsen2cxl3oc45ecwqm.ipfs.nftstorage.link/drop.png"
               alt="drop"
               width={100}
-              height={100}
+              height={60}
             />
 
             <Spacer />
