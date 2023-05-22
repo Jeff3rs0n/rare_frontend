@@ -33,8 +33,11 @@ import {
 type Props = {
   nft: NFT;
 };
+interface NFTCardProps {
+  tokenId: number;
+}
 
-const Create: NextPage = ({ tokenId }) => {
+const Create: FC<NFTCardProps> = ({ tokenId }) => {
   const { contract } = useContract(nftDropContractAddress, "nft-drop");
   const { data: nft } = useNFT(contract, tokenId);
   const address = useAddress();
@@ -99,14 +102,15 @@ const Create: NextPage = ({ tokenId }) => {
       </Button.Group>>
       <Container
         css={{
-          width: "60%",
+          width: "80%",
+          height: "40%"
         }}
       >
         <Card>
           <Card.Image
             objectFit="cover"
-            width="100%"
-            height="60%"
+            width={"100%"}
+            height="40%"
             src={nft?.metadata?.image as string}
           />
           <Card.Footer isBlurred>
@@ -118,7 +122,6 @@ const Create: NextPage = ({ tokenId }) => {
                 }}
               >
                 Total Supply 0.0
-                <hr></hr>
               </Text>
 
               <Text
@@ -128,23 +131,22 @@ const Create: NextPage = ({ tokenId }) => {
                 }}
               >
                 Claimed Supply 0.0
-                <hr></hr>
               </Text>
             </Col>
           </Card.Footer>
         </Card>
-        <Text
-          h4
-          css={{
-            padding: "2%",
-            fontFamily: "monospace",
-            textGradient: "90deg, white -10%, $yellow600 100%",
-          }}
-          weight="bold"
-        >
-          ❄️ Minting from {nft?.metadata?.name} NFT collection
-        </Text>
       </Container>
+      <Text
+        h4
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "90deg, white -10%, $yellow600 100%",
+        }}
+        weight="bold"
+      >
+        ❄️ Minting from {nft?.metadata?.name} NFT collection
+      </Text>
       <hr></hr>
       <Spacer />
       <Card
