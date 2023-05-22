@@ -82,10 +82,6 @@ export default function Tables() {
       key: "name",
       label: "NFT",
     },
-    {
-      key: "status",
-      label: "Rarity",
-    },
   ];
   const rows = [
     {
