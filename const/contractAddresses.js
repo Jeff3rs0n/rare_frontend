@@ -14,7 +14,7 @@ export const MARKETPLACE_ADDRESS = "0x0820cDa3cF5247AFfC9dFB557715aaeBbBaF821e";
 export const NFT_COLLECTION_ADDRESS =
   "0xa7154118afdf8c8252427D1ac8D3a719f142D1BF";
 export const NFT_COLLECTION_ADDRESS1 =
-  "0x72A066fEBE6EEAbe7c2CCbD04273E572464aBccC";
+  "0xa7154118afdf8c8252427D1ac8D3a719f142D1BF";
 
 // (Optional) Set up the URL of where users can view transactions on
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
