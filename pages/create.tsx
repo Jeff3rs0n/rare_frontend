@@ -103,14 +103,14 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
       <Container
         css={{
           width: "80%",
-          height: "40%",
+          height: "30%",
         }}
       >
         <Card>
           <Card.Image
             objectFit="cover"
             width={"100%"}
-            height="40%"
+            height={300}
             src={nft?.metadata?.image as string}
           />
           <Card.Footer isBlurred>
@@ -121,7 +121,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
                   fontFamily: "$mono",
                 }}
               >
-                Total Supply 0.0
+                ♻️ Supply 0
               </Text>
 
               <Text
@@ -130,7 +130,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
                   fontFamily: "$mono",
                 }}
               >
-                Claimed Supply 0.0
+                👤 Owners 0
               </Text>
             </Col>
           </Card.Footer>
