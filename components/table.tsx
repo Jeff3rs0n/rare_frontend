@@ -77,39 +77,25 @@ export default function Tables() {
   if (isLoading) {
     return <div>Loading</div>;
   }
-  const columns = [
-    {
-      key: "name",
-      label: "NFT",
-    },
-  ];
-  const rows = [
-    {
-      key: "1",
-      name: <NFTD />,
-      role: "",
-    },
-  ];
-
   return (
     <Table
-      aria-label="Example table with dynamic content"
+      aria-label="Example table with static content"
       css={{
         height: "auto",
-        minWidth: "70%",
+        minWidth: "100%",
       }}
     >
-      <Table.Header columns={columns}>
-        {(column) => (
-          <Table.Column key={column.key}>{column.label}</Table.Column>
-        )}
+      <Table.Header>
+        <Table.Column>NAME</Table.Column>
+        <Table.Column>Rarity</Table.Column>
       </Table.Header>
-      <Table.Body items={rows}>
-        {(item) => (
-          <Table.Row key={item.key}>
-            {(columnKey) => <Table.Cell>{item[columnKey]}</Table.Cell>}
-          </Table.Row>
-        )}
+      <Table.Body>
+        <Table.Row key="1">
+          <Table.Cell>
+            <NFTD />
+          </Table.Cell>
+          <Table.Cell>0.0</Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   );
