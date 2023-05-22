@@ -99,11 +99,11 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
             </Text>
           </Link>
         </Button>
-      </Button.Group>>
+      </Button.Group>
       <Container
         css={{
           width: "80%",
-          height: "40%"
+          height: "40%",
         }}
       >
         <Card>
@@ -400,3 +400,4 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
 };
 
 export default Create;
+
