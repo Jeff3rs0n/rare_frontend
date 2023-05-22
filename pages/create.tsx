@@ -118,7 +118,7 @@ const Create: NextPage = () => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "60%",
+                width: "100%",
               }}
             >
               <Button
@@ -184,7 +184,7 @@ const Create: NextPage = () => {
                       css={{
                         display: "flex",
                         flexDirection: "column",
-                        width: "60%",
+                        width: "100%",
                       }}
                     >
                       <Web3Button
@@ -229,7 +229,7 @@ const Create: NextPage = () => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "60%",
+                width: "100%",
               }}
             >
               <Button
@@ -283,7 +283,7 @@ const Create: NextPage = () => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "60%",
+                width: "100%",
               }}
             >
               <Button
