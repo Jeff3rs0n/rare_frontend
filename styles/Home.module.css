@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -297,7 +297,6 @@
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
-  
 }
 
 .heroBody {
@@ -581,19 +580,11 @@
     max-height: 540px;
   }
 }
-.nftBoxGrid {
-  display: flex;
-  flex-direction:inherit;
-  flex-wrap: wrap;
-  gap: 1%;
-  width: 100%;
-}
 
 .nftGridContainer {
   display: flex;
-  flex-direction:row;
-  gap: 90px;
-  width: 100%;
+  flex-direction: column;
+  width: 25%;
 }
 
 .nftContainer {
@@ -601,18 +592,14 @@
   border-style: solid;
   border-width: 0.1px;
   border-color: rgba(60, 60, 60, 0.444);
-  width: 100%;
-  margin: 8px;
-  position: relative;
+  width: 10%;
+  margin: 1px;
   overflow: hidden;
   border-radius: 8px;
   backface-visibility: hidden;
   outline: 1px solid rgba(255, 255, 255, 0.1);
   transform: translate3d(0px, 0px, 0px);
-  display: flex;
-  flex-direction: column;
   padding: 8px;
-  max-height: 382px;
   transition: all 0.25s ease-in-out;
 }
 
@@ -621,10 +608,17 @@
   transform: translate3d(0px, -4px, 0px);
   box-shadow: 0px 4px 8px rgba(112, 103, 103, 0.1);
 }
-.nftBox{
+.nftBox {
   display: flex;
-  flex-direction:inherit;
+  flex-direction: inherit;
   flex-wrap: wrap;
-  gap: 1%;
-  width: 100%;
+  gap: 1px;
+  width: 10%;
+}
+.flexy {
+  display: flex;
+  flex-direction: column;
+}
+.web3 {
+  width: 20px;
 }

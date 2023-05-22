@@ -28,6 +28,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import Claim from "../components/claim";
+import Tables from "../components/table";
 import Link from "next/link";
 
 const Stake: NextPage = () => {
@@ -75,7 +76,7 @@ const Stake: NextPage = () => {
   if (isLoading) {
     return <div>Loading</div>;
   }
-
+  const stakeid = {};
   return (
     <Container
       css={{
@@ -255,16 +256,7 @@ const Stake: NextPage = () => {
               <hr></hr>
               <Spacer />
 
-              <div className={styles.nftGridContainer}>
-                {stakedTokens &&
-                  stakedTokens[0]?.map((stakedToken: BigNumber) => (
-                    <NFTCard
-                      tokenId={stakedToken.toNumber()}
-                      key={stakedToken.toString()}
-                    />
-                  ))}
-              </div>
-
+              <Tables />
               <Text
                 css={{
                   padding: "2%",
@@ -277,41 +269,32 @@ const Stake: NextPage = () => {
                 Unstaked NFTs
                 <hr></hr>
               </Text>
-              <div className={styles.nftGridContainer}>
-                {ownedNfts?.map((nft) => (
-                  <div
-                    className={styles.nftBox}
-                    key={nft.metadata.id.toString()}
+
+              {ownedNfts?.map((nft) => (
+                <div className={styles.nftBox} key={nft.metadata.id.toString()}>
+                  <Card>
+                    <Card.Image
+                      src={nft.metadata.image as string}
+                      objectFit="cover"
+                    />
+                  </Card>
+                  <Spacer />
+                  <Web3Button
+                    className={styles.web3}
+                    contractAddress={stakingContractAddress}
+                    action={() => stakeNft(nft?.metadata?.id)}
                   >
-                    <Card>
-                      <Card.Image
-                        src={nft.metadata.image as string}
-                        objectFit="cover"
-                      />
-                      <Card.Footer
-                        isBlurred
-                        css={{
-                          fontFamily: "$mono",
-                        }}
-                      >
-                        {nft.metadata.name} ◇{" "}
-                      </Card.Footer>
-                    </Card>
-                    <Spacer />
-                    <Web3Button
-                      contractAddress={stakingContractAddress}
-                      action={() => stakeNft(nft.metadata.id)}
-                    >
-                      Stake
-                    </Web3Button>
-                  </div>
-                ))}
-              </div>
+                    Stake
+                  </Web3Button>
+                  <Spacer />
+                </div>
+              ))}
             </>
           )}
         </Card.Body>
-        <Card.Footer></Card.Footer>
       </Card>
+      <Spacer />
+
       <Spacer />
       <Spacer />
     </Container>
