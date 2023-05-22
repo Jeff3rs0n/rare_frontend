@@ -1,5 +1,5 @@
 .profileHeader {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .coverImage {
@@ -33,9 +33,9 @@
 }
 
 .tab {
-  flex-direction:row-reverse;
+  flex-direction: row-reverse;
   display: flex;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 16px;
   font-size: 16px;
   font-weight: 600;
@@ -60,16 +60,17 @@
   height: 0px;
   opacity: 0;
   transition: all 0.1s linear;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .activeTabContent {
   display: flex;
-  flex-direction:inherit;
+  flex-direction: inherit;
   flex-wrap: wrap;
   gap: 1%;
   display: flex;
   flex-direction: row;
   opacity: 1;
   margin-top: -1%;
+  height: 100%;
 }

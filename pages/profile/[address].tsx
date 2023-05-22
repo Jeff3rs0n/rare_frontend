@@ -17,7 +17,7 @@ import {
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
-import Sell from "../sell"
+import Sell from "../sell";
 import {
   Spacer,
   Image,
@@ -27,14 +27,12 @@ import {
   Row,
   Button,
   Badge,
-  Input
+  Input,
 } from "@nextui-org/react";
 import Link from "next/link";
 import { Modal, Checkbox } from "@nextui-org/react";
-import { Upload } from "@web3uikit/core"
+import { Upload } from "@web3uikit/core";
 import { useStorageUpload } from "@thirdweb-dev/react";
-
-
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -44,16 +42,18 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 ];
 
 export default function ProfilePage() {
-   const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
   const handler = () => setVisible(true);
 
   const closeHandler = () => {
     setVisible(false);
     console.log("closed");
   };
-  
+
   const router = useRouter();
-  const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "Sell">("nfts");
+  const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "Sell">(
+    "nfts"
+  );
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
   const { contract: nftCollection2 } = useContract(NFT_COLLECTION_ADDRESS1);
@@ -84,19 +84,38 @@ export default function ProfilePage() {
 
   return (
     <Container maxWidth="lg">
-                <Button.Group color="warning" light>
-        <Button><Link href="/"><Text css={{
-          fontFamily: "$mono"
-        }} color="white"> « Home 🏠</Text></Link></Button>
-                <Button><Link href="/buy"><Text css={{
-          fontFamily: "$mono"
-        }} color="white"> Listings ✨ »</Text></Link></Button>
+      <Button.Group color="warning" light>
+        <Button>
+          <Link href="/">
+            <Text
+              css={{
+                fontFamily: "$mono",
+              }}
+              color="white"
+            >
+              {" "}
+              « Home 🏠
+            </Text>
+          </Link>
+        </Button>
+        <Button>
+          <Link href="/buy">
+            <Text
+              css={{
+                fontFamily: "$mono",
+              }}
+              color="white"
+            >
+              {" "}
+              Listings ✨ »
+            </Text>
+          </Link>
+        </Button>
       </Button.Group>
       <hr></hr>
       <Spacer />
       <div className={styles.profileHeader}>
- 
-      <Spacer />
+        <Spacer />
         <div
           className={styles.coverImage}
           style={{
@@ -109,56 +128,53 @@ export default function ProfilePage() {
             background: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
           }}
         />
-                <Button auto light onPress={handler}
-                >
-      ✏️Edit
-      </Button>
-      <Modal
-        closeButton
-        aria-labelledby="modal-title"
-        open={visible}
-        onClose={closeHandler}
-        css={{
-          backgroundColor: "transparent",
-          borderStyle: "solid",
-          borderWidth: "1px"
-        }}
-      >
-        <Modal.Header>
-          <Text id="modal-title" size={18} 
+        <Modal
+          closeButton
+          aria-labelledby="modal-title"
+          open={visible}
+          onClose={closeHandler}
           css={{
-            alignContent: "centre",
-            textAlign: "centre",
-            display: "flex",
-            fontFamily: "$mono"
+            backgroundColor: "transparent",
+            borderStyle: "solid",
+            borderWidth: "1px",
           }}
-          >
-            Set Avatar
-          </Text>
-          <hr></hr>
-        </Modal.Header>
-        <Modal.Body>
-          
-        <div>
-      <input type="file" />
-      <button>Upload</button>
-    </div>
-
-        </Modal.Body>
-        <Modal.Footer>
-          <Button auto flat color="error" onPress={closeHandler}>
-            Close
-          </Button>
-          <Button auto onPress={closeHandler}>
-            Save
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        <Text className={styles.profileName}
-        css={{
-          fontFamily: "$mono",
-          fontSize: "40px"
-        }}
+        >
+          <Modal.Header>
+            <Text
+              id="modal-title"
+              size={18}
+              css={{
+                alignContent: "centre",
+                textAlign: "centre",
+                display: "flex",
+                fontFamily: "$mono",
+              }}
+            >
+              Set Avatar
+            </Text>
+            <hr></hr>
+          </Modal.Header>
+          <Modal.Body>
+            <div>
+              <input type="file" />
+              <button>Upload</button>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button auto flat color="error" onPress={closeHandler}>
+              Close
+            </Button>
+            <Button auto onPress={closeHandler}>
+              Save
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        <Text
+          className={styles.profileName}
+          css={{
+            fontFamily: "$mono",
+            fontSize: "40px",
+          }}
         >
           {router.query.address ? (
             router.query.address.toString().substring(0, 4) +
@@ -166,11 +182,9 @@ export default function ProfilePage() {
             router.query.address.toString().substring(38, 42)
           ) : (
             <Skeleton width="320" />
-
           )}
         </Text>
       </div>
-
       <div className={styles.tabs}>
         <h3
           className={`${styles.tab} 
@@ -201,24 +215,23 @@ export default function ProfilePage() {
           Sell
         </h3>
       </div>
-
       <div
         className={`${
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-              <Spacer />
-      <Spacer />
+        <Spacer />
+        <Spacer />
         <NFTGrid
           data={ownedNfts}
           isLoading={loadingOwnedNfts}
           emptyText="❌ NO NFTs HERE ❌"
         />
         <hr></hr>
-              <Spacer />
-      <Spacer />
+        <Spacer />
+        <Spacer />
       </div>
-
+      <Spacer /> <Spacer />
       <div
         className={`${
           tab === "listings" ? styles.activeTabContent : styles.tabContent
@@ -234,7 +247,8 @@ export default function ProfilePage() {
           ))
         )}
       </div>
-
+      <Spacer />
+      <Spacer /> <Spacer />
       <div
         className={`${
           tab === "auctions" ? styles.activeTabContent : styles.tabContent
@@ -255,11 +269,13 @@ export default function ProfilePage() {
           tab === "Sell" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-<Sell />
+        <Sell />
       </div>
       <Spacer />
       <Spacer />
+      <Spacer />
+      <Spacer /> <Spacer />
+      <Spacer /> <Spacer />
     </Container>
-
   );
 }

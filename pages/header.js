@@ -18,24 +18,24 @@ import {
   useMetamask,
 } from "@thirdweb-dev/react";
 import styles from "./Navbar.module.css";
-import {NftCat} from '@web3uikit/icons'
-import {HandCoin} from '@web3uikit/icons'
-import {Plus} from '@web3uikit/icons'
-import {Grid} from '@web3uikit/icons'
-import {ReferenceApi} from '@web3uikit/icons'
-import {Rocket} from '@web3uikit/icons'
-import {ChevronRight2X} from '@web3uikit/icons'
+import { NftCat } from "@web3uikit/icons";
+import { HandCoin } from "@web3uikit/icons";
+import { Plus } from "@web3uikit/icons";
+import { Grid } from "@web3uikit/icons";
+import { ReferenceApi } from "@web3uikit/icons";
+import { Rocket } from "@web3uikit/icons";
+import { ChevronRight2X } from "@web3uikit/icons";
 import Link from "next/link";
 import { useState } from "react";
-import truncateEthAddress from 'truncate-eth-address'
+import truncateEthAddress from "truncate-eth-address";
 import Skeleton from "./Skeleton/Skeleton";
 import { Loading } from "@web3uikit/core";
 
-import { startTransition } from 'react';
-import { Suspense, lazy } from 'react';
+import { startTransition } from "react";
+import { Suspense, lazy } from "react";
 
 export default function Header() {
-  const navc = useState("navc")
+  const navc = useState("navc");
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
 
@@ -62,7 +62,6 @@ export default function Header() {
 
   return (
     <Suspense fallback={<Loading />}>
-         
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
@@ -83,23 +82,22 @@ export default function Header() {
             >
               RareBay
             </Text>
-</Link>
-            <Image
-              src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
-              alt="logo"
-              width={40}
-              height={40}
-            />
+          </Link>
+          <Image
+            src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
+            alt="logo"
+            width={40}
+            height={40}
+          />
         </Navbar.Brand>
-        <Navbar.Content activeColor="warning" hideIn="xs" variant="light"  >
-          <Link href="/" isActive key={"Market"}>
+        <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
+          <Link href="/buy" isActive key={"Market"}>
             {" "}
             <Text
               b
-            
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $yellow600 -20%, $blue600 100%"
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%",
               }}
             >
               Marketplace
@@ -109,10 +107,9 @@ export default function Header() {
             {" "}
             <Text
               b
-              
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $yellow600 -20%, $blue600 100%"
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%",
               }}
             >
               Whitepaper
@@ -122,23 +119,22 @@ export default function Header() {
             {" "}
             <Text
               b
-             
               color="warning"
               css={{
                 fontFamily: "monospace",
-                textGradient: "45deg, $yellow600 -20%, $blue600 100%"              }}
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+              }}
             >
-              $RARE 
-             </Text>
+              $RARE
+            </Text>
           </Link>
           <Spacer />
-
         </Navbar.Content>
 
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
-              key={item.  Market}
+              key={item.Market}
               activeColor="warning"
               css={{
                 fontFamily: "monospace",
@@ -165,13 +161,12 @@ export default function Header() {
             },
           }}
         >
-      <ConnectWallet />
-  <Dropdown placement="bottom-right">
+          <ConnectWallet />
+          <Dropdown placement="bottom-right">
             <Navbar.Item>
-
               <Dropdown.Trigger>
                 <Avatar
-                Skeleton
+                  Skeleton
                   bordered
                   color="warning"
                   size="md"
@@ -184,66 +179,54 @@ export default function Header() {
               aria-label="User menu actions"
               color="warning"
               onAction={(actionKey) => console.log({ actionKey })}
-            >              
-              <Dropdown.Item key="buy" >
-                 
+            >
+              <Dropdown.Item key="buy">
                 <Link href="/buy">
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <NftCat fontSize='15px'/>   Buy NFT
+                    <NftCat fontSize="15px" /> Buy NFT
                   </Text>
                 </Link>
-               
               </Dropdown.Item>
               <Dropdown.Item key="sell">
-             
                 <Link href="/sell">
                   {" "}
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <HandCoin fontSize='15px'/> Sell NFT
+                    <HandCoin fontSize="15px" /> Sell NFT
                   </Text>
                 </Link>
-                
               </Dropdown.Item>
               <Dropdown.Item key="create">
-             
                 <Link href="/">
-                <Text color="warning" css={{ fontFamily: "monospace" }}>
-                <Plus fontSize='15px'/> Drop Request
-                </Text>
+                  <Text color="warning" css={{ fontFamily: "monospace" }}>
+                    <Plus fontSize="15px" /> Drop Request
+                  </Text>
                 </Link>
-               
               </Dropdown.Item>
               <Dropdown.Item key="collections">
-            
                 <Link href={`/profile/${address}`}>
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <Grid fontSize='15px'/> My Collections
+                    <Grid fontSize="15px" /> My Collections
                   </Text>
                 </Link>
-              
               </Dropdown.Item>
               <Dropdown.Item key="portfolio">
-            
                 <Link href={`/profile/${address}`}>
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <ReferenceApi fontSize='15px'/> My Portfolio
+                    <ReferenceApi fontSize="15px" /> My Portfolio
                   </Text>
                 </Link>
-              
               </Dropdown.Item>
               <Dropdown.Item key="configurations">
-          
                 <Link href="/create">
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
-                  <Rocket fontSize='15px'/> Mint Drops
+                    <Rocket fontSize="15px" /> Mint Drops
                   </Text>
                 </Link>
-             
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Content>
       </Navbar>
-      </Suspense>
+    </Suspense>
   );
 }

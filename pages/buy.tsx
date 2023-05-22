@@ -3,9 +3,8 @@ import React from "react";
 import Container from "../components/Container/Container";
 import NFTGrid from "./NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
-import { Text, Spacer, Button } from "@nextui-org/react"
+import { Text, Spacer, Button } from "@nextui-org/react";
 import Link from "next/link";
-import Buy1 from "./buy2";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -14,7 +13,7 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-               <Text
+      <Text
         h4
         size={30}
         css={{
@@ -24,27 +23,47 @@ export default function Buy() {
         }}
         weight="bold"
       >
-    Listings on RareBay ♦️
+        Listings on RareBay ♦️
       </Text>
       <Button.Group color="warning" light>
-        <Button><Link href="/"><Text css={{
-          fontFamily: "$mono"
-        }} color="white"> « Home 🏠</Text></Link></Button>
-        <Button><Link href="/buy"><Text css={{
-          fontFamily: "$mono"
-        }} color="white"> Listings ✨</Text></Link></Button>
+        <Button>
+          <Link href="/">
+            <Text
+              css={{
+                fontFamily: "$mono",
+              }}
+              color="white"
+            >
+              {" "}
+              « Home 🏠 /
+            </Text>
+          </Link>
+        </Button>
+        <Button>
+          <Link href="/buy">
+            <Text
+              css={{
+                fontFamily: "$mono",
+              }}
+              color="white"
+            >
+              {" "}
+              Listings ✨
+            </Text>
+          </Link>
+        </Button>
       </Button.Group>
-<hr></hr>
-<Spacer />
+      <hr></hr>
+      <Spacer />
       <NFTGrid
         data={data}
         isLoading={isLoading}
-        emptyText={
-          "Oops! No NFTs Here"
-        }
+        emptyText={"Oops! No NFTs Here"}
       />
-       <Buy1 />
+      <Spacer />
+      <Spacer />
+      <Spacer />
+      <Spacer />
     </Container>
-   
   );
 }

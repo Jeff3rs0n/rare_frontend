@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { CoreBlockchain, CoreBlockchainTestnet } from "@thirdweb-dev/chains";
+import { Mumbai } from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
 import Header from "./header";
 
@@ -8,13 +8,12 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
-import {SSRProvider} from 'react-aria';
+import { SSRProvider } from "react-aria";
 import Skeleton from "./Skeleton/Skeleton";
-import Footer from "../components/footer"
-import { startTransition } from 'react';
-import { useState, Suspense, lazy } from 'react';
+import Footer from "../components/footer";
+import { startTransition } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Loading } from "@web3uikit/core";
-
 
 const darkTheme = createTheme({
   type: "dark",
@@ -26,53 +25,49 @@ const darkTheme = createTheme({
   },
 });
 
-
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SSRProvider>
-    <ThirdwebProvider
-      activeChain={CoreBlockchainTestnet}
-      authConfig={{
-        domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN || "",
-        authUrl: "/api/auth",
-      }}
-    >
-      <NextThemesProvider
-        defaultTheme="dark"
-        attribute="class"
-        value={{
-          dark: darkTheme.className,
+      <ThirdwebProvider
+        activeChain={"mumbai"}
+        authConfig={{
+          domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN || "",
+          authUrl: "/api/auth",
         }}
       >
-        <NextUIProvider>
-          <div
-            style={{
-              backgroundImage: `url("https://bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa.ipfs.nftstorage.link/ipfs/bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa/411997-fractal-fractal-flame-mathematics-energy-field-space.jpg")`,
-              backgroundSize: "cover",
-              width: "100%",
-            }}
-          >
-
-            <NextNProgress
-              color="var(--color-tertiary)"
-              startPosition={0.3}
-              stopDelayMs={200}
-              height={3}
-              showOnShallow={true}
-            />
+        <NextThemesProvider
+          defaultTheme="dark"
+          attribute="class"
+          value={{
+            dark: darkTheme.className,
+          }}
+        >
+          <NextUIProvider>
+            <div
+              style={{
+                backgroundImage: `url("https://bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa.ipfs.nftstorage.link/ipfs/bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa/411997-fractal-fractal-flame-mathematics-energy-field-space.jpg")`,
+                backgroundSize: "cover",
+                width: "100%",
+              }}
+            >
+              <NextNProgress
+                color="var(--color-tertiary)"
+                startPosition={0.3}
+                stopDelayMs={200}
+                height={3}
+                showOnShallow={true}
+              />
               <Suspense fallback={<Loading />}>
-              <Header />
-              <Component {...pageProps} />
-      </Suspense>
-   
+                <Header />
+                <Component {...pageProps} />
+              </Suspense>
 
-            <Footer />
-            <Analytics />
-          </div>
-        </NextUIProvider>
-      </NextThemesProvider>
-    </ThirdwebProvider>
+              <Footer />
+              <Analytics />
+            </div>
+          </NextUIProvider>
+        </NextThemesProvider>
+      </ThirdwebProvider>
     </SSRProvider>
   );
 }
