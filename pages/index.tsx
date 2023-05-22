@@ -56,7 +56,7 @@ export default function Home() {
       </Head>
       
       <Spacer />
-      <Container  fluid>
+      <Container>
       <motion.div     animate={{
       scale: [1, 2, 2, 1, 1],
       rotate: [0, 0, 270, 270, 0],
