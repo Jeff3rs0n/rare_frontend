@@ -8,6 +8,7 @@ import {
 } from "@nextui-org/react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme, Spacer, Button } from "@nextui-org/react";
+import { Blockie } from "web3uikit";
 
 import {
   ConnectWallet,
@@ -165,13 +166,9 @@ export default function Header() {
           <Dropdown placement="bottom-right">
             <Navbar.Item>
               <Dropdown.Trigger>
-                <Avatar
-                  Skeleton
-                  bordered
-                  color="warning"
-                  size="md"
-                  src="https://bafybeifwhnkyf2y2tzmcsv6rrysbcrkvpitozkjoefky2seaitaw7txyby.ipfs.nftstorage.link/user(1).png"
-                />
+                <Button size={16} light>
+                  <Blockie seed={address} />
+                </Button>
               </Dropdown.Trigger>
             </Navbar.Item>
 

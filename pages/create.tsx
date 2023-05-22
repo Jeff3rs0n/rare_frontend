@@ -23,7 +23,7 @@ const Create: NextPage = () => {
       css={{
         display: "flex",
         flexDirection: "column",
-        width: "90%",
+        width: "100%",
       }}
     >
       <Spacer></Spacer>
@@ -93,8 +93,6 @@ const Create: NextPage = () => {
         css={{
           backgroundColor: "transparent",
           backdropFilter: "blur(32px)",
-          borderColor: "grey",
-          borderStyle: "solid",
         }}
       >
         <Card.Header></Card.Header>
@@ -103,7 +101,7 @@ const Create: NextPage = () => {
             css={{
               display: "flex",
               flexDirection: "column",
-              width: "100%",
+              width: "90%",
             }}
           >
             {/* Mint a new NFT */}
@@ -174,7 +172,7 @@ const Create: NextPage = () => {
                     fontFamily: "$mono",
                   }}
                 >
-                  RARE NFT Drop
+                  PKCH NFT Drop
                 </Text>
                 <Modal.Body>
                   <Container>
@@ -194,7 +192,7 @@ const Create: NextPage = () => {
                         contractAddress={nftDropContractAddress}
                         action={(contract) => contract.erc721.claim(1)}
                         onSuccess={() => {
-                          alert("Yaay!! NFT Claimed!");
+                          alert("Yaay!! NFT Claimed! 🥳🥳🥳");
                         }}
                         onError={(error) => {
                           alert(error);

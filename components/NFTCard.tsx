@@ -3,7 +3,7 @@ import {
   useContract,
   useNFT,
   Web3Button,
-  useAddress
+  useAddress,
 } from "@thirdweb-dev/react";
 import type { FC } from "react";
 import {
@@ -13,12 +13,9 @@ import {
 import { NFT } from "@thirdweb-dev/sdk";
 import React from "react";
 import Skeleton from "../pages/Skeleton/Skeleton";
-import styles from "../styles/Buy.module.css";
-import { Card, Container, Button, Text, Spacer } from "@nextui-org/react";
-import {
-  tokenContractAddress,
-} from "../const/contractAddresses";
-
+import styles from "../styles/Home.module.css";
+import { Card, Container, Button, Text, Spacer, Grid } from "@nextui-org/react";
+import { tokenContractAddress } from "../const/contractAddresses";
 
 type Props = {
   nft: NFT;
@@ -31,45 +28,47 @@ interface NFTCardProps {
 const NFTCard: FC<NFTCardProps> = ({ tokenId }) => {
   const { contract } = useContract(nftDropContractAddress, "nft-drop");
   const { data: nft } = useNFT(contract, tokenId);
-  const address = useAddress()
+  const address = useAddress();
   return (
     <>
       <Container
         css={{
           display: "flex",
-          width: "20%"
+          flexDirection: "row",
+          width: "100%",
         }}
       >
         {nft && (
-          <div 
-          className={styles.nftBoxGrid}
-          >
+          <Grid>
             {nft.metadata && (
               <Card>
                 <Card.Image
                   src={nft.metadata.image as string}
                   objectFit="cover"
                 />
-                <Card.Footer isBlurred
-                css={{
-                  fontFamily: "$mono"
-                }}
-                >{nft.metadata.name} ◇ </Card.Footer>
               </Card>
             )}
             <Spacer />
-            <Web3Button
-              action={(contract) =>
-                contract?.call("withdraw", [nft.metadata.id])
-              }
-              contractAddress={stakingContractAddress}
-            >
-              Unstake
-            </Web3Button>
 
-            <Spacer />
-          </div>
+            <Text
+              css={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+              size={10}
+            >
+              {nft.metadata.name}
+            </Text>
+          </Grid>
         )}
+      </Container>
+      <Container
+        css={{
+          display: "flex",
+          flexDirection: "row",
+        }}
+      >
+        <Spacer />
       </Container>
     </>
   );
