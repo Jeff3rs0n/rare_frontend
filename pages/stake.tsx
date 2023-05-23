@@ -26,6 +26,8 @@ import {
   Card,
   Text,
   Button,
+  Loading,
+  Grid,
 } from "@nextui-org/react";
 import Claim from "../components/claim";
 import Tables from "../components/table";
@@ -74,7 +76,41 @@ const Stake: NextPage = () => {
   }
 
   if (isLoading) {
-    return <div>Loading</div>;
+    return (
+      <Container>
+        <Spacer />
+        <Spacer /> <Spacer />
+        <Spacer /> <Spacer />
+        <Spacer />
+        <Grid xs={12}></Grid>
+        <Spacer />
+        <Spacer />
+        <Spacer />
+        <Grid xs={12}>
+          <Loading
+            size="xl"
+            color={"warning"}
+            css={{
+              display: "flex",
+            }}
+          />
+          <Spacer />
+        </Grid>
+        <Spacer />
+        <Spacer />
+        <Spacer />
+        <Grid xs={2}></Grid>
+        <Spacer />
+        <Spacer /> <Spacer />
+        <Spacer />
+        <Spacer />
+        <Spacer /> <Spacer />
+        <Spacer />
+        <Spacer />
+        <Spacer /> <Spacer />
+        <Spacer />
+      </Container>
+    );
   }
   const stakeid = {};
   return (

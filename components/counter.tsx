@@ -10,14 +10,16 @@ export const Counter = () => {
   useEffect(() => {
     setTimeout(() => setTimeLeft(calculateTimeLeft()), 1000);
   }, [timeLeft]);
-  
 
   return (
     <Container>
-          <Container>
+      <Container>
         <div className="counter-item">
           <span className="label">
-            <Text color="warning" h3 css={{
+            <Text
+              color="warning"
+              size={18}
+              css={{
                 fontFamily: "monospace",
                 borderStyle: "solid",
                 borderColor: "grey",
@@ -25,14 +27,23 @@ export const Counter = () => {
                 borderRadius: "8px",
                 width: "100%",
                 backdropFilter: "blur(16px)",
-            }}><Spacer /> {String(timeLeft.days).padStart(2, "0")} : {String(timeLeft.hours).padStart(2, "0")} : {String(timeLeft.minutes).padStart(2, "0")} : {String(timeLeft.seconds).padStart(2, "0")} <Spacer /></Text>
+              }}
+            >
+              <Spacer /> {String(timeLeft.days).padStart(2, "0")} :{" "}
+              {String(timeLeft.hours).padStart(2, "0")} :{" "}
+              {String(timeLeft.minutes).padStart(2, "0")} :{" "}
+              {String(timeLeft.seconds).padStart(2, "0")} <Spacer />
+            </Text>
           </span>
         </div>
 
         <div className="counter-item">
           <span className="value">
             <Spacer />
-          <Text h6 color="warning"  css={{
+            <Text
+              size={12}
+              color="warning"
+              css={{
                 fontFamily: "monospace",
                 borderStyle: "solid",
                 borderColor: "grey",
@@ -40,14 +51,15 @@ export const Counter = () => {
                 borderRadius: "8px",
                 width: "100%",
                 backdropFilter: "blur(16px)",
-            }}>
-                   <Spacer />
-               Days  : Hours :  Minutes :  Seconds 
-                 <Spacer />
+              }}
+            >
+              <Spacer />
+              Days : Hrs : Mins : Secs
+              <Spacer />
             </Text>
           </span>
-        </div> 
-    </Container>
+        </div>
+      </Container>
     </Container>
   );
 };

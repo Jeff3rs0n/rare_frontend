@@ -64,7 +64,6 @@ export default function Header() {
   return (
     <Suspense fallback={<Loading />}>
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
-        <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
             "@xs": {
@@ -90,7 +89,70 @@ export default function Header() {
             width={40}
             height={40}
           />
+          <Spacer />
+          <Navbar.Content showIn={"xs"}>
+            <Dropdown>
+              <Dropdown.Button light>Menu</Dropdown.Button>
+              <Dropdown.Menu variant="light" aria-label="Actions">
+                <Dropdown.Item key="new">
+                  <Link href="/buy">
+                    <Text
+                      size={16}
+                      css={{
+                        fontFamily: "$mono",
+                      }}
+                      color="warning"
+                    >
+                      🛒 Marketplace
+                    </Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item key="copy">
+                  {" "}
+                  <Link href="/whitepaper">
+                    <Text
+                      size={16}
+                      css={{
+                        fontFamily: "$mono",
+                      }}
+                      color="warning"
+                    >
+                      📜 Whitepaper
+                    </Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item key="edit">
+                  {" "}
+                  <Link href="/stake">
+                    <Text
+                      size={16}
+                      css={{
+                        fontFamily: "$mono",
+                      }}
+                      color="warning"
+                    >
+                      ❄️ Rarity
+                    </Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item key="delete" color="success" withDivider>
+                  <Link href="/">
+                    <Text
+                      size={16}
+                      css={{
+                        fontFamily: "$mono",
+                      }}
+                      color="warning"
+                    >
+                      🚀 Launchpads
+                    </Text>
+                  </Link>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Navbar.Content>
         </Navbar.Brand>
+        <Spacer />
         <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
           <Link href="/buy" isActive key={"Market"}>
             {" "}

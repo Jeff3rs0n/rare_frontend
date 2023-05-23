@@ -59,8 +59,8 @@ export default function Caros() {
     <>
       <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide number-slide1">
-          <Container css={{ w: "95%", h: "600px" }}>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "80%", h: "500px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -168,7 +168,7 @@ export default function Caros() {
                   <Col>
                     <Row justify="flex-end">
                       <Button
-                      color="warning"
+                        color="warning"
                         flat
                         auto
                         css={{
@@ -201,8 +201,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide2">
-          <Container css={{ w: "95%", h: "600px" }}>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "80%", h: "500px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -345,8 +345,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide3">
-          <Container css={{ w: "95%", h: "600px" }}>
-            <Card css={{ w: "100%", h: "600px" }}>
+          <Container css={{ w: "80%", h: "500px" }}>
+            <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -491,8 +491,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide4">
-          <Container css={{ w: "95%", h: "600px" }}>
-            <Card css={{ h: "600px" }}>
+          <Container css={{ w: "80%", h: "500px" }}>
+            <Card css={{ h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
