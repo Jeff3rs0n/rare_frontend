@@ -55,7 +55,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
       css={{
         display: "flex",
         flexDirection: "column",
-        width: "80%",
+        width: "90%",
       }}
     >
       <Spacer />
@@ -186,7 +186,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
                     fontFamily: "$mono",
                   }}
                 >
-                  PKCH NFT Drop
+                  {nft.metadata.name} Drop
                 </Text>
                 <Modal.Body>
                   <Container>
@@ -201,6 +201,20 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
                         width: "100%",
                       }}
                     >
+                      <Container>
+                        <Card
+                          css={{
+                            width: "100%",
+                          }}
+                        >
+                          <Card.Image
+                            objectFit="cover"
+                            width={"100%"}
+                            src={nft?.metadata?.image as string}
+                          />
+                        </Card>
+                      </Container>
+                      <Spacer />
                       <Web3Button
                         theme="dark"
                         contractAddress={nftDropContractAddress}
@@ -233,12 +247,6 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
             <Spacer />
             <Spacer />
 
-            <Image
-              src={nft?.metadata?.image as string}
-              alt="drop"
-              width={100}
-              height={100}
-            />
             <Spacer />
             <Container
               css={{
@@ -355,4 +363,3 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
 };
 
 export default Create;
-
