@@ -100,53 +100,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
           </Link>
         </Button>
       </Button.Group>
-      <Container
-        css={{
-          width: "80%",
-          height: "30%",
-        }}
-      >
-        <Card>
-          <Card.Image
-            objectFit="cover"
-            width={"100%"}
-            height={300}
-            src={nft?.metadata?.image as string}
-          />
-          <Card.Footer isBlurred>
-            <Col>
-              <Text
-                h5
-                css={{
-                  fontFamily: "$mono",
-                }}
-              >
-                ♻️ Supply 0
-              </Text>
 
-              <Text
-                h5
-                css={{
-                  fontFamily: "$mono",
-                }}
-              >
-                👤 Owners 0
-              </Text>
-            </Col>
-          </Card.Footer>
-        </Card>
-      </Container>
-      <Text
-        h4
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "90deg, white -10%, $yellow600 100%",
-        }}
-        weight="bold"
-      >
-        ❄️ Minting from {nft?.metadata?.name} NFT collection
-      </Text>
       <hr></hr>
       <Spacer />
       <Card
@@ -278,8 +232,9 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
             </Container>
             <Spacer />
             <Spacer />
+
             <Image
-              src="https://bafybeib6ywau4nvobrfl4qacxuiqpv2r3lt7njzxsd2xqv6wkg7qyuv3iq.ipfs.nftstorage.link/icons8-sell-64.png"
+              src={nft?.metadata?.image as string}
               alt="drop"
               width={100}
               height={100}
