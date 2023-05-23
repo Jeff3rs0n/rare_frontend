@@ -203,7 +203,9 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
                         contractAddress={nftDropContractAddress}
                         action={(contract) => contract.erc721.claim(1)}
                         onSuccess={() => {
-                          alert("Yaay!! NFT Claimed! 🥳🥳🥳");
+                          alert(
+                            "Yaay!! NFT Claimed! 🥳🥳🥳, Proceede to Sell Pade to Sell it."
+                          );
                         }}
                         onError={(error) => {
                           alert(error);

@@ -26,6 +26,7 @@ import {
   Card,
   Text,
   Button,
+  Loading,
 } from "@nextui-org/react";
 import Claim from "../components/claim";
 import Tables from "../components/table";
