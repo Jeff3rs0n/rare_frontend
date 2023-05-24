@@ -15,7 +15,7 @@ export default function Roadmaps() {
   return (
     <>
       <Spacer />
-      <Container justify="centre">
+      <Container justify="centre" fluid>
         <Spacer />
         <Text
           weight="extrabold"

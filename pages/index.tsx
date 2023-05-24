@@ -269,7 +269,7 @@ export default function Home() {
             }}
           >
             <Spacer />
-            <Roadmaps />
+
             <Card
               css={{
                 backgroundColor: "transparent",
@@ -318,11 +318,12 @@ export default function Home() {
               <Card.Body></Card.Body>
             </Card>
           </Container>
+          <Spacer />
         </AnimatePresence>
-        <Spacer />
-        <Spacer />
-        <Spacer />
       </div>
+      <Container fluid>
+        <Roadmaps />
+      </Container>
     </>
   );
 }
