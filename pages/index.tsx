@@ -264,7 +264,7 @@ export default function Home() {
 
           <Container
             css={{
-              width: "70%",
+              width: "85%",
             }}
           >
             <hr></hr>
