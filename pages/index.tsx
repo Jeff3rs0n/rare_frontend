@@ -268,7 +268,6 @@ export default function Home() {
               width: "85%",
             }}
           >
-            <hr></hr>
             <Spacer />
             <Roadmaps />
             <Card
