@@ -65,6 +65,7 @@ export default function Header() {
     <Suspense fallback={<Loading />}>
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Brand
+          hideIn={"xs"}
           css={{
             "@xs": {
               w: "12%",
@@ -72,6 +73,12 @@ export default function Header() {
           }}
         >
           <Link href="/">
+            <Image
+              src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
+              alt="logo"
+              width={40}
+              height={40}
+            />
             <Text
               b
               color="warning"
@@ -83,75 +90,70 @@ export default function Header() {
               RareBay
             </Text>
           </Link>
-          <Image
-            src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
-            alt="logo"
-            width={40}
-            height={40}
-          />
           <Spacer />
-          <Navbar.Content showIn={"xs"}>
-            <Dropdown>
-              <Dropdown.Button light>Menu</Dropdown.Button>
-              <Dropdown.Menu variant="light" aria-label="Actions">
-                <Dropdown.Item key="new">
-                  <Link href="/buy">
-                    <Text
-                      size={16}
-                      css={{
-                        fontFamily: "$mono",
-                      }}
-                      color="warning"
-                    >
-                      🛒 Marketplace
-                    </Text>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item key="copy">
-                  {" "}
-                  <Link href="/whitepaper">
-                    <Text
-                      size={16}
-                      css={{
-                        fontFamily: "$mono",
-                      }}
-                      color="warning"
-                    >
-                      📜 Whitepaper
-                    </Text>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item key="edit">
-                  {" "}
-                  <Link href="/stake">
-                    <Text
-                      size={16}
-                      css={{
-                        fontFamily: "$mono",
-                      }}
-                      color="warning"
-                    >
-                      ❄️ Rarity
-                    </Text>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item key="delete" color="success" withDivider>
-                  <Link href="/">
-                    <Text
-                      size={16}
-                      css={{
-                        fontFamily: "$mono",
-                      }}
-                      color="warning"
-                    >
-                      🚀 Launchpads
-                    </Text>
-                  </Link>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Navbar.Content>
         </Navbar.Brand>
+
+        <Navbar.Content showIn={"xs"}>
+          <Dropdown>
+            <Dropdown.Button light>Menu</Dropdown.Button>
+            <Dropdown.Menu variant="light" aria-label="Actions">
+              <Dropdown.Item key="new" withDivider>
+                <Link href="/buy">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    🛒 Marketplace
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="copy" withDivider>
+                {" "}
+                <Link href="/whitepaper">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    📜 Whitepaper
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="edit" withDivider>
+                {" "}
+                <Link href="/stake">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    ❄️ Rarity
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="delete" color="success" withDivider>
+                <Link href="/">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    🚀 Launchpads
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Navbar.Content>
         <Spacer />
         <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
           <Link href="/buy" isActive key={"Market"}>

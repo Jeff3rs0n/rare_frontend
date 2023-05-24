@@ -59,7 +59,7 @@ export default function Caros() {
     <>
       <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide number-slide1">
-          <Container css={{ w: "80%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "500px" }}>
             <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -125,7 +125,7 @@ export default function Caros() {
                           <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -138,7 +138,7 @@ export default function Caros() {
                           <Dapps fontSize="15px" /> Volume: 0.0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -151,7 +151,7 @@ export default function Caros() {
                           <Cat fontSize="15px" /> Items: #0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -201,7 +201,7 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide2">
-          <Container css={{ w: "80%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "500px" }}>
             <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -267,7 +267,7 @@ export default function Caros() {
                           <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -280,7 +280,7 @@ export default function Caros() {
                           <Dapps fontSize="15px" /> Volume: 0.0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -293,7 +293,7 @@ export default function Caros() {
                           <Cat fontSize="15px" /> Items: #0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -345,7 +345,7 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide3">
-          <Container css={{ w: "80%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "500px" }}>
             <Card css={{ w: "100%", h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -378,7 +378,7 @@ export default function Caros() {
                   objectFit="cover"
                   src="https://images.blur.io/_blur-prod/_assets/homepage/covers/checks-1.png?tl_px=1,1&br_px=1600,900&format=png&w=1560"
                   width={1500}
-                  height={2000}
+                  height={1000}
                   alt="Background gradient from red to blue"
                 ></Card.Image>
               </Card.Body>
@@ -412,7 +412,7 @@ export default function Caros() {
                         </Text>
 
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -425,7 +425,7 @@ export default function Caros() {
                           <Dapps fontSize="15px" /> Volume: 0.0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -439,7 +439,7 @@ export default function Caros() {
                         </Text>
 
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -491,7 +491,7 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide4">
-          <Container css={{ w: "80%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "500px" }}>
             <Card css={{ h: "500px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -556,7 +556,7 @@ export default function Caros() {
                           <Badge color="success" variant="dot" /> Active
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -569,7 +569,7 @@ export default function Caros() {
                           <Dapps fontSize="15px" /> Volume: 0.0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
@@ -582,7 +582,7 @@ export default function Caros() {
                           <Cat fontSize="15px" /> Items: #0
                         </Text>
                         <Text
-                          size={15}
+                          size={12}
                           color="warning"
                           weight={"bold"}
                           css={{
