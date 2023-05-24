@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
               style={{
                 backgroundImage: `url("https://bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa.ipfs.nftstorage.link/ipfs/bafybeigywo2u5r4dhs6uugrtrpveetyomyrkvnxlovqs665dbanwzthrpa/411997-fractal-fractal-flame-mathematics-energy-field-space.jpg")`,
                 backgroundSize: "cover",
+                backgroundRepeat: "repeat",
                 width: "100%",
               }}
             >

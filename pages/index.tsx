@@ -23,6 +23,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Counter } from "@/components/counter";
 import Header from "./header";
+import Roadmaps from "./roadmap";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -267,8 +268,8 @@ export default function Home() {
               width: "85%",
             }}
           >
-            <hr></hr>
             <Spacer />
+            <Roadmaps />
             <Card
               css={{
                 backgroundColor: "transparent",
