@@ -116,8 +116,8 @@ const Stake: NextPage = () => {
   return (
     <Container
       css={{
-        padding: "2%",
-        width: "100%",
+        padding: "5%",
+        width: "80%",
       }}
     >
       <Spacer />
