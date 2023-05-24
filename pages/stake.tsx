@@ -117,7 +117,7 @@ const Stake: NextPage = () => {
     <Container
       css={{
         padding: "5%",
-        width: "80%",
+        width: "90%",
       }}
     >
       <Spacer />
@@ -145,19 +145,6 @@ const Stake: NextPage = () => {
             >
               {" "}
               Listings ✨ /
-            </Text>
-          </Link>
-        </Button>
-        <Button>
-          <Link href="/stake">
-            <Text
-              css={{
-                fontFamily: "$mono",
-              }}
-              color="white"
-            >
-              {" "}
-              Staking 💰
             </Text>
           </Link>
         </Button>
