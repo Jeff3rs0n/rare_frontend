@@ -94,10 +94,22 @@ export default function Header() {
         </Navbar.Brand>
 
         <Navbar.Content showIn={"xs"}>
-          <Dropdown>
+          <Dropdown
+            css={{
+              background: "transparent",
+              backdropFilter: "blur(10px)",
+            }}
+          >
             <Dropdown.Button light>Menu</Dropdown.Button>
-            <Dropdown.Menu variant="light" aria-label="Actions">
-              <Dropdown.Item key="new" withDivider>
+            <Dropdown.Menu
+              variant="light"
+              aria-label="Actions"
+              css={{
+                background: "transparent",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Dropdown.Item key="new">
                 <Link href="/buy">
                   <Text
                     size={16}
@@ -148,6 +160,19 @@ export default function Header() {
                     color="warning"
                   >
                     🚀 Launchpads
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="delete" color="success" withDivider>
+                <Link href="/roadmap">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    🛣️ Roadmap
                   </Text>
                 </Link>
               </Dropdown.Item>

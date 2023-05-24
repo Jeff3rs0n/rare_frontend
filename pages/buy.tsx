@@ -1,7 +1,7 @@
 import { useContract, useNFTs } from "@thirdweb-dev/react";
 import React from "react";
 import Container from "../components/Container/Container";
-import NFTGrid from "./NFTGrid";
+import NFTGrid from "../components/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import { Text, Spacer, Button } from "@nextui-org/react";
 import Link from "next/link";

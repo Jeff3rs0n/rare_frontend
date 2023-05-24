@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { Mumbai } from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
-import Header from "./header";
+import Header from "../components/header";
 
 import { createTheme, NextUIProvider, Container } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
@@ -9,7 +9,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SSRProvider } from "react-aria";
-import Skeleton from "./Skeleton/Skeleton";
+import Skeleton from "../components/Skeleton/Skeleton";
 import Footer from "../components/footer";
 import { startTransition } from "react";
 import { useState, Suspense, lazy } from "react";
