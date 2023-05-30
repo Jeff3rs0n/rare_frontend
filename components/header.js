@@ -65,7 +65,6 @@ export default function Header() {
     <Suspense fallback={<Loading />}>
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Brand
-          hideIn={"xs"}
           css={{
             "@xs": {
               w: "12%",
@@ -76,8 +75,8 @@ export default function Header() {
             <Image
               src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
               alt="logo"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
             />
             <Text
               b

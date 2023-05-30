@@ -1,5 +1,10 @@
 import type { AppProps } from "next/app";
-import { Mumbai } from "@thirdweb-dev/chains";
+import {
+  Mumbai,
+  CoreBlockchain,
+  Ethereum,
+  Polygon,
+} from "@thirdweb-dev/chains";
 import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
 import Header from "../components/header";
 
@@ -29,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <SSRProvider>
       <ThirdwebProvider
-        activeChain={"mumbai"}
+        activeChain={CoreBlockchain}
         authConfig={{
           domain: process.env.NEXT_PUBLIC_THIRDWEB_AUTH_DOMAIN || "",
           authUrl: "/api/auth",

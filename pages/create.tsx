@@ -10,7 +10,7 @@ import {
 } from "../const/contractAddresses";
 import { NFT } from "@thirdweb-dev/sdk";
 import React from "react";
-import Skeleton from "../pages/Skeleton/Skeleton";
+import Skeleton from "../components/Skeleton/Skeleton";
 import styles from "../styles/Home.module.css";
 import {
   Card,
@@ -62,7 +62,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
         css={{
           display: "flex",
           flexDirection: "column",
-          width: "80%",
+          width: "90%",
         }}
       >
         <Spacer />
@@ -97,148 +97,149 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
 
         <hr></hr>
         <Spacer />
-        <Card
-          css={{
-            backgroundColor: "transparent",
-            backdropFilter: "blur(32px)",
-            borderStyle: "solid",
-            borderColor: "Gray",
-          }}
-        >
-          <Card.Header></Card.Header>
-          <Card.Body>
-            <Container
-              css={{
-                display: "flex",
-                flexDirection: "column",
-                width: "70%",
-              }}
-            >
-              <Button
-                shadow
-                color="warning"
-                ghost
-                onPress={handler}
+        <Container>
+          <Card
+            css={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur(32px)",
+            }}
+          >
+            <Card.Header></Card.Header>
+            <Card.Body>
+              <Container
                 css={{
-                  padding: "3%",
-                  fontFamily: "monospace",
-                  textGradient: "45deg, $yellow200 -20%, $red600 100%",
-                  height: "40%",
-                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "50%",
                 }}
               >
-                <Image
-                  src="https://bafybeiaye5lcoeduup3c3edgbi25ayorebzjzqsaqsen2cxl3oc45ecwqm.ipfs.nftstorage.link/drop.png"
-                  alt="drop"
-                  width={50}
-                  height={50}
-                />
-                <Text
-                  size={18}
+                 <Image
+                    src="https://bafybeiaye5lcoeduup3c3edgbi25ayorebzjzqsaqsen2cxl3oc45ecwqm.ipfs.nftstorage.link/drop.png"
+                    alt="drop"
+                    width={50}
+                    height={50}
+                  />
+                  <Spacer />
+                <Button
+                  shadow
+                  color="warning"
+                  ghost
+                  onPress={handler}
                   css={{
-                    padding: "2%",
+                    padding: "3%",
                     fontFamily: "monospace",
-                    textGradient: "45deg, $green900 -10%, $blue800 100%",
+                    textGradient: "45deg, $yellow200 -20%, $red600 100%",
+                    height: "40%",
+                    width: "100%",
                   }}
-                  weight="bold"
                 >
-                  Mint NFT ✨
-                </Text>
-              </Button>
-              <Modal
-                closeButton
-                aria-labelledby="modal-title"
-                open={visible}
-                onClose={closeHandler}
-              >
-                <Modal.Header>
                   <Text
-                    color="warning"
-                    id="modal-title"
                     size={18}
+                    css={{
+                      padding: "2%",
+                      fontFamily: "monospace",
+                      textGradient: "45deg, $green900 -10%, $blue800 100%",
+                    }}
+                    weight="bold"
+                  >
+                    Mint NFT ✨
+                  </Text>
+                </Button>
+                <Modal
+                  closeButton
+                  aria-labelledby="modal-title"
+                  open={visible}
+                  onClose={closeHandler}
+                >
+                  <Modal.Header>
+                    <Text
+                      color="warning"
+                      id="modal-title"
+                      size={18}
+                      css={{
+                        fontFamily: "$mono",
+                      }}
+                    >
+                      Mint an NFT from
+                    </Text>
+                    <br></br>
+                  </Modal.Header>
+                  <Text
                     css={{
                       fontFamily: "$mono",
                     }}
                   >
-                    Mint an NFT from
+                    {nft?.metadata?.name} Drop
                   </Text>
-                  <br></br>
-                </Modal.Header>
-                <Text
-                  css={{
-                    fontFamily: "$mono",
-                  }}
-                >
-                  {nft?.metadata?.name} Drop
-                </Text>
-                <Modal.Body>
-                  <Container>
-                    <hr
-                      className={`${styles.smallDivider} ${styles.detailPageHr}`}
-                    />
-                    <Spacer />
-                    <Container
-                      css={{
-                        display: "flex",
-                        flexDirection: "column",
-                        width: "100%",
-                      }}
-                    >
-                      <Container>
-                        <Card
-                          css={{
-                            width: "100%",
-                          }}
-                        >
-                          <Card.Image
-                            objectFit="cover"
-                            width={"100%"}
-                            src={nft?.metadata?.image as string}
-                          />
-                        </Card>
-                      </Container>
+                  <Modal.Body>
+                    <Container>
+                      <hr
+                        className={`${styles.smallDivider} ${styles.detailPageHr}`}
+                      />
                       <Spacer />
-                      <Web3Button
-                        theme="dark"
-                        contractAddress={nftDropContractAddress}
-                        action={(contract) => contract.erc721.claim(1)}
-                        onSuccess={() => {
-                          alert(
-                            "Yaay!! NFT Claimed! 🥳🥳🥳, Proceede to Sell Pade to Sell it."
-                          );
-                        }}
-                        onError={(error) => {
-                          alert(error);
+                      <Container
+                        css={{
+                          display: "flex",
+                          flexDirection: "column",
+                          width: "100%",
                         }}
                       >
-                        Claim NFT ✨
-                      </Web3Button>
+                        <Container>
+                          <Card
+                            css={{
+                              width: "80%",
+                            }}
+                          >
+                            <Card.Image
+                              objectFit="cover"
+                              width={"100%"}
+                              src={nft?.metadata?.image as string}
+                            />
+                          </Card>
+                        </Container>
+                        <Spacer />
+                        <Web3Button
+                          theme="dark"
+                          contractAddress={nftDropContractAddress}
+                          action={(contract) => contract.erc721.claim(1)}
+                          onSuccess={() => {
+                            alert(
+                              "Yaay!! NFT Claimed! 🥳🥳🥳, Proceede to Sell Pade to Sell it."
+                            );
+                          }}
+                          onError={(error) => {
+                            alert(error);
+                          }}
+                        >
+                          Claim NFT ✨
+                        </Web3Button>
+                      </Container>
                     </Container>
-                  </Container>
-                </Modal.Body>
-                <Modal.Footer></Modal.Footer>
-              </Modal>
-              <Text
-                size={16}
-                css={{
-                  fontFamily: "monospace",
-                  textAlign: "centre",
-                }}
-              >
-                <Spacer />
-                Minting is free and only liable to gas fees.
-                <hr></hr>
-              </Text>
-            </Container>
-          </Card.Body>
-        </Card>
+                  </Modal.Body>
+                  <Modal.Footer></Modal.Footer>
+                </Modal>
+                <Text
+                  size={16}
+                  css={{
+                    fontFamily: "monospace",
+                    textAlign: "centre",
+                  }}
+                >
+                  <Spacer />
+                  Minting is free and only liable to gas fees.
+                  <hr></hr>
+                </Text>
+              </Container>
+            </Card.Body>
+          </Card>
+        </Container>
+
         <Spacer />
         <Card
           css={{
             backgroundColor: "transparent",
             backdropFilter: "blur(32px)",
-            borderStyle: "solid",
-            borderColor: "Gray",
+            width: "100%",
           }}
         >
           <Card.Header></Card.Header>
@@ -247,7 +248,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "70%",
+                width: "100%",
               }}
             >
               <Button
@@ -304,8 +305,6 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
           css={{
             backgroundColor: "transparent",
             backdropFilter: "blur(32px)",
-            borderStyle: "solid",
-            borderColor: "Gray",
           }}
         >
           <Card.Header></Card.Header>
@@ -314,7 +313,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "70%",
+                width: "100%",
               }}
             >
               <Button
