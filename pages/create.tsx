@@ -111,7 +111,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "100%",
+                width: "70%",
               }}
             >
               <Image
@@ -247,7 +247,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "100%",
+                width: "70%",
               }}
             >
               <Image
@@ -313,7 +313,7 @@ const Create: FC<NFTCardProps> = ({ tokenId }) => {
               css={{
                 display: "flex",
                 flexDirection: "column",
-                width: "100%",
+                width: "70%",
               }}
             >
               <Image
