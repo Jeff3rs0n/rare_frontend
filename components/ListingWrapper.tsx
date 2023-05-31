@@ -5,7 +5,7 @@ import React from "react";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import styles from "../styles/Buy.module.css";
 import NFT from "./NFT";
-import Skeleton from "../pages/Skeleton/Skeleton";
+import Skeleton from "../components/Skeleton/Skeleton";
 
 type Props = {
   listing: DirectListingV3 | EnglishAuction;
