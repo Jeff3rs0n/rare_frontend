@@ -21,7 +21,7 @@ export const NFT_COLLECTION_ADDRESS1 =
 export const ETHERSCAN_URL = "https://scan.test.btcs.network/";
 
 export const nftDropContractAddress =
-  "0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242";
+  "0xad5E22E52709D2ECD5fDEB652ab34FC0795b4b63";
 
 export const stakingContractAddress =
   "0x7607f1c69F84CeBBc8f32380Cc465751179Fb1FF";
