@@ -22,8 +22,8 @@ import { Hero, Typography } from "@web3uikit/core";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Counter } from "@/components/counter";
-import Header from "./header";
-import Roadmaps from "./roadmap";
+import Header from "../components/header";
+import Roadmaps from "../components/roadmap";
 
 import { motion, AnimatePresence } from "framer-motion";
 

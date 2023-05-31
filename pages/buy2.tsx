@@ -1,9 +1,9 @@
 import { useContract, useNFTs } from "@thirdweb-dev/react";
 import React from "react";
 import Container from "../components/Container/Container";
-import NFTGrid2 from "./NFtGrid2";
+import NFTGrid2 from "../components/NFtGrid2";
 import { NFT_COLLECTION_ADDRESS1 } from "../const/contractAddresses";
-import { Text, Spacer, Button } from "@nextui-org/react"
+import { Text, Spacer, Button } from "@nextui-org/react";
 import Link from "next/link";
 
 export default function Buy1() {
@@ -13,20 +13,19 @@ export default function Buy1() {
 
   return (
     <Container maxWidth="lg">
-        <Text  h4 css={{fontFamily: "$mono" }}>Emojis</Text>
-<hr></hr>
-<Spacer />
+      <Text h4 css={{ fontFamily: "$mono" }}>
+        Emojis
+      </Text>
+      <hr></hr>
+      <Spacer />
       <NFTGrid2
         data={data}
         isLoading={isLoading}
-        emptyText={
-          "Oops! No NFTs Here"
-        }
+        emptyText={"Oops! No NFTs Here"}
       />
-       <Spacer />
-       <Spacer />
-       <Spacer />
+      <Spacer />
+      <Spacer />
+      <Spacer />
     </Container>
-   
   );
 }

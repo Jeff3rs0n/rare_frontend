@@ -65,7 +65,6 @@ export default function Header() {
     <Suspense fallback={<Loading />}>
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Brand
-          hideIn={"xs"}
           css={{
             "@xs": {
               w: "12%",
@@ -76,8 +75,8 @@ export default function Header() {
             <Image
               src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
               alt="logo"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
             />
             <Text
               b
@@ -94,10 +93,22 @@ export default function Header() {
         </Navbar.Brand>
 
         <Navbar.Content showIn={"xs"}>
-          <Dropdown>
+          <Dropdown
+            css={{
+              background: "transparent",
+              backdropFilter: "blur(10px)",
+            }}
+          >
             <Dropdown.Button light>Menu</Dropdown.Button>
-            <Dropdown.Menu variant="light" aria-label="Actions">
-              <Dropdown.Item key="new" withDivider>
+            <Dropdown.Menu
+              variant="light"
+              aria-label="Actions"
+              css={{
+                background: "transparent",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Dropdown.Item key="new">
                 <Link href="/buy">
                   <Text
                     size={16}
@@ -148,6 +159,19 @@ export default function Header() {
                     color="warning"
                   >
                     🚀 Launchpads
+                  </Text>
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="delete" color="success" withDivider>
+                <Link href="/roadmap">
+                  <Text
+                    size={16}
+                    css={{
+                      fontFamily: "$mono",
+                    }}
+                    color="warning"
+                  >
+                    🛣️ Roadmap
                   </Text>
                 </Link>
               </Dropdown.Item>

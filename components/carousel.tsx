@@ -59,8 +59,8 @@ export default function Caros() {
     <>
       <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide number-slide1">
-          <Container css={{ w: "90%", h: "500px" }}>
-            <Card css={{ w: "100%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "600px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -72,28 +72,28 @@ export default function Caros() {
                       fontFamily: "monospace",
                     }}
                   >
-                    Category
+                    PFPS
                   </Text>
                   <Text
                     h3
                     color="white"
                     css={{
-                      textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                      textGradient: "45deg, $yellow800 -20%, $red600 100%",
 
                       fontFamily: "monospace",
                     }}
                   >
-                    Collection Name
+                    The Kepler Project
                   </Text>
                 </Col>
               </Card.Header>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
                   objectFit="cover"
-                  src="https://ik.imagekit.io/bayc/assets/bayc-mutant-hero.jpg"
-                  width={1500}
+                  src="https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png"
+                  width={"100%"}
                   height={2000}
-                  alt="Background gradient from red to blue"
+                  alt="Kepler"
                 ></Card.Image>
               </Card.Body>
               <Card.Footer
@@ -129,7 +129,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -142,7 +142,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -155,7 +155,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -201,8 +201,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide2">
-          <Container css={{ w: "90%", h: "500px" }}>
-            <Card css={{ w: "100%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "600px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -271,7 +271,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -284,7 +284,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -297,7 +297,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -345,8 +345,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide3">
-          <Container css={{ w: "90%", h: "500px" }}>
-            <Card css={{ w: "100%", h: "500px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ w: "100%", h: "600px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -416,7 +416,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -429,7 +429,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -443,7 +443,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -491,8 +491,8 @@ export default function Caros() {
         </div>
 
         <div className="keen-slider__slide number-slide4">
-          <Container css={{ w: "90%", h: "500px" }}>
-            <Card css={{ h: "500px" }}>
+          <Container css={{ w: "90%", h: "600px" }}>
+            <Card css={{ h: "600px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -560,7 +560,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -573,7 +573,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
@@ -586,7 +586,7 @@ export default function Caros() {
                           color="warning"
                           weight={"bold"}
                           css={{
-                            textGradient: "45deg, $blue600 -20%, $red600 100%",
+                            textGradient: "45deg, $blue300 -20%, $red200 100%",
 
                             fontFamily: "monospace",
                           }}
