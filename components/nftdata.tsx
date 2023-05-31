@@ -77,15 +77,5 @@ export default function NFTD() {
     return <div>Loading</div>;
   }
 
-  return (
-    <div className={styles.nftGridContainer}>
-      {stakedTokens &&
-        stakedTokens[0]?.map((stakedToken: BigNumber) => (
-          <NFTCard
-            tokenId={stakedToken.toNumber()}
-            key={stakedToken.toString()}
-          />
-        ))}
-    </div>
-  );
+  return <div className={styles.nftGridContainer}></div>;
 }
