@@ -2,9 +2,13 @@ import { useContract, useNFTs } from "@thirdweb-dev/react";
 import React from "react";
 import Container from "../components/Container/Container";
 import NFTGrid from "../components/NFTGrid";
-import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
+import {
+  NFT_COLLECTION_ADDRESS,
+  NFT_COLLECTION_ADDRESS1,
+} from "../const/contractAddresses";
 import { Text, Spacer, Button } from "@nextui-org/react";
 import Link from "next/link";
+import Buy1 from "./buy2";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -13,18 +17,6 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-      <Text
-        h4
-        size={30}
-        css={{
-          padding: "2%",
-          fontFamily: "monospace",
-          textGradient: "45deg, $yellow600 -20%, $red600 100%",
-        }}
-        weight="bold"
-      >
-        Listings on RareBay ♦️
-      </Text>
       <Button.Group color="warning" light>
         <Button>
           <Link href="/">
@@ -53,6 +45,18 @@ export default function Buy() {
           </Link>
         </Button>
       </Button.Group>
+      <Text
+        h4
+        size={30}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+        weight="bold"
+      >
+        Kepler Collection
+      </Text>
       <hr></hr>
       <Spacer />
       <NFTGrid
@@ -61,6 +65,7 @@ export default function Buy() {
         emptyText={"Oops! No NFTs Here"}
       />
       <Spacer />
+      <Buy1 />
       <Spacer />
       <Spacer />
       <Spacer />

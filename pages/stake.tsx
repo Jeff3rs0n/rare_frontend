@@ -262,8 +262,12 @@ const Stake: NextPage = () => {
                 </div>
               </div>
               <Spacer />
-              <Container></Container>
-              <Claim />
+              <Web3Button
+                action={(contract) => contract.call("claimRewards")}
+                contractAddress={stakingContractAddress}
+              >
+                Claim Rewards
+              </Web3Button>
               <Spacer />
               <Text
                 css={{
@@ -278,7 +282,15 @@ const Stake: NextPage = () => {
               </Text>
               <hr></hr>
               <Spacer />
-
+              <div className={styles.nftBoxGrid}>
+                {stakedTokens &&
+                  stakedTokens[0]?.map((stakedToken: BigNumber) => (
+                    <NFTCard
+                      tokenId={stakedToken.toNumber()}
+                      key={stakedToken.toString()}
+                    />
+                  ))}
+              </div>
               <Tables />
               <Text
                 css={{
