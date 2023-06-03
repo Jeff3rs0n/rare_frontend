@@ -116,7 +116,6 @@ export default function ProfilePage() {
           weight="bold"
         >
           By <Blockie seed={address as string} size={5} />{" "}
-        
         </Text>
       </Text>
       <Spacer />
@@ -238,7 +237,6 @@ export default function ProfilePage() {
                 rightLabel="Unlimited"
                 min={1}
                 onChange={function noRefCheck() {}}
-                value="1"
               />
               <Text
                 css={{
