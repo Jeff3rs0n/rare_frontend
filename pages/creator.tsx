@@ -236,7 +236,7 @@ export default function ProfilePage() {
                 rightLabel="Unlimited"
                 min={1}
                 onChange={function noRefCheck() {}}
-                value="1"
+                value={1}
               />
               <Text
                 css={{
