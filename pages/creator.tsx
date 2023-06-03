@@ -230,7 +230,6 @@ export default function ProfilePage() {
               <Slider
                 leftLabel={"Public"}
                 step={1}
-                enabled
                 bgColor="green"
                 id="one"
                 labelBgColor="orange"
