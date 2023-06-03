@@ -34,7 +34,7 @@ import {
 import Link from "next/link";
 import { Modal, Checkbox } from "@nextui-org/react";
 import { Upload } from "@web3uikit/core";
-import { useStorageUpload, useAddress, use } from "@thirdweb-dev/react";
+import { useStorageUpload, useAddress } from "@thirdweb-dev/react";
 import { Blockie } from "web3uikit";
 import { Counter } from "../components/counter";
 import { Slider } from "@web3uikit/core";
