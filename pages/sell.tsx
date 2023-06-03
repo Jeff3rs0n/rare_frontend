@@ -25,36 +25,6 @@ export default function Sell() {
 
   return (
     <Container maxWidth="lg">
-      <Button.Group color="warning" light>
-        <Button>
-          <Link href="/buy">
-            <Text
-              css={{
-                fontFamily: "$mono",
-              }}
-              color="white"
-            >
-              {" "}
-              ⬅ Listings ✨
-            </Text>
-          </Link>
-        </Button>
-        <Button>
-          <Link href="/">
-            <Text
-              css={{
-                fontFamily: "$mono",
-              }}
-              color="white"
-            >
-              {" "}
-              Home 🏠
-            </Text>
-          </Link>
-        </Button>
-      </Button.Group>
-      <hr></hr>
-      <Spacer />
       {!selectedNft ? (
         <>
           <NFTGrid
@@ -63,7 +33,7 @@ export default function Sell() {
             overrideOnclickBehavior={(nft) => {
               setSelectedNft(nft);
             }}
-            emptyText={"❌NO NFTs Here❌"}
+            emptyText={""}
           />
         </>
       ) : (
@@ -117,8 +87,6 @@ export default function Sell() {
           </div>
         </div>
       )}
-      <Spacer />
-      <Spacer />
     </Container>
   );
 }

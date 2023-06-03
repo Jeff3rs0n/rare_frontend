@@ -33,11 +33,11 @@ export default function Roadmaps() {
         <Grid xs={3}></Grid>
         <Grid xs={5} alignItems="centre"></Grid>
 
-        <Grid xs={4}></Grid>
+        <Grid xs={6}></Grid>
         <Collapse.Group>
           <Collapse
             css={{
-              padding: "3.5%",
+              padding: "1%",
               textAlign: "centre",
               fontFamily: "$mono",
             }}
@@ -60,8 +60,8 @@ export default function Roadmaps() {
                   justify="centre"
                   color="warning"
                   css={{
-                    width: "95%",
-                    Height: "95%",
+                    width: "100%",
+                    Height: "100%",
                   }}
                 >
                   <Card.Header></Card.Header>
@@ -129,7 +129,7 @@ export default function Roadmaps() {
           <Collapse
             title="PHASE 2: (Value)"
             css={{
-              padding: "5%",
+              padding: "1%",
               textAlign: "centre",
               fontFamily: "$mono",
             }}
@@ -177,18 +177,7 @@ export default function Roadmaps() {
                           xl={18}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
-                          Jan 2024 - Staking Mechanism For Token Owners to earn
-                          RARITY
-                        </Text>
-                      </Grid>
-                      <Grid xs={12} alignItems="center">
-                        <Badge color="warning" enableShadow variant="dot" />
-                        <Text
-                          xs={12}
-                          xl={18}
-                          css={{ ml: "$2", fontFamily: "$mono" }}
-                        >
-                          PKCH NFT DROP on RareBay NFT Marketplace
+                          Allow creators to request launch drops
                         </Text>
                       </Grid>
                       <Grid xs={12} alignItems="center">
@@ -219,9 +208,9 @@ export default function Roadmaps() {
             </Grid.Container>
           </Collapse>
           <Collapse
-            title="PHASE 3: (Marketplace)"
+            title="PHASE 3: (Staking)"
             css={{
-              padding: "5%",
+              padding: "1%",
               textAlign: "centre",
               fontFamily: "$mono",
             }}
@@ -269,7 +258,7 @@ export default function Roadmaps() {
                           xl={18}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
-                          Launch RareBay NFT Marketplace for Rare NFT
+                          Rarity increament by staking
                         </Text>
                       </Grid>
                       <Grid xs={12} alignItems="center">
@@ -279,18 +268,7 @@ export default function Roadmaps() {
                           xl={18}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
-                          Token Owners Can Trade on RareBay Marketplace with
-                          $RARE Token
-                        </Text>
-                      </Grid>
-                      <Grid xs={12} alignItems="center">
-                        <Badge color="warning" enableShadow variant="dot" />
-                        <Text
-                          xs={12}
-                          xl={18}
-                          css={{ ml: "$2", fontFamily: "$mono" }}
-                        >
-                          RARE NFT Staking on RareBay NFT Marketplace
+                          Token Owner Can stake NFTs
                         </Text>
                       </Grid>
                       <Grid xs={12} alignItems="center">
@@ -301,16 +279,6 @@ export default function Roadmaps() {
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           RareBay NFT Marketplace Membership for Token Holders
-                        </Text>
-                      </Grid>
-                      <Grid xs={8} alignItems="center">
-                        <Badge color="warning" enableShadow variant="dot" />
-                        <Text
-                          xs={12}
-                          xl={18}
-                          css={{ ml: "$2", fontFamily: "$mono" }}
-                        >
-                          Token Presale 1,000,0000,000 $RARE{" "}
                         </Text>
                       </Grid>
                     </Grid.Container>

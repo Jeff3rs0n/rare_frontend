@@ -14,17 +14,17 @@ export const MARKETPLACE_ADDRESS = "0xE7F566927C29469562aF6C1f659A126F90160c0B";
 export const NFT_COLLECTION_ADDRESS =
   "0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242";
 export const NFT_COLLECTION_ADDRESS1 =
-  "0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242";
+  "0x89eB8bF6bc437f8c6DB5910DC2B005d6A4ae59e9";
 
 // (Optional) Set up the URL of where users can view transactions on
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
-export const ETHERSCAN_URL = "https://scan.test.btcs.network/";
+export const ETHERSCAN_URL = "https://scan.coredao.org/";
 
 export const nftDropContractAddress =
-  "0xad5E22E52709D2ECD5fDEB652ab34FC0795b4b63";
+  "0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242";
 
 export const stakingContractAddress =
-  "0x7607f1c69F84CeBBc8f32380Cc465751179Fb1FF";
+  "0x5F8a5cc9935f5743F5880C6E2ad4C2ac18AF12fb";
 
 export const tokenContractAddress =
-  "0xAe0379c3a50Fa78D100A1e256C823ab5186b2684";
+  "0x0B2d702B9139256fDA18bB8D52a4826183787CEB";

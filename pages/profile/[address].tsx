@@ -18,6 +18,7 @@ import {
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
 import Sell from "../sell";
+import Sell1 from "../sell1";
 import {
   Spacer,
   Image,
@@ -32,7 +33,8 @@ import {
 import Link from "next/link";
 import { Modal, Checkbox } from "@nextui-org/react";
 import { Upload } from "@web3uikit/core";
-import { useStorageUpload } from "@thirdweb-dev/react";
+import { useStorageUpload, useAddress } from "@thirdweb-dev/react";
+import { Blockie } from "web3uikit";
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -42,6 +44,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 ];
 
 export default function ProfilePage() {
+  const address = useAddress();
   const [visible, setVisible] = React.useState(false);
   const handler = () => setVisible(true);
 
@@ -115,11 +118,12 @@ export default function ProfilePage() {
       <hr></hr>
       <Spacer />
       <div className={styles.profileHeader}>
-        <Spacer />
         <div
           className={styles.coverImage}
           style={{
-            background: `linear-gradient(3deg, ${randomColor1}, ${randomColor2},  ${randomColor3}, ${randomColor4}, ${randomColor1}, ${randomColor1})`,
+            backgroundImage: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100%",
           }}
         />
         <div
@@ -221,12 +225,7 @@ export default function ProfilePage() {
         }`}
       >
         <Spacer />
-        <Spacer />
-        <NFTGrid
-          data={ownedNfts}
-          isLoading={loadingOwnedNfts}
-          emptyText="❌ NO NFTs HERE ❌"
-        />
+        <NFTGrid data={ownedNfts} isLoading={loadingOwnedNfts} emptyText="" />
         <hr></hr>
         <Spacer />
         <Spacer />
@@ -247,8 +246,6 @@ export default function ProfilePage() {
           ))
         )}
       </div>
-      <Spacer />
-      <Spacer /> <Spacer />
       <div
         className={`${
           tab === "auctions" ? styles.activeTabContent : styles.tabContent
@@ -269,6 +266,7 @@ export default function ProfilePage() {
           tab === "Sell" ? styles.activeTabContent : styles.tabContent
         }`}
       >
+        <Sell1 />
         <Sell />
       </div>
       <Spacer />

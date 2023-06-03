@@ -13,8 +13,17 @@ export default function Buy1() {
 
   return (
     <Container maxWidth="lg">
-      <Text h4 css={{ fontFamily: "$mono" }}>
-        Emojis
+      <Text
+        h4
+        size={30}
+        css={{
+          padding: "2%",
+          fontFamily: "monospace",
+          textGradient: "45deg, $yellow600 -20%, $red600 100%",
+        }}
+        weight="bold"
+      >
+        Rare Collection
       </Text>
       <hr></hr>
       <Spacer />

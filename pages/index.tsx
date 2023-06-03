@@ -254,76 +254,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <AnimatePresence>
-          {
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            />
-          }
-
-          <Container
-            css={{
-              width: "85%",
-            }}
-          >
-            <Spacer />
-
-            <Card
-              css={{
-                backgroundColor: "transparent",
-                backdropFilter: "blur(16px)",
-                borderColor: "grey",
-                borderStyle: "solid",
-              }}
-            >
-              <Card.Header>
-                <Col>
-                  <Text
-                    h2
-                    weight="bold"
-                    color="#ffffffAA"
-                    css={{
-                      fontFamily: "monospace",
-                    }}
-                  >
-                    RareBay Launch Countdown
-                    <Text
-                      color="warning"
-                      size={14}
-                      css={{
-                        fontFamily: "monospace",
-                        paddingRight: "8%",
-                        paddingLeft: "8%",
-                      }}
-                    >
-                      RareBay is in testnet mode and expected to launch when
-                      timer ends
-                    </Text>
-                    <Spacer />
-                    <Spacer />
-                    <Image
-                      src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
-                      alt="logo"
-                      width={100}
-                      height={100}
-                    />
-                    <Spacer />
-                    <Counter />
-                  </Text>
-                </Col>
-              </Card.Header>
-
-              <Card.Body></Card.Body>
-            </Card>
-          </Container>
-          <Spacer />
-        </AnimatePresence>
+        <Container fluid>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+          <Roadmaps />
+          <AnimatePresence></AnimatePresence>
+        </Container>
       </div>
-      <Container fluid>
-        <Roadmaps />
-      </Container>
     </>
   );
 }

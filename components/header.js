@@ -5,6 +5,8 @@ import {
   Dropdown,
   Container,
   Image,
+  Input,
+  Popover,
 } from "@nextui-org/react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme, Spacer, Button } from "@nextui-org/react";
@@ -34,6 +36,7 @@ import { Loading } from "@web3uikit/core";
 
 import { startTransition } from "react";
 import { Suspense, lazy } from "react";
+import { px } from "framer-motion";
 
 export default function Header() {
   const navc = useState("navc");
@@ -65,6 +68,7 @@ export default function Header() {
     <Suspense fallback={<Loading />}>
       <Navbar isBordered variant={"floating"} height={80} tabIndex={0}>
         <Navbar.Brand
+          hideIn="xs"
           css={{
             "@xs": {
               w: "12%",
@@ -79,6 +83,8 @@ export default function Header() {
               height={30}
             />
             <Text
+              size={18}
+              weight="extrabold"
               b
               color="warning"
               css={{
@@ -99,13 +105,37 @@ export default function Header() {
               backdropFilter: "blur(10px)",
             }}
           >
-            <Dropdown.Button light>Menu</Dropdown.Button>
+            <Dropdown.Trigger
+              css={{
+                height: "100%",
+              }}
+            >
+              <Link href="#">
+                <Image
+                  src="https://bafkreiakjtw7wj6x7qpdliuoeypuar2554hebk3vnz75dhomkqrgbwvfya.ipfs.nftstorage.link/"
+                  alt="logo"
+                  width={30}
+                  height={30}
+                />
+                <Text
+                  size={12}
+                  b
+                  color="warning"
+                  css={{
+                    fontFamily: "monospace",
+                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+                  }}
+                >
+                  RareBay
+                </Text>
+              </Link>
+            </Dropdown.Trigger>
             <Dropdown.Menu
               variant="light"
               aria-label="Actions"
               css={{
                 background: "transparent",
-                backdropFilter: "blur(10px)",
+                height: "100%",
               }}
             >
               <Dropdown.Item key="new">
@@ -162,24 +192,48 @@ export default function Header() {
                   </Text>
                 </Link>
               </Dropdown.Item>
-              <Dropdown.Item key="delete" color="success" withDivider>
-                <Link href="/roadmap">
-                  <Text
-                    size={16}
-                    css={{
-                      fontFamily: "$mono",
-                    }}
-                    color="warning"
-                  >
-                    🛣️ Roadmap
-                  </Text>
-                </Link>
-              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Content>
+        <Navbar.Content showIn={"xs"}>
+          <Popover isBordered disableShadow>
+            <Popover.Trigger>
+              <Button light size={5}>
+                <Text size={30}>🔍</Text>
+              </Button>
+            </Popover.Trigger>
+            <Popover.Content
+              css={{
+                marginTop: "5%",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <Container>
+                <Input
+                  underlined
+                  css={{
+                    background: "transparent",
+                    padding: "$5",
+                  }}
+                  placeholder="Search..."
+                  type="search"
+                />
+              </Container>
+            </Popover.Content>
+          </Popover>
+        </Navbar.Content>
+
         <Spacer />
         <Navbar.Content activeColor="warning" hideIn="xs" variant="light">
+          <Container>
+            <Input
+              placeholder="🔍Search..."
+              type="search"
+              css={{
+                width: "400px",
+              }}
+            />
+          </Container>
           <Link href="/buy" isActive key={"Market"}>
             {" "}
             <Text
@@ -190,6 +244,18 @@ export default function Header() {
               }}
             >
               Marketplace
+            </Text>
+          </Link>
+          <Link href="/buy" isActive key={"Market"}>
+            {" "}
+            <Text
+              b
+              css={{
+                fontFamily: "monospace",
+                textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+              }}
+            >
+              Launchpad
             </Text>
           </Link>
           <Link href="/whitepaper" isActive key={"whitepaper"}>
@@ -219,7 +285,6 @@ export default function Header() {
           </Link>
           <Spacer />
         </Navbar.Content>
-
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
@@ -273,7 +338,7 @@ export default function Header() {
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="sell">
-                <Link href="/sell">
+                <Link href={`/profile/${address}`}>
                   {" "}
                   <Text color="warning" css={{ fontFamily: "monospace" }}>
                     <HandCoin fontSize="15px" /> Sell NFT

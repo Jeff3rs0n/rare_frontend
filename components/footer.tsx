@@ -38,6 +38,7 @@ export default function Footer() {
         <Spacer />
       </Text>
       <Spacer />
+      <Spacer /> <Spacer /> <Spacer /> <Spacer /> <Spacer />
     </Container>
   );
 }
