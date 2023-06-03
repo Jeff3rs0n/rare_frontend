@@ -233,7 +233,6 @@ export default function ProfilePage() {
                 step={1}
                 enabled
                 bgColor="green"
-                handleTooltipLabel={function noRefCheck() {}}
                 id="one"
                 labelBgColor="orange"
                 rightLabel="Unlimited"
