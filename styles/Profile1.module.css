@@ -31,6 +31,13 @@
   border-bottom: #fe7302;
   border-bottom-style: solid;
 }
+.creatorTitle1 {
+  border-radius: 16px;
+  vertical-align: inherit;
+  padding-top: 2%;
+  margin-top: 10px;
+  margin-left: 2%;
+}
 
 .profileName {
   margin-left: 2.5%;

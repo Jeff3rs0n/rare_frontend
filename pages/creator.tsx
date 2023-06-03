@@ -34,7 +34,7 @@ import {
 import Link from "next/link";
 import { Modal, Checkbox } from "@nextui-org/react";
 import { Upload } from "@web3uikit/core";
-import { useStorageUpload, useAddress } from "@thirdweb-dev/react";
+import { useStorageUpload, useAddress, use } from "@thirdweb-dev/react";
 import { Blockie } from "web3uikit";
 import { Counter } from "../components/counter";
 import { Slider } from "@web3uikit/core";
@@ -116,6 +116,7 @@ export default function ProfilePage() {
           weight="bold"
         >
           By <Blockie seed={address as string} size={5} />{" "}
+        
         </Text>
       </Text>
       <Spacer />
@@ -127,7 +128,22 @@ export default function ProfilePage() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "100%",
           }}
-        />
+        >
+          <Text
+            className={styles.creatorTitle1}
+            h2
+            size={20}
+            css={{
+              fontFamily: "PT Mono",
+              textGradient: "45deg, $yellow500 -20%, $blue800 100%",
+              textAlign: "left",
+              position: "sticky",
+            }}
+            weight="bold"
+          >
+            Description:
+          </Text>
+        </div>
         <div
           className={styles.profilePicture}
           style={{
@@ -139,7 +155,7 @@ export default function ProfilePage() {
       <hr></hr>
       <Spacer />
       <Grid.Container>
-        <Grid xs={6}>
+        <Grid xs={5}>
           <Card
             css={{
               backdropFilter: "blur(10px)",
@@ -153,7 +169,8 @@ export default function ProfilePage() {
           </Card>
           <Spacer />
         </Grid>
-        <Grid xs={6}>
+
+        <Grid xs={7}>
           <Card
             css={{
               backdropFilter: "blur(10px)",
@@ -224,34 +241,56 @@ export default function ProfilePage() {
                 onChange={function noRefCheck() {}}
                 value="1"
               />
-
               <Text
                 css={{
                   fontFamily: "PT Mono",
-                  textGradient: "45deg, $yellow500 -20%, $blue700 100%",
+                  textGradient: "45deg, $yellow500 -20%, $blue300 100%",
                   textAlign: "center",
                   position: "sticky",
+                  borderBottomStyle: "solid",
+                  borderRadius: "16px",
                 }}
               >
-                PRICE:{" "}
+                Member Price
                 <Image
                   src="https://bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q.ipfs.nftstorage.link/ipfs/bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q/cqsYAptJ_400x400-removebg-preview.png"
-                  width={10}
-                  height={10}
+                  width={30}
+                  height={30}
                 />
+                0.0 CORE
               </Text>
+              <Container maxWidth="sm">
+                <Button
+                  css={{
+                    fontFamily: "$mono",
+                    width: "100%",
+                  }}
+                  color={"success"}
+                  ghost
+                >
+                  MINT 👾
+                </Button>
+              </Container>
             </Card.Body>
             <Card.Footer>
-              <Button
-                css={{
-                  padding: "2%",
-                  fontFamily: "$mono",
-                }}
-                color={"success"}
-                ghost
-              >
-                MINT 👾
-              </Button>
+              <Col>
+                <Text
+                  css={{
+                    fontFamily: "PT Mono",
+                    textGradient: "45deg, $yellow500 -20%, $blue700 100%",
+                    textAlign: "center",
+                    position: "sticky",
+                  }}
+                >
+                  MINT PRICE:{" "}
+                  <Image
+                    src="https://bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q.ipfs.nftstorage.link/ipfs/bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q/cqsYAptJ_400x400-removebg-preview.png"
+                    width={30}
+                    height={30}
+                  />
+                  0.0 CORE
+                </Text>
+              </Col>
             </Card.Footer>
           </Card>
         </Grid>
