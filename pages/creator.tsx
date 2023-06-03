@@ -230,13 +230,13 @@ export default function ProfilePage() {
               <Slider
                 leftLabel={"Public"}
                 step={1}
-                enabled
                 bgColor="green"
                 id="one"
                 labelBgColor="orange"
                 rightLabel="Unlimited"
                 min={1}
                 onChange={function noRefCheck() {}}
+                value={1}
               />
               <Text
                 css={{
