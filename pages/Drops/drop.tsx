@@ -40,7 +40,7 @@ import {
   import { Counter } from "@/components/counter";
   import { Slider } from "@web3uikit/core";
   import truncateEthAddress from "truncate-eth-address";
-import { Height } from "@mui/icons-material";
+
 
   
   const [randomColor1, randomColor2, randomColor3, randomColor4] = [
