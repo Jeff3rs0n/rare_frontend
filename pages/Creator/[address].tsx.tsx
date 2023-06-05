@@ -468,7 +468,6 @@ ghost
 css={{
 padding: "20%"
 }}
-ghost
 color="warning"
                         onClick={() => {
                           const value = quantity + 1;
