@@ -94,7 +94,7 @@ import {
   
     return (
      
-        <Container>
+        <Container maxWidth="lg">
 
 <Card 
 isPressable
