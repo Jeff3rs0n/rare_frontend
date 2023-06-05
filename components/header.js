@@ -230,7 +230,7 @@ export default function Header() {
               placeholder="🔍Search..."
               type="search"
               css={{
-                width: "400px",
+                width: "200px",
               }}
             />
           </Container>

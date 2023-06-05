@@ -516,25 +516,15 @@ color="warning"
                       onError={(err) => {
                         console.error(err);
                         console.log({ err });
-                        toast({
-                          title: "Failed to mint drop",
-                          description: (err as any).reason || "",
-                          duration: 9000,
-                          variant: "destructive",
-                        });
-                      }}
-                      onSuccess={() => {
-                        toast({
-                          title: "Successfully minted",
-                          description:
-                            "The NFT has been transferred to your wallet",
-                          duration: 5000,
-                          className: "bg-green-500",
-                        });
                       }}
                     >
                       {buttonLoading ? (
-                        <div role="status">
+                        <div role="status"
+						style={{
+						width: "10px",
+						height: "10px"
+						}}
+						>
                           <svg
                             aria-hidden="true"
                             className="mr-2 h-2 w-2 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
