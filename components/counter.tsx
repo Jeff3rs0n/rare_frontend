@@ -39,7 +39,7 @@ export const Counter = () => {
               borderRadius: "8px",
               width: "100%",
               backdropFilter: "blur(16px)",
-              borderBottomStyle: "solid",
+              borderStyle: "solid",
               padding: "8%",
               textAlign: "center",
             }}

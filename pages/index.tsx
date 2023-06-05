@@ -24,6 +24,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Counter } from "@/components/counter";
 import Header from "../components/header";
 import Roadmaps from "../components/roadmap";
+import Thumbs from "../pages/thumb"
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -56,7 +57,10 @@ export default function Home() {
       </Head>
 
       <Spacer />
-      <Container>
+      <Container
+	   css={{ w: "80%", h: "auto",
+	  }}
+	  >
         <motion.div
           animate={{
             scale: [1, 2, 2, 1, 1],
@@ -88,7 +92,7 @@ export default function Home() {
             Digital Museum for RARE Art
           </Text>
         </motion.div>
-
+        <Spacer />
         <hr></hr>
 
         <Spacer />
@@ -121,63 +125,12 @@ export default function Home() {
         </Button.Group>
         <hr></hr>
       </Container>
-      <Spacer />
-      <div className={styles.heroBody}>
-        <Button.Group color="gradient" ghost>
-          <Button>
-            {" "}
-            <Text
-              b
-              css={{
-                fontFamily: "monospace",
-                textGradient: "45deg, $pink500 -20%, $yellow800 100%",
-              }}
-            >
-              Art
-            </Text>
-          </Button>
-          <Button>
-            {" "}
-            <Text
-              b
-              css={{
-                fontFamily: "monospace",
-                textGradient: "45deg, $pink500 -20%, $yellow800 100%",
-              }}
-            >
-              PFPS
-            </Text>
-          </Button>
-          <Button>
-            {" "}
-            <Text
-              b
-              css={{
-                fontFamily: "monospace",
-                textGradient: "45deg, $pink500 -20%, $yellow800 100%",
-              }}
-            >
-              Gaming
-            </Text>
-          </Button>
-          <Button>
-            {" "}
-            <Text
-              b
-              css={{
-                fontFamily: "monospace",
-                textGradient: "45deg, $pink500 -20%, $yellow800 100%",
-              }}
-            >
-              Memberships
-            </Text>
-          </Button>
-        </Button.Group>
-      </div>
-      <Spacer />
-      <Container css={{ w: "100%" }}>
-        <Caros />
+      <Container css={{ w: "100%", h: "400px",
+marginBottom: "10%"
+	  }}>
+        <Thumbs />
       </Container>
+
       <Container
         css={{
           maxWidth: "100%",
@@ -188,9 +141,10 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.heroBody}>
+		  
             <Spacer />
+			
             <span className={styles.heroTitleGradient}>
-              <hr></hr>
               <motion.div
                 animate={{
                   scale: [1, 2, 2, 1, 1],
@@ -198,6 +152,12 @@ export default function Home() {
                   borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                 }}
               >
+			    <motion.div
+                initial={{ opacity: 0, scale: 0.1 }}
+                animate={{ opacity: 4, scale: 1.5 }}
+                transition={{ duration: 10 }}
+              >
+			  <hr />
                 <Text
                   h1
                   size={50}
@@ -208,7 +168,7 @@ export default function Home() {
                 >
                   Welcome to RareBay.
                 </Text>
-
+ </motion.div>
                 <Text
                   h1
                   size={50}

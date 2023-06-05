@@ -20,6 +20,7 @@ import { startTransition } from "react";
 import { useState, Suspense, lazy } from "react";
 import { Loading } from "@web3uikit/core";
 
+
 const darkTheme = createTheme({
   type: "dark",
   theme: {
