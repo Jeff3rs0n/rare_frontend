@@ -245,8 +245,6 @@ export default function ProfilePage() {
       }
       return `Mint (${priceToMint})`;
     }
-
-
     return "Minting not available";
   }, [
     isSoldOut,
@@ -330,8 +328,7 @@ export default function ProfilePage() {
         >
           <Text
             className={styles.creatorTitle1}
-            h2
-            size={20}
+            size={18}
             css={{
               padding: "5%",
               fontFamily: "PT Mono",
@@ -352,12 +349,13 @@ export default function ProfilePage() {
           }}
         />
       </div>
-      <Spacer />
-      <hr></hr>
-      <Spacer />
-      <Grid.Container>
-
-        <Grid xs={11}>
+	  <Spacer />
+	  <hr />
+	  <Spacer />
+	  <Grid.Container>
+	  <Grid xs={1}></Grid>
+	   <Grid xs={10}>
+		
           <Card
             css={{
               backdropFilter: "blur(10px)",
@@ -390,6 +388,7 @@ export default function ProfilePage() {
                 </Text>
 
                 <Text
+				weight="extrabold"
                   css={{
                     fontFamily: "PT Mono",
                     textGradient: "45deg, $yellow800 -20%, $blue700 100%",
@@ -416,6 +415,7 @@ export default function ProfilePage() {
             <Card.Body>
 			
             <Grid.Container>
+			<Grid xs={1}></Grid>
 <Grid xs={3}>  
 <Button
 size="xs"
@@ -440,20 +440,29 @@ color="warning"
                       </Button>
 
 </Grid>
-<Grid>
-<Text css={{
-
-paddingLeft: "50px",
-paddingBottom: "50px",
-fontFamily: "PT Mono",
-textAlign: "centre"
-}}>
+<Spacer />
+<Grid xs={4}>
+<Text
+weight="extrabold"
+ css={{
+            fontFamily: "PT Mono",
+            textGradient: "45deg, $yellow600 -20%, $green500 100%",
+            textAlign: "center",
+            position: "sticky",
+			padding: "5%",
+			borderBottomStyle: "solid",
+			borderWidth: "1px",
+			borderRadius: "8px",
+			width: "90px",
+			marginLeft: "5%",
+			marginRight: "5%"
+          }}>
                         {!isLoading && isSoldOut ? "Sold Out" : quantity} {contractMetadata?.data?.symbol}
+
 </Text>
 <Spacer />
 </Grid>
 <Grid xs={3}>
-<Spacer />
  <Button
 size="xs"
 ghost
@@ -479,32 +488,30 @@ color="warning"
                       >
                         ➕
                       </Button>
+
 </Grid>
+
 </Grid.Container>
+<Spacer />
+
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer 
+			 isBlurred
+      css={{
+        position: "inherit",
+        bgBlur: "#0f224426",
+        borderTop: "$borderWeights$light solid $gray800",
+      }}
+			>
 
-                    <div className={styles.container}>
-                    
-
-
-                     
-                     
- <Container
-
-css={{
-width: "100%",
-height: "100%"
-}}
->
   <Web3Button
                       contractAddress={"0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242"}
                       style={{
                         backgroundColor: "orange",
                         height: "60px",
-                         width: "80%",
+                         width: "50%",
                          fontFamily: "PT Mono",
-                          margin: "10%"
+						 marginLeft: "25%"
                       }}
                       action={(cntr) => cntr.erc721.claim(quantity)}
                       isDisabled={!canClaim || buttonLoading}
@@ -534,7 +541,7 @@ height: "100%"
                             aria-hidden="true"
                             className="mr-2 h-2 w-2 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                             viewBox="0 0 100 101"
-                            fill="none"
+                            fill="green"
                             xmlns="http://www.w3.org/2000/svg"
                           >
 Loading...
@@ -549,12 +556,13 @@ Loading...
                         buttonText
                       )}
                     </Web3Button>
-</Container>
-                    </div>
+                   
             </Card.Footer>
           </Card>
         </Grid>
-      </Grid.Container>
+		<Grid xs={0.5}></Grid>
+	  </Grid.Container>
+       
       <Spacer />
       <hr></hr>
     </Container>
