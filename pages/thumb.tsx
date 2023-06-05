@@ -23,6 +23,7 @@ const Thumbs = () => {
       <ul
         ref={scrollRef}
         style={{
+		  marginTop: "-5%",
           display: 'flex',
           overflow: 'auto',
           scrollSnapType: 'x mandatory'
@@ -53,57 +54,30 @@ const Thumbs = () => {
       </ul>
 
       
-		<Container
-		css={{
-		width: "400px",		
-		marginTop: "5%",
-		}}
-		>
-<Grid.Container
 
-css={{
-marginTop: "10px",
-marginLeft: "20px"
-}}
->
-
-<Grid xs={2}
->
 <Button
 
 	  size="xs"
 css={{
-hieght: "10px",
-padding: "10%",
-position: "static"
-}}
-	 light onClick={() => next()}><Text weight={"extrabold"} size={25}>⩤</Text>
-	  </Button>
-</Grid>
-<Grid xs={5}>
-<span className={styles.heroTitleGradient}>
-<Text
-css={{
-textAlign: "centre",
-alignContent: "centre",
-display: "flex"
-}}
 
->
-</Text>
-</span>
-</Grid>
-<Grid xs={5}>
+marginTop: "-20%",
+padding: "5%",
+position: "inherit",
+}}
+	 light onClick={() => prev()}><Text weight={"extrabold"} size={25}>⩤</Text>
+	  </Button>
+
+
+
  <Button
 	  size="xs"
 css={{
+marginTop: "-10%",
+marginLeft: "85%",
 padding: "5%",
-position: "static",
+position: "inherit",
 }}
-	  light onClick={() => prev()}><Text weight={"extrabold"} size={25}>⩥</Text></Button></Grid>
-	  
-</Grid.Container>
-</Container>
+	  light onClick={() => next()}><Text weight={"extrabold"} size={25}>⩥</Text></Button>
 
 	
     </>

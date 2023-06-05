@@ -94,26 +94,20 @@ import { Height } from "@mui/icons-material";
   
     return (
      
-        <Container
-css={
-{
-padding: "2%",
-margin: "2%"
-}
-}
->
+        <Container>
+
 <Card 
 isPressable
       isHoverable
 css={{
     height: "300px",
+	paddingBottom: "10%",
+	marginBottom: "10%",
     width: "250px",
     background: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
 }}
 >
-<Card.Header></Card.Header>
 <Card.Body>
-
 <Avatar 
 color="gradient"
 bordered

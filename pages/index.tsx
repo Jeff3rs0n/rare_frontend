@@ -61,42 +61,7 @@ export default function Home() {
 	   css={{ w: "80%", h: "auto",
 	  }}
 	  >
-        <motion.div
-          animate={{
-            scale: [1, 2, 2, 1, 1],
-            rotate: [0, 0, 270, 270, 0],
-            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-          }}
-        >
-          <Text
-            h2
-            size={50}
-            css={{
-              fontFamily: "monospace",
-              textGradient: "45deg, $pink600 -20%, $blue600 100%",
-            }}
-            weight="bold"
-          >
-            RareBay Marketplace
-          </Text>
-
-          <Text
-            h2
-            size={17}
-            css={{
-              fontFamily: "monospace",
-              textGradient: "45deg, $yellow600 -20%, $blue600 100%",
-            }}
-            weight="bold"
-          >
-            Digital Museum for RARE Art
-          </Text>
-        </motion.div>
-        <Spacer />
-        <hr></hr>
-
-        <Spacer />
-        <Button.Group color="warning" light>
+	   <Button.Group color="warning" light>
           <Button>
             <Link href="/">
               <Text
@@ -123,11 +88,36 @@ export default function Home() {
             </Link>
           </Button>
         </Button.Group>
-        <hr></hr>
+        <motion.div
+          animate={{
+            scale: [1, 2, 2, 1, 1],
+            rotate: [0, 0, 270, 270, 0],
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+        >
+
+        </motion.div>
+		
       </Container>
-      <Container css={{ w: "100%", h: "400px",
+	  
+      <Container css={{ w: "auto%", h: "400px",
 marginBottom: "10%"
 	  }}>
+	    <hr></hr>
+	   <Text
+                  h1
+                  size={20}
+                  css={{
+				  marginTop: "2%",
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue400 -20%, $yellow700 50%",
+                  }}
+                  weight="bold"
+				  
+                >
+                  TOP COLLECTIONS
+                </Text>
+        <hr></hr>
         <Thumbs />
       </Container>
 
