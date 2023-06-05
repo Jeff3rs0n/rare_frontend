@@ -35,7 +35,6 @@ export const Counter = () => {
   <Grid xs={3}>
  <Card
 	variant="bordered"
-  justify="centre"
   css={{
   width: "65px",
   height: "65px",
@@ -61,7 +60,6 @@ export const Counter = () => {
   <Grid xs={3}>
  <Card
 	variant="bordered"
-  justify="centre"
   css={{
   width: "65px",
   height: "65px",
@@ -87,7 +85,6 @@ export const Counter = () => {
   <Grid xs={3}>
   <Card
 	variant="bordered"
-  justify="centre"
   css={{
   width: "65px",
   height: "65px",
