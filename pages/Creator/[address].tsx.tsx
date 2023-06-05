@@ -310,7 +310,6 @@ export default function ProfilePage() {
         {contractMetadata.data?.name}
         <Text
           size={20}
-         or
           weight="bold"
         >
           By <Blockie seed={address as string} size={5} />{" "}{truncateEthAddress("0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242")}
