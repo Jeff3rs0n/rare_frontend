@@ -312,7 +312,7 @@ export default function ProfilePage() {
           size={20}
           weight="bold"
         >
-          By <Blockie seed={address as string} size={5} />{" "}{truncateEthAddress("0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242")}
+          By <Blockie seed={"0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242"} size={6} scale={4} />{" "}{truncateEthAddress("0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242")}
         </Text>
       </Text>
       <Spacer />
@@ -373,7 +373,7 @@ export default function ProfilePage() {
                     position: "sticky",
                   }}
                 >
-                  TOTAL SUPPLY {numberTotal}
+                  TOTAL SUPPLY: {numberTotal} Items
                   <Text
                     css={{
                       fontFamily: "PT Mono",
@@ -382,28 +382,28 @@ export default function ProfilePage() {
                       position: "sticky",
                     }}
                   >
-<Spacer />
                   </Text>
                 </Text>
 
                 <Text
+				className={styles.creatorTitle2}
 				weight="extrabold"
                   css={{
                     fontFamily: "PT Mono",
                     textGradient: "45deg, $yellow800 -20%, $blue700 100%",
                     textAlign: "center",
                     position: "sticky",
+					
                   }}
                 >
-                  MINTED SUPPLY {numberClaimed}
+				<Spacer />
+                  MINTED SUPPLY: {numberClaimed} Items
                   <Text
                     css={{
                       fontFamily: "PT Mono",
                       textGradient: "45deg, $yellow500 -20%, $blue100 100%",
                       textAlign: "center",
-                      position: "sticky",
-                      borderBottomStyle: "solid",
-                      borderRadius: "16px",
+                      position: "sticky"
                     }}
                   >
                     <Spacer />
@@ -507,9 +507,9 @@ color="warning"
                       style={{
                         backgroundColor: "orange",
                         height: "60px",
-                         width: "50%",
+                         width: "60%",
                          fontFamily: "PT Mono",
-						 marginLeft: "25%"
+						 marginLeft: "20%"
                       }}
                       action={(cntr) => cntr.erc721.claim(quantity)}
                       isDisabled={!canClaim || buttonLoading}
@@ -526,7 +526,7 @@ color="warning"
 						}}
 						>
                           <svg
-                            aria-hidden="true"
+                            aria-hidden="false"
                             className="mr-2 h-2 w-2 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                             viewBox="0 0 100 101"
                             fill="green"

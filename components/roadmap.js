@@ -60,8 +60,9 @@ export default function Roadmaps() {
                   justify="centre"
                   color="warning"
                   css={{
-                    width: "100%",
-                    Height: "100%",
+                    width: "95%",
+                    Height: "95%",
+                    padding: "7%",
                   }}
                 >
                   <Card.Header></Card.Header>
