@@ -6,11 +6,11 @@ import {
 } from "@thirdweb-dev/react";
 import React, { useState } from "react";
 import Container from "../components/Container/Container";
-import NFTGrid from "@/components/NFTGrid";
+import NFTGrid2 from "@/components/NFTGrid2";
 import { NFT_COLLECTION_ADDRESS1 } from "../const/contractAddresses";
 import tokenPageStyles from "../styles/Token.module.css";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
-import SaleInfo from "../components/SaleInfo";
+import SaleInfo1 from "../components/SaleInfo1.tsx";
 import { Text, Button, Spacer } from "@nextui-org/react";
 import ProfilePage from "../pages/profile/[address]";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function Sell1() {
       <Spacer />
       {!selectedNft ? (
         <>
-          <NFTGrid
+          <NFTGrid2
             data={data}
             isLoading={isLoading}
             overrideOnclickBehavior={(nft) => {
@@ -83,7 +83,7 @@ export default function Sell1() {
             </Text>
 
             <div className={tokenPageStyles.pricingContainer}>
-              <SaleInfo nft={selectedNft} />
+              <SaleInfo1 nft={selectedNft} />
             </div>
           </div>
         </div>

@@ -15,7 +15,13 @@ export default function Roadmaps() {
   return (
     <>
       <Spacer />
-      <Container justify="centre" fluid>
+      <Container justify="centre"
+	  css={{
+		  width: "100%"
+		  
+	  }}
+	  
+	  >
         <Spacer />
         <Text
           weight="extrabold"
@@ -27,7 +33,7 @@ export default function Roadmaps() {
             fontFamily: "$mono",
           }}
         >
-          <Roadmap fontSize="30px" /> RareBay Roadmap
+          <Roadmap fontSize="20px" /> RareBay Roadmap
         </Text>
         <hr></hr>
         <Grid xs={3}></Grid>
@@ -59,7 +65,10 @@ export default function Roadmaps() {
                   isPressable
                   justify="centre"
                   color="warning"
+
                   css={{
+					  background: "transparent",
+					  				  backdropFilter: "blur(10px)",
                     width: "95%",
                     Height: "95%",
                     padding: "7%",
@@ -81,10 +90,9 @@ export default function Roadmaps() {
                     <hr></hr>
                     <Grid.Container gap={1.5}>
                       <Grid xs={12} alignItems="center">
-                        <Badge enableShadow color="warning" variant="dot" />
+                        <Badge enableShadow color="success" variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           2023 June - Dec Community Development and awarness
@@ -93,8 +101,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Listing $RARE on CoinMarketCap, CoinGecko, Dextools
@@ -103,8 +110,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Community Building and Holder Privilages
@@ -113,8 +119,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Partnerships with other stakeholders
@@ -151,6 +156,8 @@ export default function Roadmaps() {
                   justify="centre"
                   color="warning"
                   css={{
+					   background: "transparent",
+					  				  backdropFilter: "blur(10px)",
                     width: "95%",
                     Height: "95%",
                     padding: "7%",
@@ -174,8 +181,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Allow creators to request launch drops
@@ -184,8 +190,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           RARE Android, IOS Application, Wallet Transactions
@@ -194,8 +199,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Holder Privilages, Early Access to Tools
@@ -232,6 +236,8 @@ export default function Roadmaps() {
                   justify="centre"
                   color="warning"
                   css={{
+					   background: "transparent",
+					  				  backdropFilter: "blur(10px)",
                     width: "95%",
                     Height: "95%",
                     padding: "7%",
@@ -255,8 +261,7 @@ export default function Roadmaps() {
                       <Grid xs={8} xl={8} alignItems="center">
                         <Badge enableShadow color="warning" variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           Rarity increament by staking
@@ -275,8 +280,7 @@ export default function Roadmaps() {
                       <Grid xs={12} alignItems="center">
                         <Badge color="warning" enableShadow variant="dot" />
                         <Text
-                          xs={12}
-                          xl={18}
+size={12}
                           css={{ ml: "$2", fontFamily: "$mono" }}
                         >
                           RareBay NFT Marketplace Membership for Token Holders

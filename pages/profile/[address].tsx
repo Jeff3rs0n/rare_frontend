@@ -9,6 +9,7 @@ import React, { useState, ChangeEvent } from "react";
 import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper";
 import NFTGrid from "@/components/NFTGrid";
+import NFTGrid2 from "@/components/NFTGrid2";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
@@ -228,6 +229,7 @@ export default function ProfilePage() {
         <NFTGrid data={ownedNfts} isLoading={loadingOwnedNfts} emptyText="" />
         <hr></hr>
         <Spacer />
+		<NFTGrid2 data={ownedNfts1} isLoading={loadingOwnedNfts} emptyText="" />
         <Spacer />
       </div>
       <Spacer /> <Spacer />

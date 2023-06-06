@@ -319,8 +319,10 @@ export default function Header() {
           <Dropdown placement="bottom-right">
             <Navbar.Item>
               <Dropdown.Trigger>
-                <Button size={16} light>
-                  <Blockie seed={address} />
+                <Button 
+				color="gradient"
+size="50%" >
+                  <Blockie size='10' seed={address} />
                 </Button>
               </Dropdown.Trigger>
             </Navbar.Item>

@@ -150,8 +150,10 @@ fontFamily: "PT Mono",
 			  <hr />
                 <Text
                   h1
+				  transform='uppercase'
                   size={50}
                   css={{
+				  fontFamily: "PT Mono",
                     textGradient: "45deg, $blue600 -20%, $pink600 50%",
                   }}
                   weight="bold"
@@ -161,11 +163,11 @@ fontFamily: "PT Mono",
  </motion.div>
                 <Text
                   h1
-                  size={50}
+                  size={45}
                   css={{
-                    textGradient: "45deg, $yellow600 -20%, $blue600 100%",
+				  fontFamily: "PT Mono",
+                    textGradient: "45deg, $yellow600 -20%, $gray300 50%",
                   }}
-                  weight="bold"
                 >
                   Home of the Rarest NFTs.
                 </Text>
@@ -179,7 +181,8 @@ fontFamily: "PT Mono",
                   h1
                   size={60}
                   css={{
-                    textGradient: "45deg, $yellow600 -20%, $red600 100%",
+				  fontFamily: "courier",
+                    textGradient: "45deg, $purple600 -20%, $gray300 50%",
                   }}
                   weight="bold"
                 >
@@ -204,7 +207,11 @@ fontFamily: "PT Mono",
             </div>
           </div>
         </div>
-        <Container fluid>
+        <Container 
+		css={{
+		width: "95%"
+		}}
+		>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
