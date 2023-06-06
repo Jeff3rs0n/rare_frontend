@@ -33,7 +33,7 @@ export default function NFTGrid2({
             <Link
               href={`/token2/${NFT_COLLECTION_ADDRESS1}/${nft.metadata.id}`}
               key={nft.metadata.id}
-              className={styles.nftContainer}
+               className={styles.nftContainer}
             >
               <NFTComponent1 nft={nft} />
             </Link>
