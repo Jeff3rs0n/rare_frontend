@@ -38,6 +38,8 @@ type Props = {
   contractMetadata: any;
 };
 
+
+
 const [randomColor1, randomColor2] = [randomColor(), randomColor()];
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
@@ -198,7 +200,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               <div className={styles.traitsContainer}>
  {Object.entries(nft?.metadata?.attributes || {}).map(
-                  ([key, value]) => (
+                  ([key, value]): any => (
                     <div className={styles.traitContainer} key={key}>
                       <p className={styles.traitName}>{value.trait_type}</p>
                       <p className={styles.traitValue}>
