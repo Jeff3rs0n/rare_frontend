@@ -14,7 +14,8 @@ import Skeleton from "@/components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
-  NFT_COLLECTION_ADDRESS1,
+ 
+ NFT_COLLECTION_ADDRESS1,
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
