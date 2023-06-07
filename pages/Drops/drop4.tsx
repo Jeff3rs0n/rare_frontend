@@ -112,17 +112,16 @@ css={{
 <Card.Header>
 <Col>
 <Text
-weight="extrabold"
 color="black"
   size={18}
                   css={{
 				  marginTop: "2%",
-				  weight: "bold",
+				 
 fontFamily: "PT Mono",                  
 				  
 				  textAlign: "center"
                   }}
-                  weight="bold"
+                  
 >Bored Ape Yacht Club</Text>
 <Text
 color="primary"
