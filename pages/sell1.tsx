@@ -10,7 +10,7 @@ import NFTGrid2 from "./NFTGrid2";
 import { NFT_COLLECTION_ADDRESS1 } from "../const/contractAddresses";
 import tokenPageStyles from "../styles/Token.module.css";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
-import SaleInfo1 from "/SaleInfo1.tsx";
+import SaleInfo1 from "./SaleInfo1";
 import { Text, Button, Spacer } from "@nextui-org/react";
 import ProfilePage from "../pages/profile/[address]";
 import Link from "next/link";
