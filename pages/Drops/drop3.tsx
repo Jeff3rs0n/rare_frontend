@@ -122,7 +122,7 @@ fontFamily: "PT Mono",
 				  
 				  textAlign: "center"
                   }}
-                  weight="bold"
+                  
 >Mutant Ape Yacht Club</Text>
 <Text
 color="white"
@@ -132,7 +132,6 @@ color="white"
 fontFamily: "PT Mono",                  
 				  textAlign: "center"
                   }}
-                  weight="bold"
 >	Floor Price: 0.0 CORE 
 <Text
   size={12}
@@ -142,7 +141,7 @@ fontFamily: "PT Mono",
 				  textGradient: "45deg, $blue800 -20%, yellow 50%",
 				  textAlign: "center"
                   }}
-                  weight="bold"
+                  
 >	Volume: 0.0 CORE</Text>
  </Text>
 </Col>
