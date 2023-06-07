@@ -14,10 +14,10 @@ Grid
 } from "@nextui-org/react";
 import Drops from "../pages/Drops/drop" 
 import Drops2 from "../pages/Drops/drop2" 
-import Drops3 from "../pages/Drops/drop3.tsx" 
-import Drops4 from "../pages/Drops/drop4.tsx" 
-import Drops5 from "../pages/Drops/drop5.tsx" 
-import Drops6 from "../pages/Drops/drop6.tsx" 
+import Drops3 from "../pages/Drops/drop3" 
+import Drops4 from "../pages/Drops/drop4" 
+import Drops5 from "../pages/Drops/drop5" 
+import Drops6 from "../pages/Drops/drop6" 
 import styles from "@/styles/Home.module.css";
 
 const Thumbs = () => {
