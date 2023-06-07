@@ -41,21 +41,6 @@ const Thumbs = () => {
 		  <Drops4 />
 		  <Drops5 />
 		  <Drops6 />
-		  <Drops />
-		            <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		            <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
       </ul>
 
       
