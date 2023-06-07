@@ -37,13 +37,13 @@
     border-color: grey;
     display: flex;
     width: 100%;
-    gap: 8px;
+    gap: 4px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
     background: rgba(75, 65, 57, 0.498);
-    min-height: 52px;
+    min-height: 70px;
   }
   
   .nftPriceContainer {
@@ -59,7 +59,8 @@
   
   .nftPriceLabel {
     font-family: monospace;
-    padding-top: 10%;
+    padding-top: 3%;
+	 padding-bottom: 2%;
     margin: 0px;
     margin-bottom: 4px;
     text-overflow: ellipsis;
@@ -69,6 +70,9 @@
     font-size: 13px;
     line-height: 20px;
     color: rgba(255, 255, 255, 0.842);
+	border-bottom-style: solid;
+	border-radius: 4px;
+	border-bottom-width: 1px;
   }
   
   .nftPriceValue {

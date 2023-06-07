@@ -12,6 +12,13 @@ import {
 } from "../const/contractAddresses";
 import Skeleton from "./Skeleton/Skeleton";
 import styles from "./NFT.module.css";
+import {
+  Spacer,
+  Image,
+  Container,
+  Button,
+  Badge,
+} from "@nextui-org/react";
 
 type Props = {
   nft: NFT;
@@ -84,7 +91,7 @@ export default function NFTComponent1({ nft }: Props) {
           <div className={styles.nftPriceContainer}>
             <div>
               <p className={styles.nftPriceLabel}>Price💲</p>
-              <hr></hr>
+
               <Text
                 className={styles.nftPriceValue}
                 css={{
@@ -93,8 +100,24 @@ export default function NFTComponent1({ nft }: Props) {
               >
                 {`${directListing[0]?.currencyValuePerToken.displayValue}
             ${directListing[0]?.currencyValuePerToken.symbol}`}
-                🔸
+
+
               </Text>
+			  <Container
+			  css={{
+  marginTop: "-30%",
+  marginLeft: "50%"
+  
+  }}  
+			  >
+			    <Image
+
+width={20}
+height={20}
+src="https://bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q.ipfs.nftstorage.link/ipfs/bafybeiauizqklkaqva2nhd6n7nu4ewfmeq3lejqgf2oztooxoasuklfi4q/cqsYAptJ_400x400-removebg-preview.png"
+				/>
+			  </Container>
+
             </div>
           </div>
         ) : auctionListing && auctionListing[0] ? (
@@ -123,14 +146,13 @@ export default function NFTComponent1({ nft }: Props) {
           <div className={styles.nftPriceContainer}>
             <div>
               <p className={styles.nftPriceLabel}>Price💲</p>
-              <hr></hr>
               <Text
                 className={styles.nftPriceValue}
                 css={{
                   textGradient: "45deg, $yellow900 -20%, $blue500 90%",
                 }}
               >
-                Priceless💎
+                Not Listed💎
               </Text>
             </div>
           </div>
