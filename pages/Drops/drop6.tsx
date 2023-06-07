@@ -120,7 +120,7 @@ fontFamily: "PT Mono",
 				  textAlign: "center"
                   }}
                   weight="bold"
->Otherside Koda</Text>
+>Otherside Koda </Text> 
 <Text
   size={12}
                   css={{
