@@ -13,6 +13,11 @@ import {
 Grid
 } from "@nextui-org/react";
 import Drops from "../pages/Drops/drop" 
+import Drops2 from "../pages/Drops/drop2" 
+import Drops3 from "../pages/Drops/drop3.tsx" 
+import Drops4 from "../pages/Drops/drop4.tsx" 
+import Drops5 from "../pages/Drops/drop5.tsx" 
+import Drops6 from "../pages/Drops/drop6.tsx" 
 import styles from "@/styles/Home.module.css";
 
 const Thumbs = () => {
@@ -31,11 +36,11 @@ const Thumbs = () => {
       >
        
           <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
-		  <Drops />
+		  <Drops2 />
+		  <Drops3 />
+		  <Drops4 />
+		  <Drops5 />
+		  <Drops6 />
 		  <Drops />
 		            <Drops />
 		  <Drops />

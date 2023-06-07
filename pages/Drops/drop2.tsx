@@ -50,7 +50,7 @@ import {
     randomColor(),
   ];
   
-  export default function Drops() {
+  export default function Drops2() {
     const address = useAddress();
     const [visible, setVisible] = React.useState(false);
     const handler = () => setVisible(true);
@@ -104,8 +104,9 @@ css={{
 	paddingBottom: "10%",
 	marginBottom: "10%",
     width: "300px",
-    backgroundImage: `url("https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png")`,
+    backgroundImage: `url("https://i.seadn.io/gae/PZhSKxxn8Jea8_456ruX1AOoMetR9VWHvmOrliw8nwRFeEgxRMw4PlOrb9B9Rql3cIctLZD4eJapdWESqDNIC1cmZTri_aINDgwz?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
+	backdropFilter: "blur(10px)"
 }}
 >
 <Card.Header>
@@ -116,17 +117,17 @@ color="inherit"
                   css={{
 				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue300 -20%, $yellow300 50%",
+				  textGradient: "45deg, $blue800 -20%, $green700 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
->Kepler</Text>
+>Clever Girls</Text>
 <Text
   size={12}
                   css={{
 				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow300 50%",
+				  textGradient: "45deg, $blue800 -20%, $yellow900 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -136,7 +137,7 @@ fontFamily: "PT Mono",
                   css={{
 				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow900 50%",
+				  textGradient: "45deg, $blue800 -20%, yellow 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -146,7 +147,7 @@ fontFamily: "PT Mono",
 </Card.Header>
 <Card.Body>
 <Avatar 
-src={"https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png"}
+src={"https://i.seadn.io/gae/IDQ-Sidqd0tA6kL8IXb-dQqim_NlUu2MWKu4SdXcbsBknKMObwB2r4CLBIY9rrVwlaaPVqS9Cz727FfYiZjjAq-4_eb9gBQUMVOw5A?auto=format&dpr=1&w=384"}
 color="gradient"
 bordered
 squared 

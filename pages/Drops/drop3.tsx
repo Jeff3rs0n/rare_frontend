@@ -50,7 +50,7 @@ import {
     randomColor(),
   ];
   
-  export default function Drops() {
+  export default function Drops3() {
     const address = useAddress();
     const [visible, setVisible] = React.useState(false);
     const handler = () => setVisible(true);
@@ -104,29 +104,32 @@ css={{
 	paddingBottom: "10%",
 	marginBottom: "10%",
     width: "300px",
-    backgroundImage: `url("https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png")`,
+    backgroundImage: `url("https://i.seadn.io/gcs/files/a4f4629eee85929ce502dd6e994a1f93.png?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
+	backdropFilter: "blur(10px)"
 }}
 >
 <Card.Header>
 <Col>
 <Text
-color="inherit"
+weight="extrabold"
+color="black"
   size={18}
                   css={{
 				  marginTop: "2%",
+				  weight: "bold",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue300 -20%, $yellow300 50%",
+				  
 				  textAlign: "center"
                   }}
                   weight="bold"
->Kepler</Text>
+>Mutant Ape Yacht Club</Text>
 <Text
+color="white"
   size={12}
                   css={{
 				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow300 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -136,7 +139,7 @@ fontFamily: "PT Mono",
                   css={{
 				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow900 50%",
+				  textGradient: "45deg, $blue800 -20%, yellow 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -146,7 +149,7 @@ fontFamily: "PT Mono",
 </Card.Header>
 <Card.Body>
 <Avatar 
-src={"https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png"}
+src={"https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?auto=format&dpr=1&w=384"}
 color="gradient"
 bordered
 squared 

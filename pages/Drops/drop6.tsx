@@ -104,7 +104,7 @@ css={{
 	paddingBottom: "10%",
 	marginBottom: "10%",
     width: "300px",
-    backgroundImage: `url("https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png")`,
+    backgroundImage: `url("https://i.seadn.io/gcs/files/8c72923145c38fe4ea903d9007f3ea49.webp?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
 }}
 >
@@ -120,7 +120,7 @@ fontFamily: "PT Mono",
 				  textAlign: "center"
                   }}
                   weight="bold"
->Kepler</Text>
+>Otherside Koda</Text>
 <Text
   size={12}
                   css={{
@@ -146,7 +146,7 @@ fontFamily: "PT Mono",
 </Card.Header>
 <Card.Body>
 <Avatar 
-src={"https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png"}
+src={"https://i.seadn.io/gcs/files/adeb11bcd531b77f55ce10c217e50841.jpg?auto=format&dpr=1&w=384"}
 color="gradient"
 bordered
 squared 
