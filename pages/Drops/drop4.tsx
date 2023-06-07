@@ -50,7 +50,7 @@ import {
     randomColor(),
   ];
   
-  export default function Drops3() {
+  export default function Drops() {
     const address = useAddress();
     const [visible, setVisible] = React.useState(false);
     const handler = () => setVisible(true);
@@ -100,53 +100,16 @@ import {
 isPressable
       isHoverable
 css={{
-    height: "350px",
-	paddingBottom: "10%",
+
+    height: "400px",
 	marginBottom: "10%",
-    width: "300px",
+    width: "350px",
     backgroundImage: `url("https://i.seadn.io/gae/ktM766YVd6f4HIkRGcaBIXz4Ve_7Wat6itJl0vKvJwa5c6rDwiZf9Gr7RPu5tXF3M6tuFHe-MRo8p0qpx5jmujtJOw4KYM1_dCHJcQ?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
-	backdropFilter: "blur(10px)"
 }}
 >
 <Card.Header>
-<Col>
-<Text
-color="black"
-  size={18}
-                  css={{
-				  marginTop: "2%",
-				 
-fontFamily: "PT Mono",                  
-				  
-				  textAlign: "center"
-                  }}
-                  
->Bored Ape Yacht Club</Text>
-<Text
-color="primary"
-  size={12}
-                  css={{
-				  marginTop: "2%",
-fontFamily: "PT Mono",                  
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Floor Price: 0.0 CORE 
-<Text
-  size={12}
-                  css={{
-				  marginTop: "2%",
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue800 -20%, yellow 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Volume: 0.0 CORE</Text>
- </Text>
-</Col>
-</Card.Header>
-<Card.Body>
+
 <Avatar 
 src={"https://i.seadn.io/gae/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB?auto=format&dpr=1&w=384"}
 color="gradient"
@@ -154,12 +117,54 @@ bordered
 squared 
 size="xl"
 css={{ 
-   marginTop: "30%",
-   marginLeft: "35%",
+
+   marginTop: "5%",
+   marginLeft: "40%",
 
 }}
 width={100} height={100} />
-</Card.Body>
+</Card.Header>
+<Card.Body></Card.Body>
+<Card.Footer
+isBlurred
+css={{
+borderTop: "$borderWeights$light solid $gray800",
+ bgBlur: "#0f111466",
+ height: "16%"
+ }}
+>
+<Col>
+<Text
+  size={13}
+                  css={{
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>Bored Ape Yacht Club</Text>
+<Text
+  size={10}
+                  css={{
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue400 -20%, $yellow800 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>	Floor Price: 0.0 CORE 
+<Text
+  size={10}
+                  css={{
+				  hover: "green",
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue500 -20%, $yellow500 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>	Volume: 0.0 CORE</Text>
+ </Text>
+</Col>
+</Card.Footer>
 </Card>
         </Container>
     );

@@ -54,7 +54,7 @@ marginTop: "-20%",
 padding: "5%",
 position: "inherit",
 }}
-	 light onClick={() => prev()}><Text weight={"extrabold"} size={25}>⩤</Text>
+	 light onClick={() => prev()}><Text weight={"extrabold"} color="warning" size={40}>⩤</Text>
 	  </Button>
 
 
@@ -67,7 +67,7 @@ marginLeft: "85%",
 padding: "5%",
 position: "inherit",
 }}
-	  light onClick={() => next()}><Text weight={"extrabold"} size={25}>⩥</Text></Button>
+	  light onClick={() => next()}><Text weight={"extrabold"} color="warning" size={40}>⩥</Text></Button>
 
 	
     </>

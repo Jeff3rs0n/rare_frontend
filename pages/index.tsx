@@ -101,7 +101,7 @@ export default function Home() {
       </Container>
 	  
       <Container css={{ w: "auto%", h: "400px",
-marginBottom: "10%"
+marginBottom: "19%"
 	  }}>
 	    <hr></hr>
 	   <Text
@@ -144,10 +144,9 @@ fontFamily: "PT Mono",
               >
 			    <motion.div
                 initial={{ opacity: 0, scale: 0.1 }}
-                animate={{ opacity: 4, scale: 1.5 }}
+                animate={{ opacity: 4, scale: 1.3 }}
                 transition={{ duration: 10 }}
               >
-			  <hr />
                 <Text
                   h1
 				  transform='uppercase'
@@ -155,6 +154,8 @@ fontFamily: "PT Mono",
                   css={{
 				  fontFamily: "PT Mono",
                     textGradient: "45deg, $blue600 -20%, $pink600 50%",
+					borderTopStyle: "solid",
+					borderRadius: "16px"
                   }}
                   weight="bold"
                 >
@@ -175,7 +176,7 @@ fontFamily: "PT Mono",
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 4, scale: 1.2 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 13 }}
               >
                 <Text
                   h1

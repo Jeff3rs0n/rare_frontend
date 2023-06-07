@@ -100,64 +100,71 @@ import {
 isPressable
       isHoverable
 css={{
-    height: "350px",
-	paddingBottom: "10%",
+
+    height: "400px",
 	marginBottom: "10%",
-    width: "300px",
+    width: "350px",
     backgroundImage: `url("https://i.seadn.io/gcs/files/4c6a2057355a799e698ca5ccb3157d0e.png?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
 }}
 >
 <Card.Header>
+
+<Avatar 
+src={"https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?auto=format&dpr=1&w=384"}
+color="gradient"
+bordered
+squared 
+size="xl"
+css={{ 
+
+   marginTop: "5%",
+   marginLeft: "40%",
+
+}}
+width={100} height={100} />
+</Card.Header>
+<Card.Body></Card.Body>
+<Card.Footer
+isBlurred
+css={{
+borderTop: "$borderWeights$light solid $gray800",
+ bgBlur: "#0f111466",
+ height: "16%"
+ }}
+>
 <Col>
 <Text
-color="inherit"
-  size={18}
+  size={13}
                   css={{
-				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue300 -20%, $yellow300 50%",
+				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
 >Azuki</Text>
 <Text
-  size={12}
+  size={10}
                   css={{
-				  marginTop: "2%",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow300 50%",
+				  textGradient: "45deg, $blue400 -20%, $yellow800 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
 >	Floor Price: 0.0 CORE 
 <Text
-  size={12}
+  size={10}
                   css={{
-				  marginTop: "2%",
+				  hover: "green",
 fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow900 50%",
+				  textGradient: "45deg, $blue500 -20%, $yellow500 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
 >	Volume: 0.0 CORE</Text>
  </Text>
 </Col>
-</Card.Header>
-<Card.Body>
-<Avatar 
-src={"https://i.seadn.io/gcs/files/adeb11bcd531b77f55ce10c217e50841.jpg?auto=format&dpr=1&w=384"}
-color="gradient"
-bordered
-squared 
-size="xl"
-css={{ 
-   marginTop: "30%",
-   marginLeft: "35%",
-
-}}
-width={100} height={100} />
-</Card.Body>
+</Card.Footer>
 </Card>
         </Container>
     );

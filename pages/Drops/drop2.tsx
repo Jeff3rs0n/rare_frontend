@@ -50,7 +50,7 @@ import {
     randomColor(),
   ];
   
-  export default function Drops2() {
+  export default function Drops() {
     const address = useAddress();
     const [visible, setVisible] = React.useState(false);
     const handler = () => setVisible(true);
@@ -100,52 +100,16 @@ import {
 isPressable
       isHoverable
 css={{
-    height: "350px",
-	paddingBottom: "10%",
+
+    height: "400px",
 	marginBottom: "10%",
-    width: "300px",
+    width: "350px",
     backgroundImage: `url("https://i.seadn.io/gae/PZhSKxxn8Jea8_456ruX1AOoMetR9VWHvmOrliw8nwRFeEgxRMw4PlOrb9B9Rql3cIctLZD4eJapdWESqDNIC1cmZTri_aINDgwz?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
-	backdropFilter: "blur(10px)"
 }}
 >
 <Card.Header>
-<Col>
-<Text
-color="inherit"
-  size={18}
-                  css={{
-				  marginTop: "2%",
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue800 -20%, $green700 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->Clever Girls</Text>
-<Text
-  size={12}
-                  css={{
-				  marginTop: "2%",
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue800 -20%, $yellow900 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Floor Price: 0.0 CORE 
-<Text
-  size={12}
-                  css={{
-				  marginTop: "2%",
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue800 -20%, yellow 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Volume: 0.0 CORE</Text>
- </Text>
-</Col>
-</Card.Header>
-<Card.Body>
+
 <Avatar 
 src={"https://i.seadn.io/gae/IDQ-Sidqd0tA6kL8IXb-dQqim_NlUu2MWKu4SdXcbsBknKMObwB2r4CLBIY9rrVwlaaPVqS9Cz727FfYiZjjAq-4_eb9gBQUMVOw5A?auto=format&dpr=1&w=384"}
 color="gradient"
@@ -153,12 +117,55 @@ bordered
 squared 
 size="xl"
 css={{ 
-   marginTop: "30%",
-   marginLeft: "35%",
+
+   marginTop: "5%",
+   marginLeft: "40%",
 
 }}
 width={100} height={100} />
-</Card.Body>
+</Card.Header>
+<Card.Body></Card.Body>
+<Card.Footer
+isBlurred
+
+css={{
+ bgBlur: "#0f111466",
+ borderTop: "$borderWeights$light solid $gray800",
+ height: "16%"
+ }}
+>
+<Col>
+<Text
+  size={13}
+                  css={{
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>Clever Girls</Text>
+<Text
+  size={10}
+                  css={{
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue400 -20%, $yellow800 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>	Floor Price: 0.0 CORE 
+<Text
+  size={10}
+                  css={{
+				  hover: "green",
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue500 -20%, $yellow500 50%",
+				  textAlign: "center"
+                  }}
+                  weight="bold"
+>	Volume: 0.0 CORE</Text>
+ </Text>
+</Col>
+</Card.Footer>
 </Card>
         </Container>
     );
