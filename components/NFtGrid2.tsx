@@ -1,7 +1,6 @@
 import type { NFT as NFTType } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import React from "react";
-import { NFT_COLLECTION_ADDRESS1 } from "../../const/contractAddresses";
 import Skeleton from "./Skeleton/Skeleton";
 import NFTComponent1 from "../components/NFT2";
 import styles from "../styles/Buy.module.css";
@@ -31,7 +30,7 @@ export default function NFTGrid2({
         data.map((nft) =>
           !overrideOnclickBehavior ? (
             <Link
-              href={`/token2/${NFT_COLLECTION_ADDRESS1}/${nft.metadata.id}`}
+              href={`/token2/${"0x89eB8bF6bc437f8c6DB5910DC2B005d6A4ae59e9"}/${nft.metadata.id}`}
               key={nft.metadata.id}
                className={styles.nftContainer}
             >
