@@ -9,7 +9,7 @@ import React from "react";
 import {
   MARKETPLACE_ADDRESS,
 } from "@/const/contractAddresses";
-import Skeleton from "../components/Skeleton/Skeleton";
+import Skeleton from "./Skeleton/Skeleton";
 import styles from "./NFT.module.css";
 
 type Props = {

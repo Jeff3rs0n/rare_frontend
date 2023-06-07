@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Skeleton from "./Skeleton/Skeleton";
 import NFTComponent1 from "./NFT2";
-import styles from "../styles/Buy.module.css";
+import styles from "@/styles/Buy.module.css";
 
 type Props = {
   isLoading: boolean;
