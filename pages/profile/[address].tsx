@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 import React, { useState, ChangeEvent } from "react";
 import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper";
-import NFTGrid from "@/components/NFTGrid";
-import NFTGrid2 from "@/components/NFTGrid2";
+import NFTGrid from "../../components/NFTGrid";
+import NFTGrid2 from "../../components/NFTGrid2";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
