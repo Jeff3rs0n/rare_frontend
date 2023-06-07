@@ -6,7 +6,7 @@ import {
 } from "@thirdweb-dev/react";
 import React, { useState } from "react";
 import Container from "../components/Container/Container";
-import NFTGrid2 from "@/components/NFTGrid2";
+import NFTGrid2 from "../components/NFTGrid2";
 import { NFT_COLLECTION_ADDRESS1 } from "../const/contractAddresses";
 import tokenPageStyles from "../styles/Token.module.css";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
