@@ -202,7 +202,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                     <div className={styles.traitContainer} key={key}>
                       <p className={styles.traitName}>{key as string}</p>
                       <p className={styles.traitValue}>
-                        {value?.value || ""}
+                        {value?.value?.toString() || ""}
                       </p>
                     </div>
                   )
