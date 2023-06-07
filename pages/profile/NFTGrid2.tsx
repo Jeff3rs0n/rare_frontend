@@ -2,7 +2,7 @@ import type { NFT as NFTType } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import React from "react";
 import Skeleton from "./Skeleton/Skeleton";
-import NFTComponent1 from "../components/NFT2";
+import NFTComponent1 from "./NFT2";
 import styles from "../styles/Buy.module.css";
 
 type Props = {
