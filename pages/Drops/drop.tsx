@@ -41,7 +41,7 @@ import {
   import { Counter } from "@/components/counter";
   import { Slider } from "@web3uikit/core";
   import truncateEthAddress from "truncate-eth-address";
-import Content from "@/components/content.tsx";
+import Content from "@/components/content";
 
   
   const [randomColor1, randomColor2, randomColor3, randomColor4] = [
