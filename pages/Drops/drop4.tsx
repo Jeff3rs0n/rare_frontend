@@ -30,7 +30,8 @@ import {
     Badge,
     Input,
     Grid,
-    Avatar
+    Avatar,
+	Tooltip
   } from "@nextui-org/react";
   import Link from "next/link";
   import { Modal, Checkbox } from "@nextui-org/react";
@@ -40,7 +41,7 @@ import {
   import { Counter } from "@/components/counter";
   import { Slider } from "@web3uikit/core";
   import truncateEthAddress from "truncate-eth-address";
-
+import Content from "@/components/content4";
 
   
   const [randomColor1, randomColor2, randomColor3, randomColor4] = [
@@ -95,21 +96,28 @@ import {
     return (
      
         <Container maxWidth="lg">
-
+ <Tooltip 
+ placement="bottom"
+ content={<Content />}>
 <Card 
 isPressable
       isHoverable
 css={{
 
-    height: "400px",
+    height: "350px",
 	marginBottom: "10%",
-    width: "350px",
+    width: "300px",
     backgroundImage: `url("https://i.seadn.io/gae/ktM766YVd6f4HIkRGcaBIXz4Ve_7Wat6itJl0vKvJwa5c6rDwiZf9Gr7RPu5tXF3M6tuFHe-MRo8p0qpx5jmujtJOw4KYM1_dCHJcQ?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
 }}
 >
-<Card.Header>
+<Card.Body></Card.Body>
+<Card.Footer
 
+css={{
+ height: "25%"
+ }}
+>
 <Avatar 
 src={"https://i.seadn.io/gae/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB?auto=format&dpr=1&w=384"}
 color="gradient"
@@ -118,54 +126,14 @@ squared
 size="xl"
 css={{ 
 
-   marginTop: "5%",
-   marginLeft: "40%",
+   marginTop: "0%",
+   marginLeft: "35%",
 
 }}
 width={100} height={100} />
-</Card.Header>
-<Card.Body></Card.Body>
-<Card.Footer
-isBlurred
-css={{
-borderTop: "$borderWeights$light solid $gray800",
- bgBlur: "#0f111466",
- height: "16%"
- }}
->
-<Col>
-<Text
-  size={13}
-                  css={{
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->Bored Ape Yacht Club</Text>
-<Text
-  size={10}
-                  css={{
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue400 -20%, $yellow800 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Floor Price: 0.0 CORE 
-<Text
-  size={10}
-                  css={{
-				  hover: "green",
-fontFamily: "PT Mono",                  
-				  textGradient: "45deg, $blue500 -20%, $yellow500 50%",
-				  textAlign: "center"
-                  }}
-                  weight="bold"
->	Volume: 0.0 CORE</Text>
- </Text>
-</Col>
 </Card.Footer>
 </Card>
+</Tooltip>
         </Container>
     );
   }

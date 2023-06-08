@@ -101,7 +101,7 @@ export default function Home() {
       </Container>
 	  
       <Container css={{ w: "auto%", h: "400px",
-marginBottom: "19%"
+marginBottom: "15%"
 	  }}>
 	    <hr></hr>
 	   <Text

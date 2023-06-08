@@ -20,6 +20,7 @@ import Drops5 from "../pages/Drops/drop5"
 import Drops6 from "../pages/Drops/drop6" 
 import styles from "@/styles/Home.module.css";
 
+
 const Thumbs = () => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } =
     useSnapCarousel();
@@ -27,8 +28,9 @@ const Thumbs = () => {
     <>
       <ul
         ref={scrollRef}
+
         style={{
-		  marginTop: "-5%",
+		  marginTop: "-2%",
           display: 'flex',
           overflow: 'auto',
           scrollSnapType: 'x mandatory'
@@ -41,6 +43,8 @@ const Thumbs = () => {
 		  <Drops4 />
 		  <Drops5 />
 		  <Drops6 />
+		  <Spacer />
+		  <Container></Container>
       </ul>
 
       
