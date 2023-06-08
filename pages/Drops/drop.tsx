@@ -106,7 +106,7 @@ css={{
 
     height: "350px",
 	marginBottom: "10%",
-    width: "300px",
+     width: "300px",
     backgroundImage: `url("https://bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti.ipfs.nftstorage.link/ipfs/bafybeifdvhexcod4a47cnplz7klo2amb5uva44l5rggufercqa3bfea4ti/k%20(13).png")`,
     backgroundSize: "cover",
 }}
