@@ -9,9 +9,8 @@ export default function() {
       css={{
         borderRadius: "14px",
         padding: "0.75rem",
-        maxWidth: "400px",
-		miWidth: "400px",
-		borderStyle: "solid"
+        maxWidth: "350px",
+		miWidth: "350px",
       }}
     >
       <Row justify="center" align="center">
@@ -36,7 +35,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>
@@ -50,7 +49,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>
@@ -64,7 +63,7 @@ fontFamily: "courier",
                   }}
                   weight="bold"
 >
-FLOOR: 0.0 CORE <TokenColored fontSize='15px'/>
+FLOOR: 0.0  <TokenColored fontSize='15px'/>
 
         </Text>
 		

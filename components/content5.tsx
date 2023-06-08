@@ -35,7 +35,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>
@@ -49,7 +49,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>

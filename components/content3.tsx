@@ -35,7 +35,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>
@@ -49,7 +49,7 @@ fontFamily: "courier",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 CORE 
+> VOLUME: 0.0 
         </Text>
 		
       </Row>
@@ -63,7 +63,7 @@ fontFamily: "courier",
                   }}
                   weight="bold"
 >
-FLOOR: 0.0 CORE <TokenColored fontSize='15px'/>
+FLOOR: 0.0 <TokenColored fontSize='15px'/>
 
         </Text>
 		
