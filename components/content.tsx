@@ -9,8 +9,8 @@ export default function() {
       css={{
         borderRadius: "14px",
         padding: "0.75rem",
-        maxWidth: "350px",
-		miWidth: "350px",
+        maxWidth: "280px",
+		miWidth: "280px",
       }}
     >
       <Row justify="center" align="center">
@@ -18,7 +18,7 @@ export default function() {
   size={16}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  textGradient: "45deg, $blue700 -20%, $gray300 50%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -26,12 +26,17 @@ fontFamily: "courier",
 >Kepler Stats⩩</Text>
       </Row>
       <Row>
-	  <Text color="success" size={12}>TOTAL</Text><Spacer />
+	  <Text 
+	    css={{
+fontFamily: "courier",                  
+				  textAlign: "center"
+                  }}
+	  color="success" size={12}>TOTAL</Text><Spacer />
         <Text
   size={14}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  textGradient: "45deg, $yellow800 -20%, $gray800 100%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -45,7 +50,7 @@ fontFamily: "courier",
   size={14}
                   css={{
 fontFamily: "courier new",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				 textGradient: "45deg, $green700 -20%, $gray800 100%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -58,7 +63,7 @@ fontFamily: "courier new",
   size={14}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  
 				  textAlign: "center"
                   }}
                   weight="bold"

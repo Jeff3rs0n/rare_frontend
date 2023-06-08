@@ -9,8 +9,8 @@ export default function() {
       css={{
         borderRadius: "14px",
         padding: "0.75rem",
-        maxWidth: "350px",
-		miWidth: "350px",
+        maxWidth: "280px",
+		miWidth: "280px",
       }}
     >
       <Row justify="center" align="center">

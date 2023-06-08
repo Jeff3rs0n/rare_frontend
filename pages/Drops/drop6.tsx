@@ -97,8 +97,14 @@ import Content from "@/components/content6";
      
         <Container maxWidth="lg">
  <Tooltip 
- color="invert"
- placement="top"
+ css={{ 
+
+   marginTop: "0%",
+   margin: "0",
+   bgBlur: "#0f111466",
+}}
+ hideArrow
+ placement="bottom"
  content={<Content />}>
 <Card 
 isPressable

@@ -94,11 +94,17 @@ import Content from "@/components/content";
       });
   
     return (
-     
+
         <Container maxWidth="lg">
- <Tooltip 
- color="invert"
- placement="top"
+      <Tooltip 
+ css={{ 
+
+   marginTop: "0%",
+   margin: "0",
+   bgBlur: "#0f111466",
+}}
+ hideArrow
+ placement="bottom"
  content={<Content />}>
 <Card 
 isPressable
@@ -132,10 +138,12 @@ css={{
 
 }}
 width={70} height={70} />
+
 </Card.Footer>
 </Card>
 </Tooltip>
         </Container>
+		
     );
   }
   

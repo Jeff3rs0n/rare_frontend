@@ -41,7 +41,7 @@ import {
   import { Counter } from "@/components/counter";
   import { Slider } from "@web3uikit/core";
   import truncateEthAddress from "truncate-eth-address";
-import Content from "@/components/content1";
+import Content from "@/components/content3";
 
   
   const [randomColor1, randomColor2, randomColor3, randomColor4] = [
@@ -94,11 +94,17 @@ import Content from "@/components/content1";
       });
   
     return (
-     
+
         <Container maxWidth="lg">
- <Tooltip 
- color="invert"
- placement="top"
+      <Tooltip 
+ css={{ 
+
+   marginTop: "0%",
+   margin: "0",
+   bgBlur: "#0f111466",
+}}
+ hideArrow
+ placement="bottom"
  content={<Content />}>
 <Card 
 isPressable
@@ -107,8 +113,8 @@ css={{
 
     height: "350px",
 	marginBottom: "10%",
-    width: "300px",
-    backgroundImage: `url("https://i.seadn.io/gae/PZhSKxxn8Jea8_456ruX1AOoMetR9VWHvmOrliw8nwRFeEgxRMw4PlOrb9B9Rql3cIctLZD4eJapdWESqDNIC1cmZTri_aINDgwz?auto=format&dpr=1&w=750")`,
+     width: "300px",
+    backgroundImage: `url("https://i.seadn.io/gcs/files/a4f4629eee85929ce502dd6e994a1f93.png?auto=format&dpr=1&w=750")`,
     backgroundSize: "cover",
 }}
 >
@@ -120,7 +126,7 @@ css={{
  }}
 >
 <Avatar 
-src={"https://i.seadn.io/gae/IDQ-Sidqd0tA6kL8IXb-dQqim_NlUu2MWKu4SdXcbsBknKMObwB2r4CLBIY9rrVwlaaPVqS9Cz727FfYiZjjAq-4_eb9gBQUMVOw5A?auto=format&dpr=1&w=384"}
+src={"https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?auto=format&dpr=1&w=384"}
 color="gradient"
 bordered
 squared 
@@ -131,11 +137,13 @@ css={{
    marginLeft: "35%",
 
 }}
-width={100} height={100} />
+width={70} height={70} />
+
 </Card.Footer>
 </Card>
 </Tooltip>
         </Container>
+		
     );
   }
   

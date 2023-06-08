@@ -9,29 +9,34 @@ export default function() {
       css={{
         borderRadius: "14px",
         padding: "0.75rem",
-        maxWidth: "350px",
-		miWidth: "350px",
+        maxWidth: "280px",
+		miWidth: "280px",
       }}
     >
       <Row justify="center" align="center">
         <Text
-  size={18}
+  size={16}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
-				  textAlign: "center"
+				  textGradient: "45deg, $blue700 -20%, $gray300 50%",
+				 
                   }}
                   weight="bold"
 				  transform="uppercase"
->Clever Girls Stats⩩</Text>
+>Mutant Bored Ape Stats⩩</Text>
       </Row>
       <Row>
-	  <Text color="success" size={12}>TOTAL</Text><Spacer />
+	  <Text 
+	    css={{
+fontFamily: "courier",                  
+				  textAlign: "center"
+                  }}
+	  color="success" size={12}>TOTAL</Text><Spacer />
         <Text
   size={14}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  textGradient: "45deg, $yellow800 -20%, $gray800 100%",
 				  textAlign: "center"
                   }}
                   weight="bold"
@@ -44,12 +49,12 @@ fontFamily: "courier",
         <Text
   size={14}
                   css={{
-fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+fontFamily: "courier new",                  
+				 textGradient: "45deg, $green700 -20%, $gray800 100%",
 				  textAlign: "center"
                   }}
                   weight="bold"
-> VOLUME: 0.0 
+> VOLUME: 0.0
         </Text>
 		
       </Row>
@@ -58,12 +63,12 @@ fontFamily: "courier",
   size={14}
                   css={{
 fontFamily: "courier",                  
-				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
+				  
 				  textAlign: "center"
                   }}
                   weight="bold"
 >
-FLOOR: 0.0  <TokenColored fontSize='15px'/>
+FLOOR: 0.0 CORE <TokenColored fontSize='15px'/>
 
         </Text>
 		

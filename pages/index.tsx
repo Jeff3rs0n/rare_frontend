@@ -61,7 +61,7 @@ export default function Home() {
 	   css={{ w: "80%", h: "auto",
 	  }}
 	  >
-	   <Button.Group color="warning" ghost>
+	   <Button.Group color="warning" ghost >
           <Button>
             <Link href="/">
               <Text
@@ -83,7 +83,7 @@ export default function Home() {
                 color="white"
               >
                 {" "}
-                Listings ✨ »
+                Listings ✨ 
               </Text>
             </Link>
           </Button>
