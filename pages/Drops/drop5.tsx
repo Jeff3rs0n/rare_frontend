@@ -97,7 +97,7 @@ import Content from "@/components/content5";
      
         <Container maxWidth="lg">
  <Tooltip 
- placement="bottom"
+ placement="top"
  content={<Content />}>
 <Card 
 isPressable
