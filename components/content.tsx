@@ -22,7 +22,7 @@ fontFamily: "PT Mono",
                   }}
                   weight="bold"
 				  transform="uppercase"
->Bored Ape Yatch Club Stats⩩</Text>
+>Kepler Stats⩩</Text>
       </Row>
       <Row>
 	  <Text color="success" size={12}>TOTAL</Text><Spacer />
