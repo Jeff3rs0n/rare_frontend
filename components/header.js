@@ -90,6 +90,7 @@ export default function Header() {
               css={{
                 fontFamily: "monospace",
                 textGradient: "45deg, $yellow600 -20%, $red600 100%",
+					
               }}
             >
               RareBay
@@ -124,6 +125,10 @@ export default function Header() {
                   css={{
                     fontFamily: "monospace",
                     textGradient: "45deg, $yellow600 -20%, $red600 100%",
+					borderBottomStyle: "solid",
+					borderBottomWidth: "1px",
+					borderRadius: "4px",
+					paddingBottom: "5%"
                   }}
                 >
                   RareBay
@@ -320,9 +325,17 @@ export default function Header() {
             <Navbar.Item>
               <Dropdown.Trigger>
                 <Button 
+				rounded
 				color="gradient"
-size="50%" >
-                  <Blockie size='10' seed={address} />
+size={"50%"} 
+style={{
+	borderRadius: "100px",
+	borderStyle: "solid",
+	borderColor: "orange"
+}}
+>
+                  <Blockie
+				  size='10' seed={address} />
                 </Button>
               </Dropdown.Trigger>
             </Navbar.Item>
