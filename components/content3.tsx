@@ -9,14 +9,15 @@ export default function() {
       css={{
         borderRadius: "14px",
         padding: "0.75rem",
-        maxWidth: "330px",
+        maxWidth: "400px",
+		miWidth: "400px",
       }}
     >
       <Row justify="center" align="center">
         <Text
   size={16}
                   css={{
-fontFamily: "PT Mono",                  
+fontFamily: "courier",                  
 				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
 				  textAlign: "center"
                   }}
@@ -29,7 +30,7 @@ fontFamily: "PT Mono",
         <Text
   size={14}
                   css={{
-fontFamily: "PT Mono",                  
+fontFamily: "courier",                  
 				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
 				  textAlign: "center"
                   }}
@@ -43,7 +44,7 @@ fontFamily: "PT Mono",
         <Text
   size={14}
                   css={{
-fontFamily: "PT Mono",                  
+fontFamily: "courier",                  
 				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
 				  textAlign: "center"
                   }}
@@ -56,7 +57,7 @@ fontFamily: "PT Mono",
         <Text
   size={14}
                   css={{
-fontFamily: "PT Mono",                  
+fontFamily: "courier",                  
 				  textGradient: "45deg, $blue700 -20%, $gray800 50%",
 				  textAlign: "center"
                   }}
