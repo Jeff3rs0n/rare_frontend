@@ -61,7 +61,7 @@ export default function Home() {
 	   css={{ w: "80%", h: "auto",
 	  }}
 	  >
-	   <Button.Group color="warning" light>
+	   <Button.Group color="warning" ghost>
           <Button>
             <Link href="/">
               <Text
