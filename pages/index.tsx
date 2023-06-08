@@ -144,15 +144,14 @@ fontFamily: "PT Mono",
               >
 			    <motion.div
                 initial={{ opacity: 0, scale: 0.1 }}
-                animate={{ opacity: 4, scale: 1.3 }}
+                animate={{ opacity: 4, scale: 1.4 }}
                 transition={{ duration: 10 }}
               >
                 <Text
                   h1
-				  transform='uppercase'
-                  size={50}
+                  size={45}
                   css={{
-				  fontFamily: "PT Mono",
+				  fontFamily: "$mono",
                     textGradient: "45deg, $blue600 -20%, $pink600 50%",
 					borderTopStyle: "solid",
 					borderRadius: "16px"
@@ -176,7 +175,7 @@ fontFamily: "PT Mono",
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 4, scale: 1.2 }}
-                transition={{ duration: 13 }}
+                transition={{ duration: 20 }}
               >
                 <Text
                   h1

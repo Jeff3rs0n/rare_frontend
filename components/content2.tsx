@@ -11,6 +11,7 @@ export default function() {
         padding: "0.75rem",
         maxWidth: "400px",
 		miWidth: "400px",
+		borderStyle: "solid"
       }}
     >
       <Row justify="center" align="center">
