@@ -25,6 +25,7 @@ import { Counter } from "@/components/counter";
 import Header from "../components/header";
 import Roadmaps from "../components/roadmap";
 import Thumbs from "../pages/thumb"
+import Tables from "../components/tables"
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -144,7 +145,7 @@ fontFamily: "PT Mono",
               >
 			    <motion.div
                 initial={{ opacity: 0, scale: 0.1 }}
-                animate={{ opacity: 4, scale: 1.4 }}
+                animate={{ opacity: 4, scale: 1.3 }}
                 transition={{ duration: 10 }}
               >
                 <Text
@@ -207,6 +208,9 @@ fontFamily: "PT Mono",
             </div>
           </div>
         </div>
+		<Container>
+		<Tables />
+		</Container>
         <Container 
 		css={{
 		width: "95%"
@@ -218,6 +222,7 @@ fontFamily: "PT Mono",
             exit={{ opacity: 0 }}
           />
           <Roadmaps />
+		  <Spacer />
           <AnimatePresence></AnimatePresence>
         </Container>
       </div>
