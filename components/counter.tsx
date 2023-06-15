@@ -50,6 +50,7 @@ export const Counter = () => {
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
+			marginRight: "2%",
           }}
  >{String(timeLeft.days).padStart(2, "0")}<br></br>
  DAYS
@@ -74,6 +75,7 @@ export const Counter = () => {
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
+			marginRight: "2%",
           }}
  >{String(timeLeft.hours).padStart(2, "0")}<br></br>
  HRS
@@ -98,6 +100,7 @@ export const Counter = () => {
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
+			marginRight: "2%",
           }}
  >{String(timeLeft.minutes).padStart(2, "0")}<br></br>
  MINS
@@ -111,7 +114,9 @@ export const Counter = () => {
   width: "65px",
   height: "65px",
   background: "transparent",
-  backdropFilter: "blur(10px)"
+  backdropFilter: "blur(10px)",
+  
+  
   }}
   >
 <Text
@@ -122,6 +127,7 @@ export const Counter = () => {
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
+			marginRight: "2%",
           }}
  >{String(timeLeft.seconds).padStart(2, "0")}<br></br>
  SECS
