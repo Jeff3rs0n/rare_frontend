@@ -88,7 +88,7 @@ FLOOR: 0.0 CORE <TokenColored fontSize='15px'/>
 	    css={{
 fontFamily: "courier",            
                   }}
- size={12}>VIEW</Text>
+>VIEW</Text>
 			</Link>
           </Button>
         </Grid>
