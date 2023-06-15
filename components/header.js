@@ -185,7 +185,7 @@ export default function Header() {
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item key="delete" color="success" withDivider>
-                <Link href="/">
+                <Link href="/launchpads">
                   <Text
                     size={16}
                     css={{
@@ -251,7 +251,7 @@ export default function Header() {
               Marketplace
             </Text>
           </Link>
-          <Link href="/buy" isActive key={"Market"}>
+          <Link href="/launchpads" isActive key={"Market"}>
             {" "}
             <Text
               b
@@ -275,7 +275,7 @@ export default function Header() {
               Whitepaper
             </Text>
           </Link>
-          <Link href="/create">
+          <Link href="/stake">
             {" "}
             <Text
               b

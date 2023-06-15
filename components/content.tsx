@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Button, Grid, Row, Spacer } from "@nextui-org/react";
 import {TokenColored} from '@web3uikit/icons'
-
+import Link from "next/link"
 
 export default function() {
   return (
@@ -76,14 +76,19 @@ FLOOR: 0.0 CORE <TokenColored fontSize='15px'/>
 	  <Spacer />
       <Grid.Container justify="space-between" alignContent="center">
         <Grid>
-          <Button color="warning" size="sm" ghost>
-            Buy
-          </Button>
-		  <Spacer />
-        </Grid>
-        <Grid>
-          <Button size="sm" shadow color="warning">
-            View
+          <Button size="sm" shadow color="warning"
+		  ghost
+		  >
+		  <Link href="/Creator/0xd9F40fE72Ebaa97c4A0E5d2c63B4B05218632242">
+             <Text 
+			 weight="extrabold"
+			 color="white"
+			 size={18}
+	    css={{
+fontFamily: "courier",            
+                  }}
+ size={12}>VIEW</Text>
+			</Link>
           </Button>
         </Grid>
       </Grid.Container>

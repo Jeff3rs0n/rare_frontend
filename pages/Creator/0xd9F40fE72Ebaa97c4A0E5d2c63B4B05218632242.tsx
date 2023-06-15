@@ -320,7 +320,7 @@ export default function ProfilePage() {
         <div
           className={styles.coverImage}
           style={{
-            backgroundImage: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
+            backgroundImage:`url("https://ik.imagekit.io/bayc/assets/bayc-mutant-hero.jpg")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "100%",
           }}
@@ -344,7 +344,9 @@ export default function ProfilePage() {
         <div
           className={styles.profilePicture}
           style={{
-            background: `linear-gradient(1deg, ${randomColor3}, ${randomColor4}, ${randomColor4}, ${randomColor2}, ${randomColor1}, ${randomColor1}, ${randomColor1} )`,
+            backgroundImage:`url("https://ik.imagekit.io/bayc/assets/ape1.png")`,
+			            backgroundRepeat: "no-repeat",
+            backgroundSize: "100%",
           }}
         />
       </div>

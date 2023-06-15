@@ -9,7 +9,7 @@ export default function App() {
   const columns = [
     { name: "Collection", uid: "name" },
     { name: "Stats", uid: "stats" },
-    { name: "Activity", uid: "status" },
+    { name: "", uid: "status" },
     { name: "ACTIONS", uid: "actions" },
   ];
   const users = [

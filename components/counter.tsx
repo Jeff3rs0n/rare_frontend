@@ -47,7 +47,6 @@ export const Counter = () => {
  weight={"extrabold"}
  css={{
             fontFamily: "PT Mono",
-            textGradient: "45deg, $yellow100 -20%, $green800 100%",
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
@@ -72,7 +71,6 @@ export const Counter = () => {
  weight={"extrabold"}
  css={{
             fontFamily: "PT Mono",
-            textGradient: "45deg, $yellow800 -20%, $blue300 100%",
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
@@ -97,7 +95,6 @@ export const Counter = () => {
  weight={"extrabold"}
  css={{
             fontFamily: "PT Mono",
-            textGradient: "45deg, $yellow800 -20%, $blue300 100%",
             textAlign: "center",
             position: "sticky",
 			padding: "20%",
@@ -122,7 +119,6 @@ export const Counter = () => {
  weight={"extrabold"}
  css={{
             fontFamily: "PT Mono",
-            textGradient: "45deg, $yellow800 -20%, $blue300 100%",
             textAlign: "center",
             position: "sticky",
 			padding: "20%",

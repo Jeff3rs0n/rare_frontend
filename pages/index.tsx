@@ -199,7 +199,7 @@ fontFamily: "PT Mono",
               Owners, but something Rare, the kind of art that is priceless.
             </p>
             <div className={styles.heroCtaContainer}>
-              <Link className={styles.heroCta} href="/create">
+              <Link className={styles.heroCta} href="/launchpads">
                 Get Started
               </Link>
               <Link className={styles.heroCta} href="/whitepaper">
@@ -209,6 +209,22 @@ fontFamily: "PT Mono",
           </div>
         </div>
 		<Container>
+		 <Text
+                  h1
+                  size={20}
+                  css={{
+				  marginTop: "2%",
+fontFamily: "PT Mono",                  
+				  textGradient: "45deg, $blue400 -20%, $yellow700 50%",
+				  borderBottomStyle: "solid",
+				  borderRadius: "16px",
+				  borderBottomColor: "$yellow600"
+                  }}
+                  weight="bold"
+				  
+                >
+                  TOP RAREST
+                </Text>
 		<Tables />
 		</Container>
         <Container 
@@ -221,7 +237,7 @@ fontFamily: "PT Mono",
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           />
-          <Roadmaps />
+           <Roadmaps />
 		  <Spacer />
           <AnimatePresence></AnimatePresence>
         </Container>
